@@ -30,15 +30,13 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.sliderWrapper}>
-        <Slider {...settings}>
-          {images.map((img, i) => (
-            <img key={i} className={classes.img} src={img} alt="work image" />
-          ))}
-        </Slider>
-        <a href={link} target="_blank">
-          <div className={classes.sliderHoverMask}>
-            <AspectRatioIcon className={classes.sliderIcon} />
-          </div>
+        <a className={classes.sliderLink} href={link} target="_blank">
+          <Slider {...settings} className={classes.img}>
+            {images.map((img, i) => (
+              <img key={i} src={img} alt="work image" />
+            ))}
+          </Slider>
+          <AspectRatioIcon className={classes.sliderIcon} />
         </a>
       </div>
       <div className={classes.description}>

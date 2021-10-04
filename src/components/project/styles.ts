@@ -6,28 +6,14 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     padding: 15,
     maxWidth: 400,
     borderRadius: 10,
-    transition: "all 250ms ease",
-    "&:hover": {
-      transform: "translateY(-15px)",
-      boxShadow: "10px 10px 20px #000000",
-    },
+    boxShadow: "5px 5px 20px #000000",
   },
   sliderWrapper: {
     position: "relative",
+    overflow: "hidden",
   },
-  sliderHoverMask: {
-    position: "absolute",
-    bottom: 4,
-    top: 0,
-    left: 0,
-    right: 0,
-    transition: "all 200ms ease",
-    "&:hover": {
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
-      "& svg": {
-        color: theme.palette.background.green,
-      },
-    },
+  sliderLink: {
+    overflow: "hidden",
   },
   sliderIcon: {
     position: "absolute",
@@ -45,7 +31,16 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     padding: 20,
     color: theme.palette.text.primary,
   },
-  img: {},
+  img: {
+    transition: "all 800ms ease",
+    "&:hover": {
+      transform: "scale(1.3) rotate(5deg)",
+      filter: "grayscale(1)",
+      "& + svg": {
+        color: theme.palette.background.green,
+      },
+    },
+  },
   text: {
     margin: 0,
     wordBreak: "break-word",
