@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { useStyles } from "./styles";
-import Skill from "../../components/skill/Skill";
 import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
-import react_logo from "../../images/react_logo.png";
-import typescript_logo from "../../images/typescript_logo.png";
+import react_logo from "../../images/skills/1280px-React-icon.svg.png";
+import typescript_logo from "../../images/skills/typescript.png";
 import sass_logo from "../../images/sass.png";
 import gsap_logo from "../../images/gsap.svg";
 import api_logo from "../../images/api_rest.png";
@@ -58,60 +57,61 @@ const Skills: React.FC = () => {
     <section className={classes.skills}>
       <Container className={classes.skillsContainer}>
         <Title title="Skills" index="01" />
-        <div className={classes.skillsWrapper}>
-          <div ref={skill_1}>
-            <div className={classes.wrapper}>
+        <div>
+          <div ref={skill_1} className={classes.wrapper}>
+            <div className={classes.iconWrapper}>
               <img className={classes.icon} src={react_logo} alt="React.js" />
-              <p className={classes.description}>
-                I often use next technologies: React-Redux for state managing,
-                React-Router-Dom for work with routs, Redux-Form and Formik,
-                Redux-Thunk for side-effects.
-              </p>
             </div>
+            <p className={classes.description}>
+              I often use next technologies: React-Redux for state managing,
+              React-Router-Dom for work with routs, Redux-Form and Formik,
+              Redux-Thunk for side-effects.
+            </p>
           </div>
-          <div ref={skill_2}>
-            <div className={classes.wrapper}>
+
+          <div ref={skill_2} className={classes.wrapper}>
+            <div className={classes.iconWrapper}>
               <img
                 className={classes.icon}
                 src={typescript_logo}
                 alt="TypeScript"
               />
-              <p className={classes.description}>
-                I like statically typed languages because there is so much more
-                time left to code than fix bugs.
-              </p>
             </div>
+            <p className={classes.description}>
+              I like statically typed languages because there is so much more
+              time left to code than fix bugs.
+            </p>
           </div>
-          <div ref={skill_3}>
-            <div className={classes.wrapper}>
+
+          <div ref={skill_3} className={classes.wrapper}>
+            <div className={classes.iconWrapper}>
               <img className={classes.icon} src={sass_logo} alt="SASS" />
-              <p className={classes.description}>
-                I definitely use sumantic HTML tags, for cross-browser
-                compatibility i use normalize.css and and check the browser
-                support for the tags used (Hello IE!...) And I really enjoy
-                working with animation.
-              </p>
             </div>
+            <p className={classes.description}>
+              I definitely use sumantic HTML tags, for cross-browser
+              compatibility i use normalize.css and and check the browser
+              support for the tags used (Hello IE!...) And I really enjoy
+              working with animation.
+            </p>
           </div>
-          <div ref={skill_4}>
-            <div className={classes.wrapper}>
+
+          <div ref={skill_4} className={classes.wrapper}>
+            <div className={classes.iconWrapper}>
               <img className={classes.icon} src={gsap_logo} alt="GSAP" />
-              <p className={classes.description}>
-                I like greensock (GSAP) library for animation. Today I do easy
-                animation, but i like this and future i want up level the skill.
-              </p>
             </div>
+            <p className={classes.description}>
+              I like greensock (GSAP) library for animation. Today I do easy
+              animation, but i like this and future i want up level the skill.
+            </p>
           </div>
-          <div ref={skill_5}>
-            <div className={classes.wrapper}>
+
+          <div ref={skill_5} className={classes.wrapper}>
+            <div className={classes.iconWrapper}>
               <img className={classes.icon} src={api_logo} alt="REST API" />
-              <p className={classes.description}>
-                For HTTP requests (CRUD operations) I like axios library.
-              </p>
             </div>
-            <Skill iconUrl={api_logo}>
+            <p className={classes.description}>
               For HTTP requests (CRUD operations) I like axios library.
-            </Skill>
+            </p>
           </div>
         </div>
       </Container>

@@ -4,6 +4,7 @@ import { AppTheme } from "../../themes/paletteTypes";
 export const useStyles = makeStyles((theme: AppTheme) => ({
   wrapper: {
     padding: 15,
+    margin: 20,
     maxWidth: 400,
     borderRadius: 10,
     boxShadow: "5px 5px 20px #000000",

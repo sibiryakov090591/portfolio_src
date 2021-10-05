@@ -25,6 +25,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     height: 60,
     marginBottom: 20,
   },
+  iconWrapper: {},
 }));
 
 export default "styles";

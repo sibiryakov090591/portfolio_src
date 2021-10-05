@@ -12,10 +12,22 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "center",
     paddingBottom: 50,
   },
+  skillsWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    width: "100%",
+    gap: 20,
+    "@media screen and (max-width: 792px)": {
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
   wrapper: {
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
-    maxWidth: 800,
+    maxWidth: 300,
     padding: 30,
   },
   title: {
@@ -23,28 +35,16 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.text.green,
   },
   description: {
-    marginLeft: 30,
     fontSize: "1.1rem",
     lineHeight: 1.4,
     margin: 0,
     wordBreak: "break-word",
     color: theme.palette.text.primary,
-    width: 600,
-  },
-  iconWrapper: {
-    border: `3px solid #474747`,
-    backgroundColor: theme.palette.app.grey500,
-    borderRadius: 5,
-    height: 100,
-    width: 100,
-    padding: 10,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
   icon: {
-    height: "80%",
-    borderRadius: 3,
+    display: "block",
+    height: 60,
+    marginBottom: 20,
   },
 }));
 

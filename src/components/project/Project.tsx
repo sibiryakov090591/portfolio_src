@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useStyles } from "./styles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import visit from "../../images/footer/siteVisitHover.svg";
 import AspectRatioIcon from "@material-ui/icons/AspectRatio";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type PropsType = {
   images: any[];
@@ -14,6 +15,17 @@ type PropsType = {
 
 const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
   const classes = useStyles();
+
+  const elem = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(elem.current, {
+      scrollTrigger: elem.current,
+      y: "40px",
+      duration: 1.2,
+    });
+  });
 
   const settings = {
     fade: true,
@@ -28,7 +40,7 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
   };
 
   return (
-    <div className={classes.wrapper}>
+    <div ref={elem} className={classes.wrapper}>
       <div className={classes.sliderWrapper}>
         <a className={classes.sliderLink} href={link} target="_blank">
           <Slider {...settings} className={classes.img}>

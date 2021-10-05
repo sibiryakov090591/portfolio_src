@@ -10,7 +10,9 @@ const Skill: React.FC<PropsType> = ({ iconUrl, children }) => {
 
   return (
     <div className={classes.wrapper}>
-      <img className={classes.icon} src={iconUrl} alt="Project icon" />
+      <div className={classes.iconWrapper}>
+        <img className={classes.icon} src={iconUrl} alt="Project icon" />
+      </div>
       <p className={classes.description}>{children}</p>
     </div>
   );
