@@ -18,6 +18,7 @@ export default {
   },
   button: {
     green: "#3ba29c",
+    yellow: "#d7d352",
   },
 
   // Alerts
