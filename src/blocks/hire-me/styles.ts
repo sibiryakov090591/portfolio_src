@@ -43,12 +43,13 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     height: 300,
     overflow: "hidden",
     transform: "skew(15deg)",
-    border: `4px solid ${theme.palette.app.grey600}`,
+    border: `7px solid ${theme.palette.app.grey600}`,
+    borderRadius: 5,
     cursor: "pointer",
-    transition: "all 400ms ease",
+    transition: "all 600ms ease",
     "&:hover": {
       width: 250,
-      border: `4px solid ${theme.palette.background.green}`,
+      borderColor: theme.palette.background.green,
       "& img": {
         filter: "grayscale(0)",
       },
@@ -58,7 +59,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     width: "250%",
     transform: "translate(-115px, 0) skew(-15deg)",
     filter: "grayscale(1)",
-    transition: "all 400ms ease",
+    transition: "all 600ms ease",
   },
   langIcon: {
     position: "absolute",
