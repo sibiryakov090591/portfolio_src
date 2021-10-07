@@ -39,7 +39,8 @@ export default {
     red200: "#FFC4C9",
     red100: "#FAEEEF",
 
-    grey500: "#333333",
+    grey600: "#333333",
+    grey500: "#474747",
     grey400: "#A6A6A6",
     grey300: "#C6C6C6",
     grey200: "#E0E0E0",

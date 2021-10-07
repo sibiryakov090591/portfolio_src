@@ -1,29 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
-import { Popover, Box, Button } from "@material-ui/core";
-import useAppTheme from "../../themes/ThemeStyles";
+import { Box } from "@material-ui/core";
 import FileSaver from "file-saver";
 import resumeEn from "../../resume/resume_eng.pdf";
 import resumeRu from "../../resume/resume_ru.pdf";
+import resumeImg from "../../images/resume.jpg";
+import lang_en from "../../images/lang_en.svg";
+import lang_ru from "../../images/lang_ru.svg";
 
 const HireMe: React.FC = () => {
   const classes = useStyles();
-  const appTheme = useAppTheme();
-
-  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
-
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
 
   const downloadHandler = (lang: string) => () => {
     switch (lang) {
@@ -45,32 +33,31 @@ const HireMe: React.FC = () => {
     <section className={classes.hire}>
       <Container className={classes.hireContainer}>
         <Title title="Resume" index="03" />
-        <Button className={appTheme.button} onClick={handleClick}>
-          Download
-        </Button>
-        <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "center",
-          }}
-        >
-          <Box className={classes.popoverWrapper}>
-            <Button className={classes.button} onClick={downloadHandler("en")}>
-              <span className={classes.buttonText}>In english</span>
-            </Button>
-            <Button className={classes.button} onClick={downloadHandler("ru")}>
-              <span className={classes.buttonText}>In russian</span>
-            </Button>
+
+        <Box display="flex">
+          <Box
+            className={classes.resumeImgWrapper}
+            onClick={downloadHandler("en")}
+          >
+            <img
+              className={classes.resumeImg}
+              src={resumeImg}
+              alt="resume_en"
+            />
+            <img className={classes.langIcon} src={lang_en} alt="lang_icon" />
           </Box>
-        </Popover>
+          <Box
+            className={classes.resumeImgWrapper}
+            onClick={downloadHandler("ru")}
+          >
+            <img
+              className={classes.resumeImg}
+              src={resumeImg}
+              alt="resume_ru"
+            />
+            <img className={classes.langIcon} src={lang_ru} alt="lang_icon" />
+          </Box>
+        </Box>
       </Container>
     </section>
   );

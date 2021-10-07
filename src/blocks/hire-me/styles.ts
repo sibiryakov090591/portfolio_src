@@ -11,6 +11,15 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "center",
     paddingBottom: 50,
   },
+  wrapper: {
+    display: "flex",
+  },
+  imgWrapper: {
+    height: 350,
+  },
+  img: {
+    height: "100%",
+  },
   popoverWrapper: {
     padding: "12px 20px",
     display: "flex",
@@ -27,6 +36,35 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   buttonText: {
     borderBottom: `2px solid ${theme.palette.background.green}`,
+  },
+  resumeImgWrapper: {
+    position: "relative",
+    width: 200,
+    height: 300,
+    overflow: "hidden",
+    transform: "skew(15deg)",
+    border: `4px solid ${theme.palette.app.grey600}`,
+    cursor: "pointer",
+    transition: "all 400ms ease",
+    "&:hover": {
+      width: 250,
+      border: `4px solid ${theme.palette.background.green}`,
+      "& img": {
+        filter: "grayscale(0)",
+      },
+    },
+  },
+  resumeImg: {
+    width: "250%",
+    transform: "translate(-115px, 0) skew(-15deg)",
+    filter: "grayscale(1)",
+    transition: "all 400ms ease",
+  },
+  langIcon: {
+    position: "absolute",
+    bottom: 0,
+    right: 5,
+    height: 75,
   },
 }));
 

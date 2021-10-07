@@ -32,8 +32,8 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     width: 600,
   },
   iconWrapper: {
-    border: `8px solid #474747`,
-    backgroundColor: theme.palette.app.grey500,
+    border: `8px solid ${theme.palette.app.grey500}`,
+    backgroundColor: theme.palette.app.grey600,
     borderRadius: 12,
     height: 150,
     width: 150,
