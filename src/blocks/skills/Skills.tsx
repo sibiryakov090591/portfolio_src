@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { useStyles } from "./styles";
 import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
-import react_logo from "../../images/skills/1280px-React-icon.svg.png";
+import react_logo from "../../images/skills/react.png";
 import typescript_logo from "../../images/skills/typescript.png";
-import sass_logo from "../../images/sass.png";
-import gsap_logo from "../../images/gsap.svg";
-import api_logo from "../../images/api_rest.png";
+import sass_logo from "../../images/skills/sass.png";
+import gsap_logo from "../../images/skills/gsap.png";
+import api_logo from "../../images/skills/api_rest.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

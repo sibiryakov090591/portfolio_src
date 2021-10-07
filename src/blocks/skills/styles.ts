@@ -32,18 +32,18 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     width: 600,
   },
   iconWrapper: {
-    border: `3px solid #474747`,
+    border: `8px solid #474747`,
     backgroundColor: theme.palette.app.grey500,
-    borderRadius: 5,
-    height: 100,
-    width: 100,
+    borderRadius: 12,
+    height: 150,
+    width: 150,
     padding: 10,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   icon: {
-    height: "80%",
+    height: "100%",
     borderRadius: 3,
   },
 }));
