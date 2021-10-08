@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
@@ -9,9 +9,14 @@ import resumeRu from "../../resume/resume_ru.pdf";
 import resumeImg from "../../images/resume.jpg";
 import lang_en from "../../images/lang_en.svg";
 import lang_ru from "../../images/lang_ru.svg";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HireMe: React.FC = () => {
   const classes = useStyles();
+
+  const elem_1 = useRef<HTMLDivElement>(null);
+  const elem_2 = useRef<HTMLDivElement>(null);
 
   const downloadHandler = (lang: string) => () => {
     switch (lang) {
@@ -29,13 +34,34 @@ const HireMe: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(elem_1.current, {
+      scrollTrigger: {
+        trigger: elem_1.current,
+        start: "top 80%",
+      },
+      opacity: 0,
+      duration: 0.6,
+    });
+    gsap.from(elem_2.current, {
+      scrollTrigger: {
+        trigger: elem_2.current,
+        start: "top 80%",
+      },
+      opacity: 0,
+      duration: 0.6,
+    });
+  });
+
   return (
     <section className={classes.hire}>
       <Container className={classes.hireContainer}>
         <Title title="Download resume" index="03" />
 
         <Box display="flex">
-          <Box
+          <div
+            ref={elem_1}
             className={classes.resumeImgWrapper}
             onClick={downloadHandler("en")}
           >
@@ -45,8 +71,9 @@ const HireMe: React.FC = () => {
               alt="resume_en"
             />
             <img className={classes.langIcon} src={lang_en} alt="lang_icon" />
-          </Box>
-          <Box
+          </div>
+          <div
+            ref={elem_2}
             className={classes.resumeImgWrapper}
             onClick={downloadHandler("ru")}
           >
@@ -56,7 +83,7 @@ const HireMe: React.FC = () => {
               alt="resume_ru"
             />
             <img className={classes.langIcon} src={lang_ru} alt="lang_icon" />
-          </Box>
+          </div>
         </Box>
       </Container>
     </section>

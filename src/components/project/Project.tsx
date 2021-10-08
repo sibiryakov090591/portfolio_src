@@ -21,8 +21,12 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(elem.current, {
-      scrollTrigger: elem.current,
+      scrollTrigger: {
+        trigger: elem.current,
+        start: "top 80%",
+      },
       y: "40px",
+      opacity: 0,
       duration: 1.2,
     });
   });

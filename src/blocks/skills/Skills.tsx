@@ -12,7 +12,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const iconAnimation = (ref: any) => {
   gsap.from(ref.current, {
-    scrollTrigger: ref.current,
+    scrollTrigger: {
+      trigger: ref.current,
+      start: "top 80%",
+    },
     x: "-25px",
     opacity: 0,
     duration: 1.3,
@@ -21,7 +24,10 @@ const iconAnimation = (ref: any) => {
 
 const textAnimation = (ref: any) => {
   gsap.from(ref.current, {
-    scrollTrigger: ref.current,
+    scrollTrigger: {
+      trigger: ref.current,
+      start: "top 80%",
+    },
     y: "25px",
     opacity: 0,
     duration: 1.3,
