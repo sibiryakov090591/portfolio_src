@@ -11,16 +11,29 @@ const Contacts: React.FC = () => {
   return (
     <section className={classes.contacts}>
       <Container className={classes.contactsContainer}>
-        <Title title="Контакты" index="04" />
+        <Title title="Text me" index="04" />
         <form className={classes.form}>
-          <input className={classes.input} type="text" placeholder="input" />
-          <input className={classes.input} type="text" placeholder="input" />
+          <input
+            disabled
+            className={classes.input}
+            type="text"
+            placeholder="Name"
+          />
+          <input
+            disabled
+            className={classes.input}
+            type="text"
+            placeholder="E-Mail"
+          />
           <textarea
+            disabled
             className={classes.textarea}
-            placeholder="textarea"
+            placeholder="Sorry! That functionality are develop"
           ></textarea>
         </form>
-        <Button className={appTheme.button}>Send</Button>
+        <Button disabled className={appTheme.button}>
+          Send
+        </Button>
       </Container>
     </section>
   );
