@@ -42,22 +42,22 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     width: 200,
     height: 300,
     overflow: "hidden",
-    transform: "skew(15deg)",
-    border: `7px solid ${theme.palette.app.grey600}`,
+    transform: "skew(10deg)",
     borderRadius: 5,
     cursor: "pointer",
     transition: "all 600ms ease",
+    marginRight: 20,
     "&:hover": {
       width: 250,
-      borderColor: theme.palette.background.green,
-      "& img": {
+      "& > img:first-child": {
         filter: "grayscale(0)",
+        transform: "translate(-158px, -91px) skew(-15deg) scale(0.8)",
       },
     },
   },
   resumeImg: {
     width: "250%",
-    transform: "translate(-115px, 0) skew(-15deg)",
+    transform: "translate(-127px, -72px) skew(-15deg) scale(0.8)",
     filter: "grayscale(1)",
     transition: "all 600ms ease",
   },

@@ -34,14 +34,16 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   img: {
     transition: "all 800ms ease",
+    transform: "scale(1.3) rotate(3deg)",
+    filter: "grayscale(1)",
     "& + svg": {
       "&:hover": {
         color: theme.palette.background.green,
       },
     },
     "&:hover": {
-      transform: "scale(1.3) rotate(5deg)",
-      filter: "grayscale(1)",
+      transform: "scale(1) rotate(0)",
+      filter: "grayscale(0)",
       "& + svg": {
         color: theme.palette.background.green,
       },

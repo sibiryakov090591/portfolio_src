@@ -6,7 +6,8 @@ import { Box } from "@material-ui/core";
 import FileSaver from "file-saver";
 import resumeEn from "../../resume/resume_eng.pdf";
 import resumeRu from "../../resume/resume_ru.pdf";
-import resumeImg from "../../images/resume.jpg";
+import resumeImg_en from "../../images/resume.jpg";
+import resumeImg_ru from "../../images/resume_ru.jpg";
 import lang_en from "../../images/lang_en.svg";
 import lang_ru from "../../images/lang_ru.svg";
 import { gsap } from "gsap";
@@ -39,7 +40,7 @@ const HireMe: React.FC = () => {
     gsap.from(elem_1.current, {
       scrollTrigger: {
         trigger: elem_1.current,
-        start: "top 80%",
+        start: "top 70%",
       },
       opacity: 0,
       duration: 0.6,
@@ -47,10 +48,11 @@ const HireMe: React.FC = () => {
     gsap.from(elem_2.current, {
       scrollTrigger: {
         trigger: elem_2.current,
-        start: "top 80%",
+        start: "top 70%",
       },
       opacity: 0,
-      duration: 0.6,
+      delay: 0.5,
+      duration: 1,
     });
   });
 
@@ -67,7 +69,7 @@ const HireMe: React.FC = () => {
           >
             <img
               className={classes.resumeImg}
-              src={resumeImg}
+              src={resumeImg_en}
               alt="resume_en"
             />
             <img className={classes.langIcon} src={lang_en} alt="lang_icon" />
@@ -79,7 +81,7 @@ const HireMe: React.FC = () => {
           >
             <img
               className={classes.resumeImg}
-              src={resumeImg}
+              src={resumeImg_ru}
               alt="resume_ru"
             />
             <img className={classes.langIcon} src={lang_ru} alt="lang_icon" />

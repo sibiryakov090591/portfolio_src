@@ -23,7 +23,7 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
     gsap.from(elem.current, {
       scrollTrigger: {
         trigger: elem.current,
-        start: "top 80%",
+        start: "top 90%",
       },
       y: "40px",
       opacity: 0,
