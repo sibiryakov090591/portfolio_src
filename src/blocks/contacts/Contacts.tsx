@@ -28,7 +28,7 @@ const Contacts: React.FC = () => {
           <textarea
             disabled
             className={classes.textarea}
-            placeholder="Sorry! That functionality are develop"
+            placeholder="That functionality are develop"
           ></textarea>
         </form>
         <Button disabled className={appTheme.button}>
