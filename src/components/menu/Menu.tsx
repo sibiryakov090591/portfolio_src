@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
   });
 
   return (
-    <div
+    <header
       ref={wrapperRef}
       className={`${classes.wrapper} ${
         scrollTop > 60 ? classes.fixedList : ""
@@ -60,7 +60,7 @@ const Menu: React.FC = () => {
           </li>
         </a>
       </ul>
-    </div>
+    </header>
   );
 };
 
