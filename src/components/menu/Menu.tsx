@@ -32,44 +32,34 @@ const Menu: React.FC = () => {
   });
 
   return (
-    <div ref={wrapperRef} className={classes.wrapper}>
-      <ul
-        className={`${classes.topList} ${
-          scrollTop > 50 ? classes.fixedList : ""
-        }`}
-      >
-        <li className={classes.topItem}>
-          <span className={classes.topItemIndex}>01.</span>Skills
-        </li>
-        <li className={classes.topItem}>
-          <span className={classes.topItemIndex}>02.</span>Projects
-        </li>
-        <li className={classes.topItem}>
-          <span className={classes.topItemIndex}>03.</span>Resume
-        </li>
-        <li className={classes.topItem}>
-          <span className={classes.topItemIndex}>04.</span>Text me
-        </li>
+    <div
+      ref={wrapperRef}
+      className={`${classes.wrapper} ${
+        scrollTop > 60 ? classes.fixedList : ""
+      }`}
+    >
+      <ul className={classes.topList}>
+        <a href="#skills" className={classes.topItem}>
+          <li>
+            <span className={classes.topItemIndex}>01.</span>Skills
+          </li>
+        </a>
+        <a href="#projects" className={classes.topItem}>
+          <li>
+            <span className={classes.topItemIndex}>02.</span>Projects
+          </li>
+        </a>
+        <a href="#resume" className={classes.topItem}>
+          <li>
+            <span className={classes.topItemIndex}>03.</span>Resume
+          </li>
+        </a>
+        <a href="#contact" className={classes.topItem}>
+          <li>
+            <span className={classes.topItemIndex}>04.</span>Text me
+          </li>
+        </a>
       </ul>
-
-      {/*<ul*/}
-      {/*  className={`${classes.topList} ${classes.fixedList} ${*/}
-      {/*    scrollTop > 50 ? classes.showList : ""*/}
-      {/*  }`}*/}
-      {/*>*/}
-      {/*  <li className={classes.topItem}>*/}
-      {/*    <span className={classes.topItemIndex}>01.</span>Skills*/}
-      {/*  </li>*/}
-      {/*  <li className={classes.topItem}>*/}
-      {/*    <span className={classes.topItemIndex}>02.</span>Projects*/}
-      {/*  </li>*/}
-      {/*  <li className={classes.topItem}>*/}
-      {/*    <span className={classes.topItemIndex}>03.</span>Resume*/}
-      {/*  </li>*/}
-      {/*  <li className={classes.topItem}>*/}
-      {/*    <span className={classes.topItemIndex}>04.</span>Text me*/}
-      {/*  </li>*/}
-      {/*</ul>*/}
     </div>
   );
 };

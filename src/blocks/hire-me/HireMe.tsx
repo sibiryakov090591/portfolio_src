@@ -57,7 +57,7 @@ const HireMe: React.FC = () => {
   });
 
   return (
-    <section className={classes.hire}>
+    <section id="resume" className={classes.hire}>
       <Container className={classes.hireContainer}>
         <Title title="Download resume" index="03" />
 

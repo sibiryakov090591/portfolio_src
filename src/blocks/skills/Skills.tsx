@@ -65,7 +65,7 @@ const Skills: React.FC = () => {
   });
 
   return (
-    <section className={classes.skills}>
+    <section id="skills" className={classes.skills}>
       <Container className={classes.skillsContainer}>
         <Title title="Skills" index="01" />
         <div>

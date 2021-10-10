@@ -9,7 +9,7 @@ const Contacts: React.FC = () => {
   const appTheme = useAppTheme();
 
   return (
-    <section className={classes.contacts}>
+    <section id="contact" className={classes.contacts}>
       <Container className={classes.contactsContainer}>
         <Title title="Text me" index="04" />
         <form className={classes.form}>

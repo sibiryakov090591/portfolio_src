@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <section className={classes.projects}>
+    <section id="projects" className={classes.projects}>
       <Container className={classes.projectsContainer}>
         <Title title="Projects" index="02" />
         <div className={classes.projectsWrapper}>
