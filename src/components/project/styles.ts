@@ -8,6 +8,9 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     maxWidth: 400,
     borderRadius: 10,
     boxShadow: "5px 5px 20px #000000",
+    "@media screen and (max-width: 615px)": {
+      width: "100%",
+    },
   },
   sliderWrapper: {
     position: "relative",

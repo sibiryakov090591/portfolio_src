@@ -11,9 +11,9 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     justifyContent: "space-around",
     flexWrap: "wrap",
     width: "100%",
-    gap: 20,
     "@media screen and (max-width: 1042px)": {
       justifyContent: "center",
+      padding: "0 30px",
     },
   },
   projectsContainer: {
