@@ -23,6 +23,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     transition: "all 300ms ease",
   },
   topItem: {
+    cursor: "pointer",
     padding: "30px 0",
     transition: "all 300ms ease",
     "&:hover": {
