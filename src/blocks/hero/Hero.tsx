@@ -34,9 +34,9 @@ const Hero: React.FC = () => {
                   .pauseFor(1300)
                   .typeString("Hi")
                   .pauseFor(500)
-                  .typeString(", <br/> My name is Andrew")
+                  .typeString(", <br/> I`m Andrew")
                   .pauseFor(500)
-                  .typeString(", <br/> i`m frontend developer")
+                  .typeString(", <br/> and I create UI/UX.")
                   .start();
               }}
             />
