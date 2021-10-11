@@ -17,9 +17,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   imgWrapper: {
     height: 350,
   },
-  img: {
-    height: "100%",
-  },
   popoverWrapper: {
     padding: "12px 20px",
     display: "flex",
@@ -53,6 +50,19 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
         filter: "grayscale(0)",
         transform: "translate(-158px, -91px) skew(-15deg) scale(0.8)",
       },
+      "@media screen and (max-width: 654px)": {
+        "&:hover": {
+          width: 130,
+          "& > img:first-child": {
+            filter: "grayscale(0)",
+            transform: "translate(-100px, -48px) skew(-15deg) scale(0.8)",
+          },
+        },
+      },
+    },
+    "@media screen and (max-width: 654px)": {
+      width: 100,
+      height: 200,
     },
   },
   resumeImg: {
@@ -60,12 +70,18 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     transform: "translate(-127px, -72px) skew(-15deg) scale(0.8)",
     filter: "grayscale(1)",
     transition: "all 600ms ease",
+    "@media screen and (max-width: 654px)": {
+      transform: "translate(-63px, -36px) skew(-15deg) scale(0.8)",
+    },
   },
   langIcon: {
     position: "absolute",
     bottom: 0,
     right: 5,
     height: 75,
+    "@media screen and (max-width: 654px)": {
+      height: 60,
+    },
   },
 }));
 

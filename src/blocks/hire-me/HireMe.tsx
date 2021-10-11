@@ -54,14 +54,14 @@ const HireMe: React.FC = () => {
       delay: 0.5,
       duration: 0.6,
     });
-  });
+  }, []);
 
   return (
     <section id="resume" className={classes.hire}>
       <Container className={classes.hireContainer}>
         <Title title="Download resume" index="03" />
 
-        <Box display="flex">
+        <Box className={classes.wrapper}>
           <div
             ref={elem_1}
             className={classes.resumeImgWrapper}
