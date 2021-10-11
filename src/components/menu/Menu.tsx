@@ -39,7 +39,7 @@ const Menu: React.FC = () => {
       <ul className={classes.topList}>
         <Link
           to="skills"
-          offset={-70}
+          offset={-60}
           smooth={true}
           spy={true}
           duration={600}
@@ -51,7 +51,7 @@ const Menu: React.FC = () => {
         </Link>
         <Link
           to="projects"
-          offset={-70}
+          offset={-60}
           smooth={true}
           spy={true}
           duration={600}
@@ -63,7 +63,7 @@ const Menu: React.FC = () => {
         </Link>
         <Link
           to="resume"
-          offset={-70}
+          offset={-60}
           smooth={true}
           spy={true}
           duration={600}
@@ -75,7 +75,7 @@ const Menu: React.FC = () => {
         </Link>
         <Link
           to="contact"
-          offset={-70}
+          offset={-60}
           smooth={true}
           spy={true}
           duration={600}

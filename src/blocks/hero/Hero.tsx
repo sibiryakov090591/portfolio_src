@@ -10,11 +10,12 @@ const Hero: React.FC = () => {
   const photo = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      photo.current,
-      { x: "-80px", opacity: 0 },
-      { x: "-100px", duration: 1, opacity: 1 }
-    );
+    gsap.from(photo.current, {
+      x: "-60px",
+      duration: 1,
+      opacity: 0,
+      ease: "circ.out",
+    });
   });
 
   return (

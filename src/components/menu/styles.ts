@@ -39,7 +39,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   fixedList: {
     boxShadow: "0 10px 20px -10px #000",
-    height: 80,
+    height: 70,
   },
 }));
 
