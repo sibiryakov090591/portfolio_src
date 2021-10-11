@@ -41,6 +41,13 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     boxShadow: "0 10px 20px -10px #000",
     height: 70,
   },
+  burgerWrapper: {
+    position: "relative",
+  },
+  burgerIcon: {
+    color: theme.palette.text.green,
+    fontSize: 50,
+  },
 }));
 
 export default "styles";

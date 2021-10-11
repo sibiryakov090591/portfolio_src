@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useStyles } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-scroll";
 import { gsap } from "gsap";
+import BlurOnIcon from "@material-ui/icons/BlurOn";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -36,6 +37,9 @@ const Menu: React.FC = () => {
         scrollTop > 60 ? classes.fixedList : ""
       }`}
     >
+      <div className={classes.burgerWrapper}>
+        <BlurOnIcon className={classes.burgerIcon} />
+      </div>
       <ul className={classes.topList}>
         <Link
           to="skills"

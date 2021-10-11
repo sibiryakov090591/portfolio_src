@@ -16,6 +16,10 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   heroInner: {
     display: "flex",
     position: "relative",
+    "@media screen and (max-width: 450px)": {
+      flexDirection: "column",
+      alignItems: "center",
+    },
   },
   presentation: {
     position: "absolute",
@@ -31,8 +35,10 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
       right: "-35px",
     },
     "@media screen and (max-width: 450px)": {
-      fontSize: 20,
-      width: 300,
+      position: "initial",
+      fontSize: 24,
+      width: 215,
+      alignSelf: "end",
     },
   },
   photo: {
@@ -43,6 +49,11 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     height: 300,
     "@media screen and (max-width: 900px)": {
       marginBottom: 40,
+    },
+    "@media screen and (max-width: 450px)": {
+      width: 250,
+      height: 250,
+      marginBottom: 0,
     },
   },
 }));
