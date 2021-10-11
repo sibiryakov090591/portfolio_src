@@ -17,6 +17,10 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "center",
     maxWidth: 800,
     padding: 30,
+    "@media screen and (max-width: 615px)": {
+      flexDirection: "column",
+      maxWidth: 430,
+    },
   },
   title: {
     fontSize: 18,
@@ -30,6 +34,9 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     wordBreak: "break-word",
     color: theme.palette.text.primary,
     width: 600,
+    "@media screen and (max-width: 900px)": {
+      width: "auto",
+    },
   },
   iconWrapper: {
     border: `8px solid ${theme.palette.app.grey500}`,
@@ -41,6 +48,9 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    "@media screen and (max-width: 615px)": {
+      marginBottom: 20,
+    },
   },
   icon: {
     height: "100%",
