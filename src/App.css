@@ -18,3 +18,16 @@ body {
 .typewriterCursor {
     display: none;
 }
+
+#main {
+    transition: filter 250ms ease;
+}
+
+.blur {
+    filter: blur(5px) brightness(0.7);
+}
+
+.stopScroll {
+    height: 100%;
+    overflow: hidden;
+}

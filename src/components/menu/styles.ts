@@ -1,7 +1,8 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "../../themes/paletteTypes";
+import { Theme } from "@material-ui/core/styles/createTheme";
 
-export const useStyles = makeStyles((theme: AppTheme) => ({
+export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   wrapper: {
     display: "flex",
     alignItems: "center",
@@ -21,6 +22,9 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     marginRight: 80,
     color: theme.palette.text.secondary,
     transition: "all 300ms ease",
+    [theme.breakpoints.down(901)]: {
+      display: "none",
+    },
   },
   topItem: {
     cursor: "pointer",
@@ -45,8 +49,19 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     position: "relative",
   },
   burgerIcon: {
+    display: "none",
     color: theme.palette.text.green,
     fontSize: 50,
+    marginRight: 20,
+    cursor: "pointer",
+    [theme.breakpoints.down(901)]: {
+      display: "block",
+    },
+  },
+  mobileMenuWrapper: {
+    height: "100vh",
+    overflow: "hidden",
+    filter: "blur(5px) brightness(0.7)",
   },
 }));
 

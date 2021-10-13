@@ -10,6 +10,7 @@ const Menu: React.FC = () => {
   const classes = useStyles();
 
   const [scrollTop, setScrollTop] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => setScrollTop(window.pageYOffset));
@@ -31,65 +32,82 @@ const Menu: React.FC = () => {
     });
   }, []);
 
+  const toggleMobileMenuHandler = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      window.document.body.classList.add("stopScroll");
+      window.document.querySelector("#main")?.classList.add("blur");
+    } else {
+      window.document.body.classList.remove("stopScroll");
+      window.document.querySelector("#main")?.classList.remove("blur");
+    }
+  };
+
   return (
     <header
       className={`${classes.wrapper} ${
         scrollTop > 60 ? classes.fixedList : ""
       }`}
     >
-      <div className={classes.burgerWrapper}>
+      {/*Mobile*/}
+      <div onClick={toggleMobileMenuHandler} className={classes.burgerWrapper}>
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
-      <ul className={classes.topList}>
-        <Link
-          to="skills"
-          offset={-60}
-          smooth={true}
-          spy={true}
-          duration={600}
-          className={classes.topItem}
-        >
-          <li id="menu_item">
-            <span className={classes.topItemIndex}>01.</span>Skills
-          </li>
-        </Link>
-        <Link
-          to="projects"
-          offset={-60}
-          smooth={true}
-          spy={true}
-          duration={600}
-          className={classes.topItem}
-        >
-          <li id="menu_item">
-            <span className={classes.topItemIndex}>02.</span>Projects
-          </li>
-        </Link>
-        <Link
-          to="resume"
-          offset={-60}
-          smooth={true}
-          spy={true}
-          duration={600}
-          className={classes.topItem}
-        >
-          <li id="menu_item">
-            <span className={classes.topItemIndex}>03.</span>Resume
-          </li>
-        </Link>
-        <Link
-          to="contact"
-          offset={-60}
-          smooth={true}
-          spy={true}
-          duration={600}
-          className={classes.topItem}
-        >
-          <li id="menu_item">
-            <span className={classes.topItemIndex}>04.</span>Text me
-          </li>
-        </Link>
-      </ul>
+      <div className={classes.mobileMenuWrapper}></div>
+
+      {/*Desktop*/}
+      <nav className={classes.topList}>
+        <ul>
+          <Link
+            to="skills"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>01.</span>Skills
+            </li>
+          </Link>
+          <Link
+            to="projects"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>02.</span>Projects
+            </li>
+          </Link>
+          <Link
+            to="resume"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>03.</span>Resume
+            </li>
+          </Link>
+          <Link
+            to="contact"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>04.</span>Text me
+            </li>
+          </Link>
+        </ul>
+      </nav>
     </header>
   );
 };

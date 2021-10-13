@@ -15,13 +15,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Menu />
-      <Socials />
-      <Hero />
-      <Skills />
-      <Projects />
-      <HireMe />
-      <Contacts />
-      <Footer />
+      <main id="main">
+        <Socials />
+        <Hero />
+        <Skills />
+        <Projects />
+        <HireMe />
+        <Contacts />
+        <Footer />
+      </main>
     </ThemeProvider>
   );
 }
