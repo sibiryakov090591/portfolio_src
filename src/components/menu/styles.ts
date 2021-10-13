@@ -60,8 +60,15 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   mobileMenuWrapper: {
     height: "100vh",
-    overflow: "hidden",
-    filter: "blur(5px) brightness(0.7)",
+    position: "absolute",
+    top: 0,
+    right: 0,
+    transition: "all 300ms ease",
+    transform: "translateX(100%)",
+  },
+  mobileList: {},
+  active: {
+    transform: "translateX(0)",
   },
 }));
 

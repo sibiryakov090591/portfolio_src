@@ -32,8 +32,7 @@ const Menu: React.FC = () => {
     });
   }, []);
 
-  const toggleMobileMenuHandler = () => {
-    setIsOpen(!isOpen);
+  useEffect(() => {
     if (isOpen) {
       window.document.body.classList.add("stopScroll");
       window.document.querySelector("#main")?.classList.add("blur");
@@ -41,6 +40,10 @@ const Menu: React.FC = () => {
       window.document.body.classList.remove("stopScroll");
       window.document.querySelector("#main")?.classList.remove("blur");
     }
+  }, [isOpen]);
+
+  const toggleMobileMenuHandler = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -53,7 +56,68 @@ const Menu: React.FC = () => {
       <div onClick={toggleMobileMenuHandler} className={classes.burgerWrapper}>
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
-      <div className={classes.mobileMenuWrapper}></div>
+      <div
+        className={`${classes.mobileMenuWrapper} ${
+          isOpen ? classes.active : ""
+        }`}
+      >
+        <nav className={classes.mobileList}>
+          <ul>
+            <Link
+              onClick={toggleMobileMenuHandler}
+              to="skills"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>01.</span>Skills
+              </li>
+            </Link>
+            <Link
+              onClick={toggleMobileMenuHandler}
+              to="projects"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>02.</span>Projects
+              </li>
+            </Link>
+            <Link
+              onClick={toggleMobileMenuHandler}
+              to="resume"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>03.</span>Resume
+              </li>
+            </Link>
+            <Link
+              onClick={toggleMobileMenuHandler}
+              to="contact"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>04.</span>Text me
+              </li>
+            </Link>
+          </ul>
+        </nav>
+      </div>
 
       {/*Desktop*/}
       <nav className={classes.topList}>
