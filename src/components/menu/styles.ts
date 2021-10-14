@@ -67,7 +67,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   burgerIcon: {
     display: "none",
     color: theme.palette.text.green,
-    fontSize: 50,
+    fontSize: 60,
     marginRight: 20,
     cursor: "pointer",
     [theme.breakpoints.down(901)]: {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useStyles } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,6 +8,8 @@ import BlurOnIcon from "@material-ui/icons/BlurOn";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
+
+  const burgerRef = useRef(null);
 
   const [scrollTop, setScrollTop] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +25,7 @@ const Menu: React.FC = () => {
 
   useEffect(() => {
     const tl = gsap.timeline();
+    const tlBurger = gsap.timeline();
     tl.from("#menu_item", {
       stagger: 0.1,
       ease: "circ.out",
@@ -53,7 +56,11 @@ const Menu: React.FC = () => {
       }`}
     >
       {/*Mobile*/}
-      <div onClick={toggleMobileMenuHandler} className={classes.burgerWrapper}>
+      <div
+        ref={burgerRef}
+        onClick={toggleMobileMenuHandler}
+        className={classes.burgerWrapper}
+      >
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
       <div
