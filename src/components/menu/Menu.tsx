@@ -70,10 +70,10 @@ const Menu: React.FC = () => {
               smooth={true}
               spy={true}
               duration={600}
-              className={classes.topItem}
+              className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li id="menu_item">
-                <span className={classes.topItemIndex}>01.</span>Skills
+                <span className={classes.topItemIndexMobile}>01.</span>Skills
               </li>
             </Link>
             <Link
@@ -83,10 +83,10 @@ const Menu: React.FC = () => {
               smooth={true}
               spy={true}
               duration={600}
-              className={classes.topItem}
+              className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li id="menu_item">
-                <span className={classes.topItemIndex}>02.</span>Projects
+                <span className={classes.topItemIndexMobile}>02.</span>Projects
               </li>
             </Link>
             <Link
@@ -96,10 +96,10 @@ const Menu: React.FC = () => {
               smooth={true}
               spy={true}
               duration={600}
-              className={classes.topItem}
+              className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li id="menu_item">
-                <span className={classes.topItemIndex}>03.</span>Resume
+                <span className={classes.topItemIndexMobile}>03.</span>Resume
               </li>
             </Link>
             <Link
@@ -109,10 +109,10 @@ const Menu: React.FC = () => {
               smooth={true}
               spy={true}
               duration={600}
-              className={classes.topItem}
+              className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li id="menu_item">
-                <span className={classes.topItemIndex}>04.</span>Text me
+                <span className={classes.topItemIndexMobile}>04.</span>Text me
               </li>
             </Link>
           </ul>
@@ -120,8 +120,8 @@ const Menu: React.FC = () => {
       </div>
 
       {/*Desktop*/}
-      <nav className={classes.topList}>
-        <ul>
+      <nav>
+        <ul className={classes.topList}>
           <Link
             to="skills"
             offset={-60}

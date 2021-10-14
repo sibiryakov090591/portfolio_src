@@ -27,6 +27,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
   },
   topItem: {
+    color: theme.palette.text.secondary,
     cursor: "pointer",
     padding: "30px 0",
     transition: "all 300ms ease",
@@ -37,9 +38,22 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
       marginRight: 40,
     },
   },
+  topItemMobile: {
+    fontSize: 22,
+    "& li": {
+      marginBottom: 25,
+    },
+  },
   topItemIndex: {
     color: theme.palette.text.green,
     marginRight: 6,
+  },
+  topItemIndexMobile: {
+    display: "block",
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 5,
+    color: theme.palette.text.green,
   },
   fixedList: {
     boxShadow: "0 10px 20px -10px #000",
@@ -59,14 +73,22 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
   },
   mobileMenuWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: `linear-gradient(90deg,transparent 0%,${theme.palette.background.dark} 20%)`,
     height: "100vh",
     position: "absolute",
     top: 0,
     right: 0,
-    transition: "all 300ms ease",
+    width: "60%",
+    transition: "all 400ms ease",
     transform: "translateX(100%)",
   },
-  mobileList: {},
+  mobileList: {
+    textAlign: "center",
+    marginLeft: 50,
+  },
   active: {
     transform: "translateX(0)",
   },
