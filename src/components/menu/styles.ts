@@ -60,8 +60,10 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     height: 70,
   },
   burgerWrapper: {
-    position: "relative",
+    padding: 10,
+    zIndex: 100,
   },
+  burgerWrapperActive: {},
   burgerIcon: {
     display: "none",
     color: theme.palette.text.green,
@@ -88,6 +90,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   mobileList: {
     textAlign: "center",
     marginLeft: 50,
+    width: "100%",
   },
   active: {
     transform: "translateX(0)",
