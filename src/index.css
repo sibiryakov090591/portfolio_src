@@ -1,6 +1,24 @@
 @import-normalize;
 
 @font-face{
+  font-family: 'Orbitron';
+  src: url('./fonts/orbitron/Orbitron-Bold.ttf');
+  src: url('./fonts/orbitron/Orbitron-Bold.woff2') format('woff2'),
+  url('./fonts/orbitron/Orbitron-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Orbitron';
+  src: url('./fonts/orbitron/Orbitron-Medium.ttf');
+  src: url('./fonts/orbitron/Orbitron-Medium.woff2') format('woff2'),
+  url('./fonts/orbitron/Orbitron-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
   font-family: 'Nunito Sans';
   src: url('./fonts/NunitoSans-Black.eot');
   src: url('./fonts/NunitoSans-Black.eot?iefix') format('eot'),

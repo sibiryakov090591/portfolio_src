@@ -8,6 +8,8 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   index: {
     color: theme.palette.text.green,
+    fontFamily: "Orbitron",
+    fontWeight: 400,
   },
 }));
 

@@ -48,11 +48,12 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   topItemIndex: {
     color: theme.palette.text.green,
     marginRight: 6,
+    fontFamily: "Orbitron",
+    fontWeight: 600,
   },
   topItemIndexMobile: {
     display: "block",
     fontSize: 20,
-    fontWeight: "bold",
     marginBottom: 5,
     color: theme.palette.text.green,
   },
