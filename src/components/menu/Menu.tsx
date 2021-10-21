@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -63,68 +64,76 @@ const Menu: React.FC = () => {
       >
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
-      <div
-        className={`${classes.mobileMenuWrapper} ${
-          isOpen ? classes.active : ""
-        }`}
-      >
-        <nav className={classes.mobileList}>
-          <ul>
-            <Link
-              onClick={toggleMobileMenuHandler}
-              to="skills"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndexMobile}>01.</span>Skills
-              </li>
-            </Link>
-            <Link
-              onClick={toggleMobileMenuHandler}
-              to="projects"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndexMobile}>02.</span>Projects
-              </li>
-            </Link>
-            <Link
-              onClick={toggleMobileMenuHandler}
-              to="resume"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndexMobile}>03.</span>Resume
-              </li>
-            </Link>
-            <Link
-              onClick={toggleMobileMenuHandler}
-              to="contact"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndexMobile}>04.</span>Text me
-              </li>
-            </Link>
-          </ul>
-        </nav>
-      </div>
+      {isOpen && (
+        <ClickAwayListener onClickAway={toggleMobileMenuHandler}>
+          <div
+            className={`${classes.mobileMenuWrapper} ${
+              isOpen ? classes.active : ""
+            }`}
+          >
+            <nav className={classes.mobileList}>
+              <ul style={{ padding: 0 }}>
+                <Link
+                  onClick={toggleMobileMenuHandler}
+                  to="skills"
+                  offset={-60}
+                  smooth={true}
+                  spy={true}
+                  duration={600}
+                  className={`${classes.topItem} ${classes.topItemMobile}`}
+                >
+                  <li id="menu_item">
+                    <span className={classes.topItemIndexMobile}>01.</span>
+                    Skills
+                  </li>
+                </Link>
+                <Link
+                  onClick={toggleMobileMenuHandler}
+                  to="projects"
+                  offset={-60}
+                  smooth={true}
+                  spy={true}
+                  duration={600}
+                  className={`${classes.topItem} ${classes.topItemMobile}`}
+                >
+                  <li id="menu_item">
+                    <span className={classes.topItemIndexMobile}>02.</span>
+                    Projects
+                  </li>
+                </Link>
+                <Link
+                  onClick={toggleMobileMenuHandler}
+                  to="resume"
+                  offset={-60}
+                  smooth={true}
+                  spy={true}
+                  duration={600}
+                  className={`${classes.topItem} ${classes.topItemMobile}`}
+                >
+                  <li id="menu_item">
+                    <span className={classes.topItemIndexMobile}>03.</span>
+                    Resume
+                  </li>
+                </Link>
+                <Link
+                  onClick={toggleMobileMenuHandler}
+                  to="contact"
+                  offset={-60}
+                  smooth={true}
+                  spy={true}
+                  duration={600}
+                  className={`${classes.topItem} ${classes.topItemMobile}`}
+                >
+                  <li id="menu_item">
+                    <span className={classes.topItemIndexMobile}>04.</span>Text
+                    me
+                  </li>
+                </Link>
+              </ul>
+            </nav>
+          </div>
+        </ClickAwayListener>
+      )}
 
       {/*Desktop*/}
       <nav>

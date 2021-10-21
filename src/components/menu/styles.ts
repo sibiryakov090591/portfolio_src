@@ -42,6 +42,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     fontSize: 22,
     "& li": {
       marginBottom: 25,
+      paddingLeft: 50,
     },
   },
   topItemIndex: {
@@ -89,7 +90,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   mobileList: {
     textAlign: "center",
-    marginLeft: 50,
     width: "100%",
   },
   active: {
