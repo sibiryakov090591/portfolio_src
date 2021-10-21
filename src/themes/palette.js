@@ -33,6 +33,7 @@ export default {
   },
 
   app: {
+    red600: "#e71238",
     red500: "#E94160",
     red400: "#F07188",
     red300: "#F797AB",
