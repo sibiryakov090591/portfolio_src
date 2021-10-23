@@ -77,6 +77,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
   },
   mobileMenuWrapper: {
+    zIndex: 10,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -96,6 +97,14 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   active: {
     transform: "translateX(0)",
   },
+  mask: {
+    height: "100vh",
+    position: "absolute",
+    top: 0,
+    right: 0,
+    left: 0,
+  },
+  activeMask: {},
 }));
 
 export default "styles";
