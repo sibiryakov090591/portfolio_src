@@ -64,7 +64,9 @@ const Menu: React.FC = () => {
       >
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
-      <div onClick={toggleMobileMenuHandler} className={classes.mask}></div>
+      {isOpen && (
+        <div onClick={toggleMobileMenuHandler} className={classes.mask}></div>
+      )}
       <div
         className={`${classes.mobileMenuWrapper} ${
           isOpen ? classes.active : ""
