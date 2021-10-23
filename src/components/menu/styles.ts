@@ -36,13 +36,21 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
     "&:not(:last-child)": {
       marginRight: 40,
+      [theme.breakpoints.down(901)]: {
+        marginRight: 0,
+      },
     },
   },
   topItemMobile: {
+    display: "block",
     fontSize: 22,
+    marginRight: 0,
+    padding: 0,
+    "&:not(:last-child)": {
+      borderBottom: `3px dashed darkorchid`,
+    },
     "& li": {
-      marginBottom: 25,
-      paddingLeft: 50,
+      padding: "30px 50px",
     },
   },
   topItemIndex: {
@@ -56,6 +64,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     fontSize: 20,
     marginBottom: 5,
     color: theme.palette.text.green,
+    fontFamily: "Orbitron",
+    fontWeight: 600,
   },
   fixedList: {
     boxShadow: "0 10px 20px -10px #000",
@@ -86,12 +96,13 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     position: "absolute",
     top: 0,
     right: 0,
-    width: "60%",
+    width: "50%",
     transition: "all 400ms ease",
     transform: "translateX(100%)",
+    paddingLeft: 100,
   },
   mobileList: {
-    textAlign: "center",
+    textAlign: "start",
     width: "100%",
   },
   active: {
