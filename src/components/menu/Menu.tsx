@@ -39,10 +39,13 @@ const Menu: React.FC = () => {
   useEffect(() => {
     if (isOpen) {
       window.document.body.classList.add("stopScroll");
-      window.document.querySelector("#main")?.classList.add("blur");
+      const mask: any = document.createElement("div");
+      mask?.classList.add("mask");
+      mask?.addEventListener("click", () => setIsOpen(false));
+      window.document.querySelector("#main")?.append(mask);
     } else {
       window.document.body.classList.remove("stopScroll");
-      window.document.querySelector("#main")?.classList.remove("blur");
+      window.document.querySelector(".mask")?.remove();
     }
   }, [isOpen]);
 

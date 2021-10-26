@@ -115,7 +115,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     right: 0,
     left: 0,
   },
-  activeMask: {},
 }));
 
 export default "styles";
