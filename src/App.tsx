@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Hero from "./blocks/hero/Hero";
 import Projects from "./blocks/projects/Projects";
@@ -12,6 +12,12 @@ import Skills from "./blocks/skills/Skills";
 import Menu from "./components/menu/Menu";
 
 function App() {
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Menu />

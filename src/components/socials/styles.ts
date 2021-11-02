@@ -13,6 +13,12 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   img: {
     width: "100%",
+    filter: "grayscale(1)",
+    transition: "all 250ms ease",
+    "&:hover": {
+      // transform: "scale(1) rotate(0)",
+      filter: "grayscale(0)",
+    },
   },
   line: {
     width: 2,
