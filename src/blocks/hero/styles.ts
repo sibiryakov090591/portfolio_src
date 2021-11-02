@@ -26,6 +26,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     bottom: "-55px",
     right: "-85%",
     color: theme.palette.text.green,
+    fontFamily: "Segoe UI",
     fontSize: 24,
     width: 255,
     height: 100,
