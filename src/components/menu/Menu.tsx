@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -26,8 +25,8 @@ const Menu: React.FC = () => {
 
   useEffect(() => {
     const tl = gsap.timeline();
-    const tlBurger = gsap.timeline();
     tl.from("#menu_item", {
+      delay: 4.6,
       stagger: 0.1,
       ease: "circ.out",
       opacity: 0,

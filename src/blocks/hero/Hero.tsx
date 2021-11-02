@@ -11,8 +11,9 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     gsap.from(photo.current, {
-      x: "-60px",
-      duration: 1,
+      delay: 0.3,
+      x: "-20px",
+      duration: 1.5,
       opacity: 0,
       ease: "circ.out",
     });
@@ -31,7 +32,7 @@ const Hero: React.FC = () => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .pauseFor(1300)
+                  .pauseFor(2000)
                   .typeString("Hi")
                   .pauseFor(500)
                   .typeString(", <br/> I`m Andrew")
