@@ -19,6 +19,16 @@ const Hero: React.FC = () => {
     });
   });
 
+  useEffect(() => {
+    window.document.body.classList.add("stopScroll");
+    setTimeout(() => {
+      window.document.body.classList.remove("stopScroll");
+    }, 6500);
+    return () => {
+      window.document.body.classList.remove("stopScroll");
+    };
+  }, []);
+
   return (
     <section className={classes.hero}>
       <Box className={classes.heroContainer}>
@@ -32,7 +42,7 @@ const Hero: React.FC = () => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .pauseFor(2000)
+                  .pauseFor(1700)
                   .typeString("Hi")
                   .pauseFor(500)
                   .typeString(", <br/> I`m Andrew")
