@@ -1,6 +1,4 @@
 {
-  "homepage": "https://sibiryakov090591.github.io/portfolio",
-  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,6 +23,7 @@
     "react-scripts": "4.0.2",
     "react-scroll": "^1.8.4",
     "react-slick": "^0.28.1",
+    "serve": "^12.0.1",
     "slick-carousel": "^1.8.1",
     "typescript": "^4.1.2",
     "typewriter-effect": "^2.18.0",

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useStyles } from "./styles";
 import in_icon from "../../images/footer/linkedin.svg";
-import github_icon from "../../images/footer/github.svg";
+import github_icon from "../../images/footer/github_hover.svg";
 import inst_icon from "../../images/footer/instagram.svg";
 import email_icon from "../../images/footer/email.svg";
 import { gsap } from "gsap";
