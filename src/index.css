@@ -1,6 +1,15 @@
 @import-normalize;
 
 @font-face{
+  font-family: 'Play';
+  src: url('./fonts/play/Play-Bold.ttf');
+  src: url('./fonts/play/Play-Bold.woff2') format('woff2'),
+  url('./fonts/play/Play-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
   font-family: 'Orbitron';
   src: url('./fonts/orbitron/Orbitron-Bold.ttf');
   src: url('./fonts/orbitron/Orbitron-Bold.woff2') format('woff2'),

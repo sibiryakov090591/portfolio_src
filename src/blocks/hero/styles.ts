@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     bottom: "-55px",
     right: "-85%",
     color: theme.palette.text.green,
-    fontFamily: "Segoe UI",
+    fontFamily: "Play",
     fontSize: 24,
     width: 255,
     height: 100,
@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   photo: {
-    background: `center / contain url(${my_photo}) no-repeat`,
+    background: `center / cover url(${my_photo}) no-repeat`,
     borderRadius: "50%",
     overflow: "hidden",
     width: 300,
