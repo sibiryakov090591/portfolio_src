@@ -22,9 +22,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     marginRight: 80,
     color: theme.palette.text.secondary,
     transition: "all 300ms ease",
-    [theme.breakpoints.down(901)]: {
-      display: "none",
-    },
   },
   topItem: {
     color: theme.palette.text.secondary,
@@ -74,17 +71,16 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   burgerWrapper: {
     padding: 10,
     zIndex: 100,
-  },
-  burgerWrapperActive: {},
-  burgerIcon: {
     display: "none",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+    },
+  },
+  burgerIcon: {
     color: theme.palette.text.green,
     fontSize: 60,
     marginRight: 20,
     cursor: "pointer",
-    [theme.breakpoints.down(901)]: {
-      display: "block",
-    },
   },
   mobileMenuWrapper: {
     zIndex: 10,
@@ -100,6 +96,12 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     transition: "all 400ms ease",
     transform: "translateX(100%)",
     paddingLeft: 100,
+    [theme.breakpoints.down("sm")]: {
+      width: "65%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+    },
   },
   mobileList: {
     textAlign: "start",

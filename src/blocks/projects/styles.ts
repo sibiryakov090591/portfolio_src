@@ -6,6 +6,13 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     backgroundColor: theme.palette.background.dark,
     paddingBottom: 50,
   },
+  projectsContainer: {
+    display: "flex !important",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-around",
+    paddingBottom: 50,
+  },
   projectsWrapper: {
     display: "flex",
     justifyContent: "space-around",
@@ -15,13 +22,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
       justifyContent: "center",
       padding: "0 30px",
     },
-  },
-  projectsContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-around",
-    paddingBottom: 50,
   },
 }));
 

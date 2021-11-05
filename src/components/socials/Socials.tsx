@@ -9,8 +9,6 @@ import { gsap } from "gsap";
 const Socials: React.FC = () => {
   const classes = useStyles();
 
-  const line = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     gsap.from("#social_element", {
       delay: 5.5,
@@ -31,7 +29,10 @@ const Socials: React.FC = () => {
     <div className={classes.wrapper}>
       <nav>
         <div id="social_element" className={classes.imgWrapper}>
-          <a href="https://www.instagram.com/sibiryakov_bro/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
+            target="_blank"
+          >
             <img className={classes.img} src={in_icon} alt="social_icon_in" />
           </a>
         </div>
@@ -45,10 +46,7 @@ const Socials: React.FC = () => {
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
-          <a
-            href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/sibiryakov_bro/" target="_blank">
             <img
               className={classes.img}
               src={inst_icon}

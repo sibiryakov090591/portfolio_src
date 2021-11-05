@@ -16,7 +16,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     filter: "grayscale(1)",
     transition: "all 250ms ease",
     "&:hover": {
-      // transform: "scale(1) rotate(0)",
       filter: "grayscale(0)",
     },
   },

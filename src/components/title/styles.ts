@@ -3,7 +3,8 @@ import { AppTheme } from "../../themes/paletteTypes";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   title: {
-    margin: "50px auto 65px",
+    margin: "0 auto",
+    padding: "50px 0 65px",
     color: theme.palette.text.secondary,
   },
   index: {

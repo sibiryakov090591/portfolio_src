@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
+import { Hidden } from "@material-ui/core";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -136,58 +137,60 @@ const Menu: React.FC = () => {
       </div>
 
       {/*Desktop*/}
-      <nav>
-        <ul className={classes.topList}>
-          <Link
-            to="skills"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>01.</span>Skills
-            </li>
-          </Link>
-          <Link
-            to="projects"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>02.</span>Projects
-            </li>
-          </Link>
-          <Link
-            to="resume"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>03.</span>Resume
-            </li>
-          </Link>
-          <Link
-            to="contact"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>04.</span>Text me
-            </li>
-          </Link>
-        </ul>
-      </nav>
+      <Hidden smDown>
+        <nav>
+          <ul className={classes.topList}>
+            <Link
+              to="skills"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>01.</span>Skills
+              </li>
+            </Link>
+            <Link
+              to="projects"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>02.</span>Projects
+              </li>
+            </Link>
+            <Link
+              to="resume"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>03.</span>Resume
+              </li>
+            </Link>
+            <Link
+              to="contact"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>04.</span>Text me
+              </li>
+            </Link>
+          </ul>
+        </nav>
+      </Hidden>
     </header>
   );
 };
