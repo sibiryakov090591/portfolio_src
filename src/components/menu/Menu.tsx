@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
 
   useEffect(() => {
     const tl = gsap.timeline();
-    gsap.from("#menu_item", {
+    tl.from("#menu_item", {
       delay: 4.6,
       stagger: 0.1,
       ease: "circ.out",
@@ -147,60 +147,58 @@ const Menu: React.FC = () => {
       </div>
 
       {/*Desktop*/}
-      <Hidden smDown>
-        <nav>
-          <ul className={classes.topList}>
-            <Link
-              to="skills"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>01.</span>Skills
-              </li>
-            </Link>
-            <Link
-              to="projects"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>02.</span>Projects
-              </li>
-            </Link>
-            <Link
-              to="resume"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>03.</span>Resume
-              </li>
-            </Link>
-            <Link
-              to="contact"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>04.</span>Text me
-              </li>
-            </Link>
-          </ul>
-        </nav>
-      </Hidden>
+      <nav className={classes.desktopMenu}>
+        <ul className={classes.topList}>
+          <Link
+            to="skills"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>01.</span>Skills
+            </li>
+          </Link>
+          <Link
+            to="projects"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>02.</span>Projects
+            </li>
+          </Link>
+          <Link
+            to="resume"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>03.</span>Resume
+            </li>
+          </Link>
+          <Link
+            to="contact"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>04.</span>Text me
+            </li>
+          </Link>
+        </ul>
+      </nav>
     </header>
   );
 };

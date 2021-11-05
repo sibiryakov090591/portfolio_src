@@ -20,6 +20,11 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
       height: 80,
     },
   },
+  desktopMenu: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
   topList: {
     display: "flex",
     marginRight: 80,
@@ -51,6 +56,12 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
     "& li": {
       padding: "30px 50px",
+      [theme.breakpoints.down("xs")]: {
+        padding: "25px 45px",
+      },
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 18,
     },
   },
   topItemIndex: {
@@ -66,6 +77,9 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     color: theme.palette.text.green,
     fontFamily: "Orbitron",
     fontWeight: 600,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 16,
+    },
   },
   fixedList: {
     boxShadow: "0 10px 20px -10px #000",
@@ -80,6 +94,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     display: "none",
     [theme.breakpoints.down("sm")]: {
       display: "flex",
+      position: "absolute",
+      right: 0,
     },
   },
   burgerIcon: {
