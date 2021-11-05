@@ -16,6 +16,9 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     backgroundColor: "rgba(10, 25, 47, 0.65)",
     backdropFilter: "blur(10px)",
     transition: "all 300ms ease",
+    [theme.breakpoints.down("sm")]: {
+      height: 80,
+    },
   },
   topList: {
     display: "flex",
@@ -33,7 +36,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
     "&:not(:last-child)": {
       marginRight: 40,
-      [theme.breakpoints.down(901)]: {
+      [theme.breakpoints.down("sm")]: {
         marginRight: 0,
       },
     },
@@ -44,7 +47,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     marginRight: 0,
     padding: 0,
     "&:not(:last-child)": {
-      borderBottom: `3px dashed darkorchid`,
+      borderBottom: `1px dashed darkorchid`,
     },
     "& li": {
       padding: "30px 50px",
@@ -67,13 +70,16 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   fixedList: {
     boxShadow: "0 10px 20px -10px #000",
     height: 70,
+    [theme.breakpoints.down("sm")]: {
+      height: 90,
+    },
   },
   burgerWrapper: {
     padding: 10,
     zIndex: 100,
     display: "none",
     [theme.breakpoints.down("sm")]: {
-      display: "block",
+      display: "flex",
     },
   },
   burgerIcon: {
@@ -87,20 +93,19 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: `linear-gradient(90deg,transparent 0%,${theme.palette.background.dark} 20%)`,
+    background: theme.palette.background.dark,
     height: "100vh",
     position: "absolute",
     top: 0,
     right: 0,
-    width: "50%",
+    width: "40%",
     transition: "all 400ms ease",
     transform: "translateX(100%)",
-    paddingLeft: 100,
     [theme.breakpoints.down("sm")]: {
-      width: "65%",
+      width: "50%",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "100%",
+      width: "65%",
     },
   },
   mobileList: {

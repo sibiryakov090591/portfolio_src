@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
 
   useEffect(() => {
     const tl = gsap.timeline();
-    tl.from("#menu_item", {
+    gsap.from("#menu_item", {
       delay: 4.6,
       stagger: 0.1,
       ease: "circ.out",
@@ -34,14 +34,24 @@ const Menu: React.FC = () => {
       y: "-40px",
       duration: 0.6,
     });
+    tl.from(burgerRef.current, {
+      delay: 4.6,
+      ease: "circ.out",
+      y: -100,
+      duration: 0,
+    });
+    tl.from(burgerRef.current, {
+      opacity: 0,
+      duration: 0.6,
+    });
   }, []);
 
   useEffect(() => {
     if (isOpen) {
       window.document.body.classList.add("stopScroll");
-      const mask: any = document.createElement("div");
-      mask?.classList.add("mask");
-      mask?.addEventListener("click", () => setIsOpen(false));
+      const mask = document.createElement("div");
+      mask.classList.add("mask");
+      mask.addEventListener("click", () => setIsOpen(false));
       window.document.querySelector("#main")?.append(mask);
     } else {
       window.document.body.classList.remove("stopScroll");
@@ -86,7 +96,7 @@ const Menu: React.FC = () => {
               duration={600}
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
-              <li id="menu_item">
+              <li>
                 <span className={classes.topItemIndexMobile}>01.</span>
                 Skills
               </li>
@@ -100,7 +110,7 @@ const Menu: React.FC = () => {
               duration={600}
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
-              <li id="menu_item">
+              <li>
                 <span className={classes.topItemIndexMobile}>02.</span>
                 Projects
               </li>
@@ -114,7 +124,7 @@ const Menu: React.FC = () => {
               duration={600}
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
-              <li id="menu_item">
+              <li>
                 <span className={classes.topItemIndexMobile}>03.</span>
                 Resume
               </li>
@@ -128,7 +138,7 @@ const Menu: React.FC = () => {
               duration={600}
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
-              <li id="menu_item">
+              <li>
                 <span className={classes.topItemIndexMobile}>04.</span>Text me
               </li>
             </Link>
