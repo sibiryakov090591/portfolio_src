@@ -19,6 +19,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     "@media screen and (max-width: 450px)": {
       flexDirection: "column",
       alignItems: "center",
+      justifyContent: "center",
     },
   },
   presentation: {
@@ -38,7 +39,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     "@media screen and (max-width: 450px)": {
       position: "initial",
       fontSize: 24,
-      width: 215,
+      width: 160,
       alignSelf: "end",
     },
   },

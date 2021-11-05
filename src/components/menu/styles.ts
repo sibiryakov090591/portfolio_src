@@ -6,7 +6,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   wrapper: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "end",
+    justifyContent: "space-between",
+    padding: "0 20px",
     zIndex: 2,
     position: "fixed",
     top: 0,
@@ -19,6 +20,14 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: 80,
     },
+  },
+  logoWrapper: {
+    cursor: "pointer",
+    width: 55,
+    height: 55,
+  },
+  img: {
+    width: "100%",
   },
   desktopMenu: {
     [theme.breakpoints.down("sm")]: {
@@ -89,19 +98,16 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
   },
   burgerWrapper: {
-    padding: 10,
+    transform: "translateY(-100px)",
     zIndex: 100,
     display: "none",
     [theme.breakpoints.down("sm")]: {
       display: "flex",
-      position: "absolute",
-      right: 0,
     },
   },
   burgerIcon: {
     color: theme.palette.text.green,
     fontSize: 60,
-    marginRight: 20,
     cursor: "pointer",
   },
   mobileMenuWrapper: {

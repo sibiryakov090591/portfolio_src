@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
-import { Hidden } from "@material-ui/core";
+import logo from "../../images/logo.svg";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -34,13 +34,21 @@ const Menu: React.FC = () => {
       y: "-40px",
       duration: 0.6,
     });
-    tl.from(burgerRef.current, {
+  }, []);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.to(burgerRef.current, {
       delay: 4.6,
       ease: "circ.out",
-      y: -100,
+      y: 0,
       duration: 0,
     });
     tl.from(burgerRef.current, {
+      opacity: 0,
+      duration: 0.6,
+    });
+    tl.from("#logo", {
       opacity: 0,
       duration: 0.6,
     });
@@ -69,6 +77,15 @@ const Menu: React.FC = () => {
         scrollTop > 60 ? classes.fixedList : ""
       }`}
     >
+      <div
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        id="logo"
+        className={classes.logoWrapper}
+      >
+        <img className={classes.img} src={logo} alt="logo" />
+      </div>
       {/*Mobile*/}
       <div
         ref={burgerRef}
