@@ -46,7 +46,7 @@ const Socials: React.FC = () => {
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
-          <a href="https://www.instagram.com/sibiryakov_bro/" target="_blank">
+          <a href="https://www.instagram.com/andrewsib/" target="_blank">
             <img
               className={classes.img}
               src={inst_icon}
@@ -59,7 +59,7 @@ const Socials: React.FC = () => {
             <img
               className={classes.img}
               src={email_icon}
-              alt="social_icon_instagram"
+              alt="social_icon_email"
             />
           </a>
         </div>

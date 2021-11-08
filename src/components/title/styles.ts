@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.text.secondary,
   },
   index: {
-    color: theme.palette.text.green,
+    color: theme.palette.background.green,
     fontFamily: "Orbitron",
     fontWeight: 400,
   },

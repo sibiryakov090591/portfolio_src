@@ -5,8 +5,6 @@ import Projects from "./blocks/projects/Projects";
 import HireMe from "./blocks/hire-me/HireMe";
 import Contacts from "./blocks/contacts/Contacts";
 import Footer from "./blocks/footer/Footer";
-import theme from "./themes";
-import { ThemeProvider } from "@material-ui/core";
 import Skills from "./blocks/skills/Skills";
 import Menu from "./components/menu/Menu";
 
@@ -18,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
+    <React.Fragment>
       <Menu />
       <main id="main">
         <Hero />
@@ -28,7 +26,7 @@ function App() {
         <Contacts />
         <Footer />
       </main>
-    </ThemeProvider>
+    </React.Fragment>
   );
 }
 
