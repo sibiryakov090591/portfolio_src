@@ -77,15 +77,12 @@ const Menu: React.FC = () => {
         scrollTop > 60 ? classes.fixedList : ""
       }`}
     >
-      <div
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-        id="logo"
-        className={classes.logoWrapper}
-      >
-        <img className={classes.img} src={logo} alt="logo" />
+      <div id="logo" className={classes.logoWrapper}>
+        <Link to="hero" smooth={true} spy={true} duration={600}>
+          <img className={classes.img} src={logo} alt="logo" />
+        </Link>
       </div>
+
       {/*Mobile*/}
       <div
         ref={burgerRef}

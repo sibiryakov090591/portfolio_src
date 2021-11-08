@@ -23,8 +23,9 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   logoWrapper: {
     cursor: "pointer",
-    width: 55,
-    height: 55,
+    width: 45,
+    height: 45,
+    marginLeft: 21,
   },
   img: {
     width: "100%",

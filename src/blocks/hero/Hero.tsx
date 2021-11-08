@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className={classes.hero}>
+    <section id="hero" className={classes.hero}>
       <Box className={classes.heroContainer}>
         <Box className={classes.heroInner}>
           <div className={classes.photo} ref={photo} />
