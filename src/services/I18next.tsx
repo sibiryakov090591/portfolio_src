@@ -6,12 +6,12 @@ import ruTranslate from "./ru/translation.json";
 
 i18n.use(initReactI18next).init({
   debug: true,
-  load: "languageOnly",
+  // load: "languageOnly",
   lng: localStorage.getItem("locale") || "en",
-  fallbackLng: "en",
-  react: {
-    useSuspense: false,
-  },
+  // fallbackLng: "en",
+  // react: {
+  //   useSuspense: false,
+  // },
   resources: {
     en: { translation: enTranslate },
     ru: { translation: ruTranslate },

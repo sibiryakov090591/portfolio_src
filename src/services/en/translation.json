@@ -6,8 +6,8 @@
     "text_me": "Text me"
   },
   "hero": {
-    "line_1": "Hi,",
-    "line_2": "I`m Andrew,",
+    "line_1": "Hi",
+    "line_2": "I`m Andrew",
     "line_3": "and I create UI/UX."
   },
   "skills": {
@@ -28,5 +28,11 @@
       "text_1": "What tools were used: React / Redux, React-router-dom, Material ui, Styled component, I18next, React Hook Form, Axios, Stripe",
       "text_2": "This is a marketplace - a commercial project of electronic components, team development."
     }
+  },
+  "contacts": {
+    "button": "Send",
+    "name": "Name",
+    "email": "E-mail",
+    "textarea": "This functionality are develop"
   }
 }

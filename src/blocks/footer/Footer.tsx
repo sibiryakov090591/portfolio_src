@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </Hidden>
-        <div>© 2021 Copyright.</div>
+        <div>© 2021 Andrew Sib.</div>
       </Container>
     </footer>
   );

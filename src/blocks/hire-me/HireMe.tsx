@@ -12,9 +12,11 @@ import lang_en from "../../images/lang_en.svg";
 import lang_ru from "../../images/lang_ru.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useI18n } from "../../services/I18next";
 
 const HireMe: React.FC = () => {
   const classes = useStyles();
+  const { t } = useI18n("menu");
 
   const elem_1 = useRef<HTMLDivElement>(null);
   const elem_2 = useRef<HTMLDivElement>(null);
@@ -59,7 +61,7 @@ const HireMe: React.FC = () => {
   return (
     <section id="resume" className={classes.hire}>
       <Container className={classes.hireContainer}>
-        <Title title="Download resume" index="03" />
+        <Title title={t("resume")} index="03" />
 
         <Box className={classes.wrapper}>
           <div

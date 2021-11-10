@@ -9,6 +9,7 @@ import gsap_logo from "../../images/skills/gsap.png";
 import api_logo from "../../images/skills/api_rest.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useI18n } from "../../services/I18next";
 
 const iconAnimation = (ref: any) => {
   gsap.from(ref.current, {
@@ -36,6 +37,7 @@ const textAnimation = (ref: any) => {
 
 const Skills: React.FC = () => {
   const classes = useStyles();
+  const { t } = useI18n("skills");
 
   const skill_1 = useRef<HTMLDivElement>(null);
   const skill_2 = useRef<HTMLDivElement>(null);
@@ -62,21 +64,19 @@ const Skills: React.FC = () => {
     textAnimation(text_3);
     textAnimation(text_4);
     textAnimation(text_5);
-  });
+  }, []);
 
   return (
     <section id="skills" className={classes.skills}>
       <Container className={classes.skillsContainer}>
-        <Title title="Skills" index="01" />
+        <Title title={t("menu.skills")} index="01" />
         <div>
           <div className={classes.wrapper}>
             <div ref={skill_1} className={classes.iconWrapper}>
               <img className={classes.icon} src={react_logo} alt="React.js" />
             </div>
             <p ref={text_1} className={classes.description}>
-              I often use next technologies: React-Redux for state managing,
-              React-Router-Dom for work with routs, Redux-Form and Formik,
-              Redux-Thunk for side-effects.
+              {t("react")}
             </p>
           </div>
 
@@ -89,8 +89,7 @@ const Skills: React.FC = () => {
               />
             </div>
             <p ref={text_2} className={classes.description}>
-              I like statically typed languages because there is so much more
-              time left to code than fix bugs.
+              {t("ts")}
             </p>
           </div>
 
@@ -99,10 +98,7 @@ const Skills: React.FC = () => {
               <img className={classes.icon} src={sass_logo} alt="SASS" />
             </div>
             <p ref={text_3} className={classes.description}>
-              I definitely use sumantic HTML tags, for cross-browser
-              compatibility i use normalize.css and and check the browser
-              support for the tags used (Hello IE!...) And I really enjoy
-              working with animation.
+              {t("sass")}
             </p>
           </div>
 
@@ -111,8 +107,7 @@ const Skills: React.FC = () => {
               <img className={classes.icon} src={gsap_logo} alt="GSAP" />
             </div>
             <p ref={text_4} className={classes.description}>
-              I like greensock (GSAP) library for animation. Today I do easy
-              animation, but i like this and future i want up level the skill.
+              {t("gsap")}
             </p>
           </div>
 
@@ -121,7 +116,7 @@ const Skills: React.FC = () => {
               <img className={classes.icon} src={api_logo} alt="REST API" />
             </div>
             <p ref={text_5} className={classes.description}>
-              For HTTP requests (CRUD operations) I like axios library.
+              {t("rest")}
             </p>
           </div>
         </div>

@@ -9,37 +9,36 @@ import mavik_3 from "../../images/projects/MavikPro/Mavik_3.webp";
 import chip_1 from "../../images/projects/Chipassist/chipassist_1.webp";
 import chip_2 from "../../images/projects/Chipassist/chipassist_2.webp";
 import chip_3 from "../../images/projects/Chipassist/chipassist_3.webp";
+import { useI18n } from "../../services/I18next";
 
 const Projects: React.FC = () => {
   const classes = useStyles();
+  const { t } = useI18n("projects");
 
   return (
     <section id="projects" className={classes.projects}>
       <Container className={classes.projectsContainer}>
-        <Title title="Projects" index="02" />
+        <Title title={t("menu.projects")} index="02" />
         <div className={classes.projectsWrapper}>
           <Project
             images={[mavik_1, mavik_2, , mavik_3]}
-            title="Mavik Pro Landing"
+            title={t("mavik.title")}
             link="https://sibiryakov090591.github.io/Project-Mavik/src/"
           >
-            What tools were used: HTML / SASS, JavaScript, Slick-slider, GSAP
-            for animation, PHPMailer.
+            {t("mavik.text_1")}
             <br />
             <br />
-            This is a landing page with a small animation on the greensock
-            library.
+            {t("mavik.text_2")}
           </Project>
           <Project
             images={[chip_1, chip_2, chip_3]}
-            title="ChipAssist marketplace"
+            title={t("ca.title")}
             link="https://prod.chipassist.com/"
           >
-            What tools were used: React, Material, I18n, React Hook Form, Rest
-            API, Html2Canvas.
+            {t("ca.text_1")}
             <br />
             <br />
-            This is a chip marketplace commercial project, team development.
+            {t("ca.text_2")}
           </Project>
         </div>
       </Container>

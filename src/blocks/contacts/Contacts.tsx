@@ -3,36 +3,38 @@ import Title from "../../components/title/Title";
 import { Container, Button } from "@material-ui/core";
 import { useStyles } from "./styles";
 import useAppTheme from "../../themes/ThemeStyles";
+import { useI18n } from "../../services/I18next";
 
 const Contacts: React.FC = () => {
   const classes = useStyles();
   const appTheme = useAppTheme();
+  const { t } = useI18n("contacts");
 
   return (
     <section id="contact" className={classes.contacts}>
       <Container className={classes.contactsContainer}>
-        <Title title="Text me" index="04" />
+        <Title title={t("menu.text_me")} index="04" />
         <form className={classes.form}>
           <input
             disabled
             className={classes.input}
             type="text"
-            placeholder="Name"
+            placeholder={t("name")}
           />
           <input
             disabled
             className={classes.input}
             type="text"
-            placeholder="E-Mail"
+            placeholder={t("email")}
           />
           <textarea
             disabled
             className={classes.textarea}
-            placeholder="That functionality are develop"
+            placeholder={t("textarea")}
           ></textarea>
         </form>
         <Button disabled className={appTheme.button}>
-          Send
+          {t("button")}
         </Button>
       </Container>
     </section>

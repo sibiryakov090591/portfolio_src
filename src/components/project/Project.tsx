@@ -26,7 +26,7 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
       opacity: 0,
       duration: 1.2,
     });
-  });
+  }, []);
 
   const settings = {
     fade: true,
