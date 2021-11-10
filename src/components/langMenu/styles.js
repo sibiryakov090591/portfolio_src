@@ -6,6 +6,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   langFlag: {
     width: 30,
+    [theme.breakpoints.down("sm")]: {
+      width: 50,
+    },
   },
 }));
 

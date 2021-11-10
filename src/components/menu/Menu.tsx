@@ -9,6 +9,18 @@ import logo from "../../images/logo.svg";
 import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
 import Hidden from "@material-ui/core/Hidden";
+import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
+import Switch, { SwitchClassKey, SwitchProps } from "@material-ui/core/Switch";
+import ru_flag from "../../images/lang_ru.svg";
+import en_flag from "../../images/lang_en.svg";
+
+interface Styles extends Partial<Record<SwitchClassKey, string>> {
+  focusVisible?: string;
+}
+
+interface Props extends SwitchProps {
+  classes: Styles;
+}
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -18,6 +30,7 @@ const Menu: React.FC = () => {
 
   const [scrollTop, setScrollTop] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [lang, setLang] = useState(() => localStorage.getItem("locale"));
 
   useEffect(() => {
     window.addEventListener("scroll", () => setScrollTop(window.pageYOffset));
@@ -88,7 +101,9 @@ const Menu: React.FC = () => {
           </Link>
         </div>
       </Hidden>
+
       <div></div>
+
       {/*Mobile*/}
       <div
         ref={burgerRef}
@@ -165,6 +180,7 @@ const Menu: React.FC = () => {
             </Link>
           </ul>
         </nav>
+        <LangMenu />
       </div>
 
       {/*Desktop*/}

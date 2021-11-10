@@ -5,7 +5,6 @@ import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
 import Popper from "@material-ui/core/Popper";
 import MenuList from "@material-ui/core/MenuList";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import flag_ru from "../../images/lang_ru.svg";
 import flag_en from "../../images/lang_en.svg";
 import { useI18n } from "../../services/I18next";
@@ -53,7 +52,6 @@ const LangMenu = () => {
             ) : (
               <img className={classes.langFlag} src={flag_ru} alt="flag_en" />
             )}
-            <ArrowDropDownIcon />
           </div>
         </div>
       </div>

@@ -112,6 +112,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   mobileMenuWrapper: {
     zIndex: 10,
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     background: theme.palette.background.dark,
@@ -144,7 +145,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     left: 0,
   },
   langWrapper: {
-    marginRight: 20,
+    marginRight: 40,
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
