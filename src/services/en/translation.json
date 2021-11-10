@@ -1,0 +1,32 @@
+{
+  "menu": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "resume": "Resume",
+    "text_me": "Text me"
+  },
+  "hero": {
+    "line_1": "Hi,",
+    "line_2": "I`m Andrew,",
+    "line_3": "and I create UI/UX."
+  },
+  "skills": {
+    "react": "I often use next technologies: React-Redux for state managing, React-Router-Dom for work with routs, Redux-Form and Formik, Redux-Thunk for side-effects.",
+    "ts": "I like statically typed languages because there is so much more time left to code than fix bugs.",
+    "sass": "I use sumantic HTML tags, for cross-browser compatibility I use normalize.css and check the browser support for the tags used (Hello IE!...) And I really like working with animation.",
+    "gsap": "I like greensock (GSAP) library for animation. Today I make easy animation, but I want improve the skill in future.",
+    "rest": "For HTTP requests (CRUD operations) I like Axios library and now I study Socket.io for work with web-sockets."
+  },
+  "projects": {
+    "mavik": {
+      "title": "Mavik Pro Landing",
+      "text_1": "What tools were used: HTML / SASS, JavaScript, Slick-slider, GSAP for animation, PHPMailer.",
+      "text_2": "This is a landing page with a small animation on the greensock (GSAP) library."
+    },
+    "ca": {
+      "title": "ChipAssist marketplace",
+      "text_1": "What tools were used: React / Redux, React-router-dom, Material ui, Styled component, I18next, React Hook Form, Axios, Stripe",
+      "text_2": "This is a marketplace - a commercial project of electronic components, team development."
+    }
+  }
+}

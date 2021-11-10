@@ -5,13 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import theme from "./themes";
 import { ThemeProvider } from "@material-ui/core";
+import { I18nProvider } from "./services/I18next";
 
 window.addEventListener("load", () => {
   ReactDOM.render(
     <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
+      <I18nProvider>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </I18nProvider>
     </React.StrictMode>,
     document.getElementById("root")
   );

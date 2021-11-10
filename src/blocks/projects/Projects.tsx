@@ -3,12 +3,12 @@ import { useStyles } from "./styles";
 import Title from "../../components/title/Title";
 import Project from "../../components/project/Project";
 import { Container } from "@material-ui/core";
-import mavik_1 from "../../images/projects/MavikPro/Mavik_1.jpg";
-import mavik_2 from "../../images/projects/MavikPro/Mavik_2.jpg";
-import mavik_3 from "../../images/projects/MavikPro/Mavik_3.jpg";
-import chip_1 from "../../images/projects/Chipassist/chipassist_1.jpg";
-import chip_2 from "../../images/projects/Chipassist/chipassist_2.jpg";
-import chip_3 from "../../images/projects/Chipassist/chipassist_3.jpg";
+import mavik_1 from "../../images/projects/MavikPro/Mavik_1.webp";
+import mavik_2 from "../../images/projects/MavikPro/Mavik_2.webp";
+import mavik_3 from "../../images/projects/MavikPro/Mavik_3.webp";
+import chip_1 from "../../images/projects/Chipassist/chipassist_1.webp";
+import chip_2 from "../../images/projects/Chipassist/chipassist_2.webp";
+import chip_3 from "../../images/projects/Chipassist/chipassist_3.webp";
 
 const Projects: React.FC = () => {
   const classes = useStyles();

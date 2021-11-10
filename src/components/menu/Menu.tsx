@@ -6,9 +6,12 @@ import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
 import logo from "../../images/logo.svg";
+import { useI18n } from "../../services/I18next";
+import LangMenu from "../langMenu/LangMenu";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
+  const { t } = useI18n("menu");
 
   const burgerRef = useRef(null);
 
@@ -77,12 +80,7 @@ const Menu: React.FC = () => {
         scrollTop > 60 ? classes.fixedList : ""
       }`}
     >
-      <div id="logo" className={classes.logoWrapper}>
-        <Link to="hero" smooth={true} spy={true} duration={600}>
-          <img className={classes.img} src={logo} alt="logo" />
-        </Link>
-      </div>
-
+      <div></div>
       {/*Mobile*/}
       <div
         ref={burgerRef}
@@ -112,7 +110,7 @@ const Menu: React.FC = () => {
             >
               <li>
                 <span className={classes.topItemIndexMobile}>01.</span>
-                Skills
+                {t("skills")}
               </li>
             </Link>
             <Link
@@ -126,7 +124,7 @@ const Menu: React.FC = () => {
             >
               <li>
                 <span className={classes.topItemIndexMobile}>02.</span>
-                Projects
+                {t("projects")}
               </li>
             </Link>
             <Link
@@ -140,7 +138,7 @@ const Menu: React.FC = () => {
             >
               <li>
                 <span className={classes.topItemIndexMobile}>03.</span>
-                Resume
+                {t("resume")}
               </li>
             </Link>
             <Link
@@ -153,7 +151,8 @@ const Menu: React.FC = () => {
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li>
-                <span className={classes.topItemIndexMobile}>04.</span>Text me
+                <span className={classes.topItemIndexMobile}>04.</span>
+                {t("text_me")}
               </li>
             </Link>
           </ul>
@@ -172,7 +171,8 @@ const Menu: React.FC = () => {
             className={classes.topItem}
           >
             <li id="menu_item">
-              <span className={classes.topItemIndex}>01.</span>Skills
+              <span className={classes.topItemIndex}>01.</span>
+              {t("skills")}
             </li>
           </Link>
           <Link
@@ -184,7 +184,8 @@ const Menu: React.FC = () => {
             className={classes.topItem}
           >
             <li id="menu_item">
-              <span className={classes.topItemIndex}>02.</span>Projects
+              <span className={classes.topItemIndex}>02.</span>
+              {t("projects")}
             </li>
           </Link>
           <Link
@@ -196,7 +197,8 @@ const Menu: React.FC = () => {
             className={classes.topItem}
           >
             <li id="menu_item">
-              <span className={classes.topItemIndex}>03.</span>Resume
+              <span className={classes.topItemIndex}>03.</span>
+              {t("resume")}
             </li>
           </Link>
           <Link
@@ -208,10 +210,19 @@ const Menu: React.FC = () => {
             className={classes.topItem}
           >
             <li id="menu_item">
-              <span className={classes.topItemIndex}>04.</span>Text me
+              <span className={classes.topItemIndex}>04.</span>
+              {t("text_me")}
             </li>
           </Link>
         </ul>
+
+        <LangMenu />
+
+        <div id="logo" className={classes.logoWrapper}>
+          <Link to="hero" smooth={true} spy={true} duration={600}>
+            <img className={classes.img} src={logo} alt="logo" />
+          </Link>
+        </div>
       </nav>
     </header>
   );

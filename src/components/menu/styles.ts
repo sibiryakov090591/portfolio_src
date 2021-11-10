@@ -34,6 +34,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     width: "100%",
   },
   desktopMenu: {
+    display: "flex",
+    alignItems: "center",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
