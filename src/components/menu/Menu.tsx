@@ -8,6 +8,7 @@ import BlurOnIcon from "@material-ui/icons/BlurOn";
 import logo from "../../images/logo.svg";
 import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
+import Hidden from "@material-ui/core/Hidden";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -80,6 +81,13 @@ const Menu: React.FC = () => {
         scrollTop > 60 ? classes.fixedList : ""
       }`}
     >
+      <Hidden mdUp>
+        <div id="logo" className={classes.logoWrapper}>
+          <Link to="hero" smooth={true} spy={true} duration={600}>
+            <img className={classes.img} src={logo} alt="logo" />
+          </Link>
+        </div>
+      </Hidden>
       <div></div>
       {/*Mobile*/}
       <div
@@ -216,7 +224,9 @@ const Menu: React.FC = () => {
           </Link>
         </ul>
 
-        <LangMenu />
+        <div className={classes.langWrapper} id="menu_item">
+          <LangMenu />
+        </div>
 
         <div id="logo" className={classes.logoWrapper}>
           <Link to="hero" smooth={true} spy={true} duration={600}>

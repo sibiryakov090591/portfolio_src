@@ -25,10 +25,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     cursor: "pointer",
     width: 45,
     height: 45,
-    marginLeft: 21,
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: 0,
-    },
   },
   img: {
     width: "100%",
@@ -42,7 +38,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   topList: {
     display: "flex",
-    marginRight: 80,
     color: theme.palette.text.secondary,
     transition: "all 300ms ease",
   },
@@ -51,14 +46,12 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     cursor: "pointer",
     padding: "30px 0",
     transition: "all 300ms ease",
+    marginRight: 40,
+    [theme.breakpoints.down("sm")]: {
+      marginRight: 0,
+    },
     "&:hover": {
       color: theme.palette.text.green,
-    },
-    "&:not(:last-child)": {
-      marginRight: 40,
-      [theme.breakpoints.down("sm")]: {
-        marginRight: 0,
-      },
     },
   },
   topItemMobile: {
@@ -149,6 +142,12 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     top: 0,
     right: 0,
     left: 0,
+  },
+  langWrapper: {
+    marginRight: 20,
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
 }));
 

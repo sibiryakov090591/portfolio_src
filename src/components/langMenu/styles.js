@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   langFlag: {
-    width: 25,
+    width: 30,
   },
 }));
 

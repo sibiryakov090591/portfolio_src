@@ -25,7 +25,7 @@ const themeStyles = makeStyles((theme: AppTheme) => ({
       backgroundColor: theme.palette.background.green,
     },
     "&:focus": {
-      backgroundColor: theme.palette.text.primary,
+      backgroundColor: theme.palette.text.secondary,
       "&:hover": {
         backgroundColor: theme.palette.background.green,
       },
