@@ -82,20 +82,31 @@ const Menu: React.FC = () => {
       }`}
     >
       <Hidden mdUp>
-        <div id="logo" className={classes.logoWrapper}>
-          <Link to="hero" smooth={true} spy={true} duration={600}>
+        <div
+          id="logo"
+          className={`${classes.logoWrapper} ${classes.mobileContainer}`}
+        >
+          <Link
+            className={classes.logoLink}
+            to="hero"
+            smooth={true}
+            spy={true}
+            duration={600}
+          >
             <img className={classes.img} src={logo} alt="logo" />
           </Link>
         </div>
-      </Hidden>
 
-      <div></div>
+        <div className={classes.mobileContainer}>
+          <LangMenu />
+        </div>
+      </Hidden>
 
       {/*Mobile*/}
       <div
         ref={burgerRef}
         onClick={toggleMobileMenuHandler}
-        className={classes.burgerWrapper}
+        className={`${classes.burgerWrapper} ${classes.mobileContainer}`}
       >
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
@@ -167,7 +178,6 @@ const Menu: React.FC = () => {
             </Link>
           </ul>
         </nav>
-        <LangMenu />
       </div>
 
       {/*Desktop*/}

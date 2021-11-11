@@ -50,7 +50,7 @@ const LangMenu = () => {
             {i18n.language === "en" ? (
               <img className={classes.langFlag} src={flag_en} alt="flag_en" />
             ) : (
-              <img className={classes.langFlag} src={flag_ru} alt="flag_en" />
+              <img className={classes.langFlag} src={flag_ru} alt="flag_ru" />
             )}
           </div>
         </div>
@@ -58,7 +58,7 @@ const LangMenu = () => {
       <Popper
         open={open}
         anchorEl={anchorRef.current}
-        placement={"bottom-start"}
+        placement={"bottom-center"}
         role={undefined}
         transition
         disablePortal
@@ -78,6 +78,11 @@ const LangMenu = () => {
                     className={appTheme.selectMenuItem}
                     onClick={() => handleChangeLocale("ru")}
                   >
+                    <img
+                      className={classes.langFlagItem}
+                      src={flag_ru}
+                      alt="flag_ru"
+                    />
                     RU
                   </MenuItem>
                   <MenuItem
@@ -85,6 +90,11 @@ const LangMenu = () => {
                     className={appTheme.selectMenuItem}
                     onClick={() => handleChangeLocale("en")}
                   >
+                    <img
+                      className={classes.langFlagItem}
+                      src={flag_en}
+                      alt="flag_en"
+                    />
                     EN
                   </MenuItem>
                 </MenuList>

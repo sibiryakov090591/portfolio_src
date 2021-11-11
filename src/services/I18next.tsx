@@ -6,12 +6,7 @@ import ruTranslate from "./ru/translation.json";
 
 i18n.use(initReactI18next).init({
   debug: true,
-  // load: "languageOnly",
   lng: localStorage.getItem("locale") || "en",
-  // fallbackLng: "en",
-  // react: {
-  //   useSuspense: false,
-  // },
   resources: {
     en: { translation: enTranslate },
     ru: { translation: ruTranslate },
@@ -20,9 +15,7 @@ i18n.use(initReactI18next).init({
 
 export const I18nContext = React.createContext<{}>({});
 
-export const I18nProvider: React.FunctionComponent = (
-  props: PropsWithChildren<{}>
-) => {
+export const I18nProvider: React.FC = (props: PropsWithChildren<{}>) => {
   return (
     <I18nContext.Provider value={{}}>{props.children}</I18nContext.Provider>
   );
@@ -31,7 +24,6 @@ export const I18nProvider: React.FunctionComponent = (
 export const useI18n = (
   defaultPrefix?: string
 ): { t: TFunction; i18n: Ii18n } => {
-  // eslint-disable-next-line no-shadow
   const { t, i18n } = useTranslation();
 
   function wrappedT(key: string | string[], ...args: any[]) {

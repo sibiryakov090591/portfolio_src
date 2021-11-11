@@ -18,7 +18,12 @@ export default {
   },
   button: {
     green: "#3ba29c",
-    yellow: "#d7d352",
+  },
+  select: {
+    background: "#bbdacb",
+    hover: "#85ae9c",
+    focus: "#a1c2b2",
+    text: "#0a192f",
   },
 
   // Alerts

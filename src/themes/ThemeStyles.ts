@@ -17,17 +17,23 @@ const themeStyles = makeStyles((theme: AppTheme) => ({
   },
   selectMenu: {
     borderRadius: 4,
-    backgroundColor: theme.palette.background.white,
+    backgroundColor: theme.palette.select.background,
   },
   selectMenuItem: {
-    color: theme.palette.background.dark,
+    color: theme.palette.select.text,
     "&:hover": {
-      backgroundColor: theme.palette.background.green,
+      backgroundColor: theme.palette.select.hover,
+    },
+    "&.Mui-selected": {
+      backgroundColor: theme.palette.select.focus,
+      "&:hover": {
+        backgroundColor: theme.palette.select.hover,
+      },
     },
     "&:focus": {
-      backgroundColor: theme.palette.text.secondary,
+      backgroundColor: theme.palette.select.focus,
       "&:hover": {
-        backgroundColor: theme.palette.background.green,
+        backgroundColor: theme.palette.select.hover,
       },
     },
   },

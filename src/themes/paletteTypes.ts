@@ -18,6 +18,12 @@ export interface AppTheme {
       secondary: string;
       green: string;
     };
+    select: {
+      background: string;
+      hover: string;
+      focus: string;
+      text: string;
+    };
     app: {
       red500: string;
       red400: string;
