@@ -27,6 +27,12 @@ const LangMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
 
+  const handleEnterToggle = React.useCallback((event) => {
+    if (event.keyCode === 13) {
+      setOpen((prevOpen) => !prevOpen);
+    }
+  }, []);
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -44,7 +50,13 @@ const LangMenu = () => {
 
   return (
     <div className={classes.langBlock}>
-      <div style={{ cursor: "pointer" }} onClick={handleToggle}>
+      <div
+        tabIndex={5}
+        className={appTheme.link}
+        style={{ cursor: "pointer" }}
+        onKeyDown={handleEnterToggle}
+        onClick={handleToggle}
+      >
         <div ref={anchorRef} aria-haspopup="true">
           <div style={{ display: "flex", alignItems: "center" }}>
             {i18n.language === "en" ? (

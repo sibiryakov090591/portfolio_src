@@ -24,6 +24,7 @@ export interface AppTheme {
       focus: string;
       text: string;
     };
+    outline: string;
     app: {
       red500: string;
       red400: string;

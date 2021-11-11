@@ -5,9 +5,11 @@ import github_icon from "../../images/footer/github_hover.svg";
 import inst_icon from "../../images/footer/instagram.svg";
 import email_icon from "../../images/footer/email.svg";
 import { gsap } from "gsap";
+import useAppTheme from "../../themes/ThemeStyles";
 
 const Socials: React.FC = () => {
   const classes = useStyles();
+  const appTheme = useAppTheme();
 
   useEffect(() => {
     gsap.from("#social_element", {
@@ -30,6 +32,7 @@ const Socials: React.FC = () => {
       <nav>
         <div id="social_element" className={classes.imgWrapper}>
           <a
+            className={appTheme.link}
             href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
             target="_blank"
           >
@@ -37,7 +40,11 @@ const Socials: React.FC = () => {
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
-          <a href="https://github.com/sibiryakov090591" target="_blank">
+          <a
+            className={appTheme.link}
+            href="https://github.com/sibiryakov090591"
+            target="_blank"
+          >
             <img
               className={classes.img}
               src={github_icon}
@@ -46,7 +53,11 @@ const Socials: React.FC = () => {
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
-          <a href="https://www.instagram.com/andrewsib/" target="_blank">
+          <a
+            className={appTheme.link}
+            href="https://www.instagram.com/andrewsib/"
+            target="_blank"
+          >
             <img
               className={classes.img}
               src={inst_icon}
@@ -55,7 +66,11 @@ const Socials: React.FC = () => {
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
-          <a href="mailto:sibiryakow91@gmail.com" target="_blank">
+          <a
+            className={appTheme.link}
+            href="mailto:sibiryakow91@gmail.com"
+            target="_blank"
+          >
             <img
               className={classes.img}
               src={email_icon}

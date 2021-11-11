@@ -37,6 +37,12 @@ const themeStyles = makeStyles((theme: AppTheme) => ({
       },
     },
   },
+  link: {
+    display: "flex",
+    "&:focus-visible": {
+      outline: `2px dashed ${theme.palette.outline}`,
+    },
+  },
 }));
 
 export default themeStyles;

@@ -9,9 +9,11 @@ import logo from "../../images/logo.svg";
 import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
 import Hidden from "@material-ui/core/Hidden";
+import useAppTheme from "../../themes/ThemeStyles";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
+  const appTheme = useAppTheme();
   const { t } = useI18n("menu");
 
   const burgerRef = useRef(null);
@@ -87,7 +89,7 @@ const Menu: React.FC = () => {
           className={`${classes.logoWrapper} ${classes.mobileContainer}`}
         >
           <Link
-            className={classes.logoLink}
+            className={`${classes.logoLink} ${appTheme.link}`}
             to="hero"
             smooth={true}
             spy={true}
@@ -184,6 +186,7 @@ const Menu: React.FC = () => {
       <nav className={classes.desktopMenu}>
         <ul className={classes.topList}>
           <Link
+            tabIndex={1}
             to="skills"
             offset={-60}
             smooth={true}
@@ -197,6 +200,7 @@ const Menu: React.FC = () => {
             </li>
           </Link>
           <Link
+            tabIndex={2}
             to="projects"
             offset={-60}
             smooth={true}
@@ -210,6 +214,7 @@ const Menu: React.FC = () => {
             </li>
           </Link>
           <Link
+            tabIndex={3}
             to="resume"
             offset={-60}
             smooth={true}
@@ -223,6 +228,7 @@ const Menu: React.FC = () => {
             </li>
           </Link>
           <Link
+            tabIndex={4}
             to="contact"
             offset={-60}
             smooth={true}

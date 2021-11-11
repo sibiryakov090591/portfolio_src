@@ -25,6 +25,7 @@ export default {
     focus: "#a1c2b2",
     text: "#0a192f",
   },
+  outline: "#9932cc",
 
   // Alerts
   success: {
