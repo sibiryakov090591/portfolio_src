@@ -197,14 +197,20 @@ const Menu: React.FC = () => {
       {/*Desktop*/}
       <nav className={classes.desktopMenu}>
         <ul className={classes.topList}>
-          <a href="#skills" className={classes.topItem}>
+          <Link
+            to="skills"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
             <li id="menu_item">
               <span className={classes.topItemIndex}>01.</span>
               {t("skills")}
             </li>
-          </a>
+          </Link>
           <Link
-            tabIndex={2}
             to="projects"
             offset={-60}
             smooth={true}
