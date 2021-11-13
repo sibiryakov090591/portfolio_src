@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </Hidden>
-        <div>© 2021 Andrew Sib.</div>
+        <div>© {new Date().getFullYear()} Andrew Sibiriakov.</div>
       </Container>
     </footer>
   );
