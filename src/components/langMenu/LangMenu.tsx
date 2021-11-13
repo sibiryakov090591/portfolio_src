@@ -10,7 +10,7 @@ const LangMenu = () => {
   const appTheme = useAppTheme();
   const { i18n } = useI18n();
 
-  const handleChangeLocale = (locale) => {
+  const handleChangeLocale = (locale: "en" | "ru") => {
     i18n.changeLanguage(locale);
     localStorage.setItem("locale", locale);
   };
