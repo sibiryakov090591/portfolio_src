@@ -18,7 +18,6 @@ const LangMenu = () => {
   return (
     <div
       className={`${classes.langBlock} ${appTheme.link}`}
-      tabIndex={5}
       onClick={() => handleChangeLocale(i18n.language === "en" ? "ru" : "en")}
     >
       <div>

@@ -7,12 +7,12 @@ import Contacts from "./blocks/contacts/Contacts";
 import Footer from "./blocks/footer/Footer";
 import Skills from "./blocks/skills/Skills";
 import Menu from "./components/menu/Menu";
+import * as Scroll from "react-scroll";
 
 function App() {
   useEffect(() => {
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
+    const scroll = Scroll.animateScroll;
+    scroll.scrollToTop({ duration: 0 });
   }, []);
 
   return (

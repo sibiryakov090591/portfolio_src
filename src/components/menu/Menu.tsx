@@ -8,7 +8,6 @@ import BlurOnIcon from "@material-ui/icons/BlurOn";
 import logo from "../../images/logo.svg";
 import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
-import Hidden from "@material-ui/core/Hidden";
 import useAppTheme from "../../themes/ThemeStyles";
 
 const Menu: React.FC = () => {
@@ -198,20 +197,12 @@ const Menu: React.FC = () => {
       {/*Desktop*/}
       <nav className={classes.desktopMenu}>
         <ul className={classes.topList}>
-          <Link
-            tabIndex={1}
-            to="skills"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
+          <a href="#skills" className={classes.topItem}>
             <li id="menu_item">
               <span className={classes.topItemIndex}>01.</span>
               {t("skills")}
             </li>
-          </Link>
+          </a>
           <Link
             tabIndex={2}
             to="projects"
@@ -227,7 +218,6 @@ const Menu: React.FC = () => {
             </li>
           </Link>
           <Link
-            tabIndex={3}
             to="resume"
             offset={-60}
             smooth={true}
@@ -241,7 +231,6 @@ const Menu: React.FC = () => {
             </li>
           </Link>
           <Link
-            tabIndex={4}
             to="contact"
             offset={-60}
             smooth={true}
@@ -260,7 +249,7 @@ const Menu: React.FC = () => {
           <LangMenu />
         </div>
 
-        <div id="logo" className={classes.logoWrapper}>
+        <div id="menu_item" className={classes.logoWrapper}>
           <Link to="hero" smooth={true} spy={true} duration={600}>
             <img className={classes.img} src={logo} alt="logo" />
           </Link>
