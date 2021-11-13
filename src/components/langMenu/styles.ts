@@ -4,6 +4,7 @@ import { Theme } from "@material-ui/core/styles/createTheme";
 
 export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   langBlock: {
+    outline: "none",
     cursor: "pointer",
     padding: 10,
     color: theme.palette.text.secondary,

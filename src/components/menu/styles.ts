@@ -160,6 +160,11 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
       display: "none",
     },
   },
+  mobileLangAndLogo: {
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+  },
 }));
 
 export default "styles";

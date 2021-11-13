@@ -17,6 +17,8 @@ const Menu: React.FC = () => {
   const { t } = useI18n("menu");
 
   const burgerRef = useRef(null);
+  const langRef = useRef(null);
+  const logoRef = useRef(null);
 
   const [scrollTop, setScrollTop] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -48,16 +50,25 @@ const Menu: React.FC = () => {
       delay: 4.6,
       ease: "circ.out",
       y: 0,
-      duration: 0,
-    });
-    tl.from(burgerRef.current, {
-      opacity: 0,
       duration: 0.6,
     });
-    tl.from("#logo", {
-      opacity: 0,
-      duration: 0.6,
-    });
+    tl.from(
+      logoRef.current,
+      {
+        y: -100,
+        ease: "circ.out",
+        duration: 0.6,
+      },
+      "<0.2"
+    );
+    tl.from(
+      langRef.current,
+      {
+        opacity: 0,
+        duration: 0.6,
+      },
+      "<0.4"
+    );
   }, []);
 
   useEffect(() => {
@@ -83,9 +94,9 @@ const Menu: React.FC = () => {
         scrollTop > 60 ? classes.fixedList : ""
       }`}
     >
-      <Hidden mdUp>
+      <div className={classes.mobileLangAndLogo}>
         <div
-          id="logo"
+          ref={logoRef}
           className={`${classes.logoWrapper} ${classes.mobileContainer}`}
         >
           <Link
@@ -98,11 +109,13 @@ const Menu: React.FC = () => {
             <img className={classes.img} src={logo} alt="logo" />
           </Link>
         </div>
+      </div>
 
-        <div className={classes.mobileContainer}>
+      <div className={classes.mobileLangAndLogo}>
+        <div ref={langRef} className={classes.mobileContainer}>
           <LangMenu />
         </div>
-      </Hidden>
+      </div>
 
       {/*Mobile*/}
       <div

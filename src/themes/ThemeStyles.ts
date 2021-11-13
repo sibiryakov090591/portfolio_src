@@ -1,7 +1,8 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "./paletteTypes";
+import { Theme } from "@material-ui/core/styles/createTheme";
 
-const themeStyles = makeStyles((theme: AppTheme) => ({
+const themeStyles = makeStyles((theme: AppTheme & Theme) => ({
   button: {
     paddingLeft: 20,
     paddingRight: 20,
@@ -41,6 +42,9 @@ const themeStyles = makeStyles((theme: AppTheme) => ({
     display: "flex",
     "&:focus-visible": {
       outline: `2px dashed ${theme.palette.outline}`,
+    },
+    [theme.breakpoints.down("sm")]: {
+      outline: "none",
     },
   },
 }));
