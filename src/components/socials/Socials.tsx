@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useStyles } from "./styles";
 import in_icon from "../../images/footer/linkedin.svg";
 import github_icon from "../../images/footer/github_hover.svg";
 import inst_icon from "../../images/footer/instagram.svg";
 import email_icon from "../../images/footer/email.svg";
+import wars_icon from "../../images/footer/wars.svg";
 import { gsap } from "gsap";
 import useAppTheme from "../../themes/ThemeStyles";
 
@@ -36,7 +37,7 @@ const Socials: React.FC = () => {
             href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
             target="_blank"
           >
-            <img className={classes.img} src={in_icon} alt="social_icon_in" />
+            <img className={classes.img} src={in_icon} alt="linked in" />
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
@@ -45,11 +46,16 @@ const Socials: React.FC = () => {
             href="https://github.com/sibiryakov090591"
             target="_blank"
           >
-            <img
-              className={classes.img}
-              src={github_icon}
-              alt="social_icon_github"
-            />
+            <img className={classes.img} src={github_icon} alt="github" />
+          </a>
+        </div>
+        <div id="social_element" className={classes.imgWrapper}>
+          <a
+            className={appTheme.link}
+            href="https://www.codewars.com/users/AndreySibiryakov"
+            target="_blank"
+          >
+            <img className={classes.img} src={wars_icon} alt="code wars" />
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
@@ -58,11 +64,7 @@ const Socials: React.FC = () => {
             href="https://www.instagram.com/andrewsib/"
             target="_blank"
           >
-            <img
-              className={classes.img}
-              src={inst_icon}
-              alt="social_icon_instagram"
-            />
+            <img className={classes.img} src={inst_icon} alt="instagram" />
           </a>
         </div>
         <div id="social_element" className={classes.imgWrapper}>
@@ -71,11 +73,7 @@ const Socials: React.FC = () => {
             href="mailto:sibiryakow91@gmail.com"
             target="_blank"
           >
-            <img
-              className={classes.img}
-              src={email_icon}
-              alt="social_icon_email"
-            />
+            <img className={classes.img} src={email_icon} alt="send mail" />
           </a>
         </div>
         <div id="social_line" className={classes.line}></div>
