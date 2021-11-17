@@ -15,6 +15,12 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
       width: 45,
     },
   },
+  langFlagItem: {
+    width: 20,
+  },
+  text: {
+    marginLeft: 7,
+  },
 }));
 
 export default "styles";

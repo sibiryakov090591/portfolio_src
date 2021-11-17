@@ -5,6 +5,10 @@
     "resume": "Resume",
     "text_me": "Text me"
   },
+  "lang": {
+    "ru": "Russian",
+    "en": "English"
+  },
   "hero": {
     "line_1": "Hi",
     "line_2": "I`m Andrew",

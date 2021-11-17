@@ -20,10 +20,10 @@ export default {
     green: "#3ba29c",
   },
   select: {
-    background: "rgba(0,0,0,0.6)",
-    hover: "rgba(0,0,0,0.9)",
-    focus: "rgba(0,0,0,0.9)",
-    text: "#3ba29c",
+    background: "rgba(0,0,0,0.4)",
+    hover: "rgb(12,22,34)",
+    focus: "rgb(17,27,41)",
+    text: "#ccd6f6",
   },
   outline: "#9932cc",
 

@@ -10,10 +10,10 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 const LangMenu = () => {
   const classes = useStyles();
   const appTheme = useAppTheme();
-  const { i18n } = useI18n();
+  const { t, i18n } = useI18n("lang");
 
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const anchorEl = React.useRef(null);
+  const [open, setOpen] = React.useState(false);
   const id = open ? "simple-popper" : undefined;
 
   const handleChangeLocale = (locale: "en" | "ru") => {
@@ -21,12 +21,12 @@ const LangMenu = () => {
     localStorage.setItem("locale", locale);
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
+  const handleClick = () => {
+    setOpen(!open);
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
+    setOpen(false);
   };
 
   return (
@@ -34,6 +34,7 @@ const LangMenu = () => {
       <div
         className={`${classes.langBlock} ${appTheme.link}`}
         onClick={handleClick}
+        ref={anchorEl}
       >
         <div>
           {i18n.language === "en" ? (
@@ -44,13 +45,13 @@ const LangMenu = () => {
         </div>
       </div>
       <Popper
-        placement="bottom"
+        placement={"bottom"}
         role={undefined}
         transition
         disablePortal
         id={id}
         open={open}
-        anchorEl={anchorEl}
+        anchorEl={anchorEl.current}
       >
         <ClickAwayListener onClickAway={handleClose}>
           <MenuList
@@ -61,16 +62,26 @@ const LangMenu = () => {
             <MenuItem
               className={appTheme.selectMenuItem}
               onClick={() => handleChangeLocale("en")}
+              selected={i18n.language === "en"}
             >
-              <img className={classes.langFlag} src={flag_en} alt="flag_en" />
-              English
+              <img
+                className={classes.langFlagItem}
+                src={flag_en}
+                alt="flag_en"
+              />
+              <span className={classes.text}>{t("en")}</span>
             </MenuItem>
             <MenuItem
               className={appTheme.selectMenuItem}
               onClick={() => handleChangeLocale("ru")}
+              selected={i18n.language === "ru"}
             >
-              <img className={classes.langFlag} src={flag_ru} alt="flag_ru" />
-              Russian
+              <img
+                className={classes.langFlagItem}
+                src={flag_ru}
+                alt="flag_ru"
+              />
+              <span className={classes.text}>{t("ru")}</span>
             </MenuItem>
           </MenuList>
         </ClickAwayListener>
