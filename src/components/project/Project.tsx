@@ -44,12 +44,12 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
     <div ref={elem} className={classes.wrapper}>
       <div className={classes.sliderWrapper}>
         <a className={classes.sliderLink} href={link} target="_blank">
-          <Slider {...settings} className={classes.img}>
+          <AspectRatioIcon className={classes.sliderIcon} />
+          <Slider {...settings} className={classes.slider}>
             {images.map((img, i) => (
               <img key={i} src={img} alt="work image" />
             ))}
           </Slider>
-          <AspectRatioIcon className={classes.sliderIcon} />
         </a>
       </div>
       <div className={classes.description}>

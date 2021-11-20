@@ -3,21 +3,27 @@ import { AppTheme } from "../../themes/paletteTypes";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   wrapper: {
-    padding: 15,
     margin: 20,
     maxWidth: 400,
     borderRadius: 10,
     boxShadow: "5px 5px 20px #000000",
+    overflow: "hidden",
     "@media screen and (max-width: 615px)": {
       width: "100%",
     },
   },
   sliderWrapper: {
-    position: "relative",
     overflow: "hidden",
+    height: 188,
   },
   sliderLink: {
-    overflow: "hidden",
+    display: "block",
+    position: "relative",
+    "&:hover": {
+      "& svg": {
+        color: theme.palette.background.green,
+      },
+    },
   },
   sliderIcon: {
     position: "absolute",
@@ -25,6 +31,8 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     right: 7,
     color: "#5c5c5c",
     transition: "all 200ms ease",
+    pointerEvents: "none",
+    zIndex: 10,
   },
   title: {
     fontSize: 18,
@@ -32,24 +40,16 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   description: {
     lineHeight: 1.4,
-    padding: 20,
+    padding: "10px 35px 35px",
     color: theme.palette.text.primary,
   },
-  img: {
+  slider: {
     transition: "all 800ms ease",
     transform: "scale(1.3) rotate(3deg)",
     filter: "grayscale(1)",
-    "& + svg": {
-      "&:hover": {
-        color: theme.palette.background.green,
-      },
-    },
     "&:hover": {
       transform: "scale(1) rotate(0)",
       filter: "grayscale(0)",
-      "& + svg": {
-        color: theme.palette.background.green,
-      },
     },
   },
   text: {
