@@ -19,7 +19,7 @@
     "ts": "I like statically typed languages because there is so much more time left to code than fix bugs.",
     "sass": "I use sumantic HTML tags, for cross-browser compatibility I use normalize.css and check the browser support for the tags used (Hello IE!...) And I really like working with animation.",
     "gsap": "I like greensock (GSAP) library for animation. Today I make easy animation, but I want improve the skill in future.",
-    "rest": "For HTTP requests (CRUD operations) I like Axios library and now I study Socket.io for work with web-sockets."
+    "rest": "For HTTP requests (CRUD operations) I like Axios library and I learn Socket.io for work with web-sockets."
   },
   "projects": {
     "mavik": {
