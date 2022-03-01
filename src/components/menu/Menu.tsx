@@ -19,17 +19,13 @@ const Menu: React.FC = () => {
   const langRef = useRef(null);
   const logoRef = useRef(null);
 
-  const [scrollTop, setScrollTop] = useState(0);
+  const [pageYOffset, setPageYOffset] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => setScrollTop(window.pageYOffset));
-    return () => {
-      window.removeEventListener("scroll", () =>
-        setScrollTop(window.pageYOffset)
-      );
-    };
-  }, []);
+    window.addEventListener("scroll", listener);
+    return () => window.removeEventListener("scroll", listener);
+  }, [pageYOffset]);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -87,10 +83,19 @@ const Menu: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
+  const listener = () => {
+    if (window.pageYOffset >= 60) {
+      if (pageYOffset !== 60) setPageYOffset(60);
+    } else {
+      if (pageYOffset === 60) setPageYOffset(0);
+    }
+    console.log(window.pageYOffset, pageYOffset);
+  };
+
   return (
     <header
       className={`${classes.wrapper} ${
-        scrollTop > 60 ? classes.fixedList : ""
+        pageYOffset === 60 ? classes.fixedList : ""
       }`}
     >
       <div className={classes.mobileLangAndLogo}>
