@@ -19,16 +19,6 @@ const Hero: React.FC = () => {
     });
   });
 
-  useEffect(() => {
-    window.document.body.classList.add("stopScroll");
-    setTimeout(() => {
-      window.document.body.classList.remove("stopScroll");
-    }, 6500);
-    return () => {
-      window.document.body.classList.remove("stopScroll");
-    };
-  }, []);
-
   return (
     <section id="hero" className={classes.hero}>
       <Box className={classes.heroContainer}>

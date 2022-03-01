@@ -9,6 +9,10 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     padding: 10,
     color: theme.palette.text.secondary,
   },
+  title: {
+    padding: "0 7px 7px 7px",
+    color: theme.palette.text.green,
+  },
   langFlag: {
     width: 30,
     [theme.breakpoints.down("sm")]: {

@@ -59,6 +59,7 @@ const LangMenu = () => {
             autoFocusItem={open}
             onClick={handleClose}
           >
+            <div className={classes.title}>{t("title")}</div>
             <MenuItem
               className={appTheme.selectMenuItem}
               onClick={() => handleChangeLocale("en")}
