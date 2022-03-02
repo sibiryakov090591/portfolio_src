@@ -3,6 +3,7 @@ import { AppTheme } from "../../themes/paletteTypes";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   wrapper: {
+    backgroundColor: theme.palette.background.dark,
     margin: 20,
     maxWidth: 400,
     borderRadius: 10,
