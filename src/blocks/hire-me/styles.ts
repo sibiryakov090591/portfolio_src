@@ -64,7 +64,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     height: 280,
     overflow: "hidden",
     cursor: "pointer",
-    transition: "all 600ms ease-out",
+    transition: "all 500ms ease-out",
     boxShadow: "2px 0 10px rgb(0 0 0 / 40%)",
     "&:hover": {
       boxShadow: "0px 0px 5px 2px #3ba29c",
