@@ -7,7 +7,7 @@ export default {
     light: colors.red[400],
   },
   text: {
-    primary: "#8892b0",
+    primary: "#a6b1d0",
     secondary: "#ccd6f6",
     green: "#64ffda",
   },
@@ -18,6 +18,10 @@ export default {
   },
   button: {
     green: "#3ba29c",
+  },
+  skill: {
+    background: "#232f41",
+    border: "#2d3c50",
   },
   select: {
     background: "rgba(0,0,0,0.4)",

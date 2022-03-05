@@ -13,6 +13,10 @@ export interface AppTheme {
     button: {
       green: string;
     };
+    skill: {
+      background: string;
+      border: string;
+    };
     text: {
       primary: string;
       secondary: string;
