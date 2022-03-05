@@ -16,6 +16,9 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   wrapper: {
     display: "flex",
+    "@media screen and (max-width: 654px)": {
+      flexDirection: "column",
+    },
   },
   imgWrapper: {
     height: 350,
@@ -37,45 +40,53 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   buttonText: {
     borderBottom: `2px solid ${theme.palette.background.green}`,
   },
+  resumeItemWrapper: {
+    width: 200,
+    height: 280,
+    margin: "0 20px",
+    position: "relative",
+    "&:before": {
+      content: "''",
+      display: "block",
+      position: "absolute",
+      transform: "rotate(4deg)",
+      width: "100%",
+      height: "100%",
+      backgroundColor: "#ffffff",
+    },
+    "@media screen and (max-width: 654px)": {
+      margin: "20px 0",
+    },
+  },
   resumeImgWrapper: {
     position: "relative",
     width: 200,
-    height: 300,
+    height: 280,
     overflow: "hidden",
-    transform: "skew(10deg)",
-    borderRadius: 5,
     cursor: "pointer",
-    transition: "all 600ms ease",
-    marginRight: 20,
+    transition: "all 600ms ease-out",
+    boxShadow: "2px 0 10px rgb(0 0 0 / 40%)",
     "&:hover": {
-      width: 250,
+      boxShadow: "0px 0px 5px 2px #3ba29c",
       "& > img:first-child": {
         filter: "grayscale(0)",
-        transform: "translate(-158px, -91px) skew(-15deg) scale(0.8)",
+        width: "145%",
       },
       "@media screen and (max-width: 654px)": {
         "&:hover": {
-          width: 130,
           "& > img:first-child": {
             filter: "grayscale(0)",
-            transform: "translate(-100px, -48px) skew(-15deg) scale(0.8)",
           },
         },
       },
     },
-    "@media screen and (max-width: 654px)": {
-      width: 100,
-      height: 200,
-    },
   },
   resumeImg: {
-    width: "250%",
-    transform: "translate(-127px, -72px) skew(-15deg) scale(0.8)",
+    width: "150%",
+    transform: "translateX(-2px)",
     filter: "grayscale(1)",
-    transition: "all 600ms ease",
-    "@media screen and (max-width: 654px)": {
-      transform: "translate(-63px, -36px) skew(-15deg) scale(0.8)",
-    },
+    transition: "all 500ms ease-out",
+    "@media screen and (max-width: 654px)": {},
   },
   langIcon: {
     position: "absolute",

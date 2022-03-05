@@ -64,29 +64,31 @@ const HireMe: React.FC = () => {
         <Title title={t("resume")} index="03" />
 
         <Box className={classes.wrapper}>
-          <div
-            ref={elem_1}
-            className={classes.resumeImgWrapper}
-            onClick={downloadHandler("en")}
-          >
-            <img
-              className={classes.resumeImg}
-              src={resumeImg_en}
-              alt="resume_en"
-            />
-            <img className={classes.langIcon} src={lang_en} alt="lang_icon" />
+          <div ref={elem_1} className={classes.resumeItemWrapper}>
+            <div
+              className={classes.resumeImgWrapper}
+              onClick={downloadHandler("en")}
+            >
+              <img
+                className={classes.resumeImg}
+                src={resumeImg_en}
+                alt="resume_en"
+              />
+              <img className={classes.langIcon} src={lang_en} alt="lang_icon" />
+            </div>
           </div>
-          <div
-            ref={elem_2}
-            className={classes.resumeImgWrapper}
-            onClick={downloadHandler("ru")}
-          >
-            <img
-              className={classes.resumeImg}
-              src={resumeImg_ru}
-              alt="resume_ru"
-            />
-            <img className={classes.langIcon} src={lang_ru} alt="lang_icon" />
+          <div ref={elem_2} className={classes.resumeItemWrapper}>
+            <div
+              className={classes.resumeImgWrapper}
+              onClick={downloadHandler("ru")}
+            >
+              <img
+                className={classes.resumeImg}
+                src={resumeImg_ru}
+                alt="resume_ru"
+              />
+              <img className={classes.langIcon} src={lang_ru} alt="lang_icon" />
+            </div>
           </div>
         </Box>
       </Container>
