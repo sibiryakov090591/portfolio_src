@@ -25,8 +25,8 @@ export default {
   },
   select: {
     background: "rgba(0,0,0,0.4)",
-    hover: "rgb(12,22,34)",
-    focus: "rgb(17,27,41)",
+    hover: "rgb(83,101,126)",
+    focus: "rgb(83,101,126)",
     text: "#ccd6f6",
   },
   outline: "#9932cc",

@@ -19,12 +19,13 @@ const themeStyles = makeStyles((theme: AppTheme & Theme) => ({
   selectMenu: {
     border: "1px solid",
     background:
-      "linear-gradient(146deg, rgba(24,36,54,1) 25%, rgba(31,39,50,1) 100%)",
+      "linear-gradient(146deg, rgba(78,87,101, 1) 25%, rgba(31,39,50,1) 100%) !important",
   },
   selectMenuItem: {
     display: "flex",
     alignItems: "center",
     color: theme.palette.select.text,
+    transition: "all 0ms",
     "&:hover": {
       backgroundColor: theme.palette.select.hover,
     },
