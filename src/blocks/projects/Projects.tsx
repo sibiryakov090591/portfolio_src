@@ -9,6 +9,9 @@ import mavik_3 from "../../images/projects/MavikPro/Mavik_3.webp";
 import chip_1 from "../../images/projects/Chipassist/chipassist_1.webp";
 import chip_2 from "../../images/projects/Chipassist/chipassist_2.webp";
 import chip_3 from "../../images/projects/Chipassist/chipassist_3.webp";
+import requests_1 from "../../images/projects/Requests/requests_1.jpg";
+import requests_2 from "../../images/projects/Requests/requests_2.jpg";
+import requests_3 from "../../images/projects/Requests/requests_3.jpg";
 import { useI18n } from "../../services/I18next";
 
 const Projects: React.FC = () => {
@@ -39,6 +42,16 @@ const Projects: React.FC = () => {
             <br />
             <br />
             {t("ca.text_2")}
+          </Project>
+          <Project
+            images={[requests_1, requests_2, , requests_3]}
+            title={t("requests.title")}
+            link="https://requests.chipassist.com/"
+          >
+            {t("requests.text_1")}
+            <br />
+            <br />
+            {t("requests.text_2")}
           </Project>
         </div>
       </Container>

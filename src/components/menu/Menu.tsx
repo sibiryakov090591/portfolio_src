@@ -39,32 +39,32 @@ const Menu: React.FC = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.to(burgerRef.current, {
-      delay: 4.6,
-      ease: "circ.out",
-      y: 0,
-      duration: 0.6,
-    });
-    tl.from(
-      logoRef.current,
-      {
-        y: -100,
-        ease: "circ.out",
-        duration: 0.6,
-      },
-      "<0.2"
-    );
-    tl.from(
-      langRef.current,
-      {
-        opacity: 0,
-        duration: 0.6,
-      },
-      "<0.4"
-    );
-  }, []);
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
+  //   tl.to(burgerRef.current, {
+  //     // delay: 4.6,
+  //     ease: "circ.out",
+  //     y: 0,
+  //     duration: 0.6,
+  //   });
+  //   tl.from(
+  //     logoRef.current,
+  //     {
+  //       y: -100,
+  //       ease: "circ.out",
+  //       duration: 0.6,
+  //     },
+  //     "<0.2"
+  //   );
+  //   tl.from(
+  //     langRef.current,
+  //     {
+  //       opacity: 0,
+  //       duration: 0.6,
+  //     },
+  //     "<0.4"
+  //   );
+  // }, []);
 
   useEffect(() => {
     if (isOpen) {

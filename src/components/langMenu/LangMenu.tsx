@@ -36,13 +36,11 @@ const LangMenu = () => {
         onClick={handleClick}
         ref={anchorEl}
       >
-        <div>
-          {i18n.language === "en" ? (
-            <img className={classes.langFlag} src={flag_en} alt="flag_en" />
-          ) : (
-            <img className={classes.langFlag} src={flag_ru} alt="flag_ru" />
-          )}
-        </div>
+        <img
+          className={classes.langFlag}
+          src={i18n.language === "en" ? flag_en : flag_ru}
+          alt="flag icon"
+        />
       </div>
       <Popper
         placement={"bottom"}

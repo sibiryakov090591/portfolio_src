@@ -73,7 +73,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     marginRight: 0,
     padding: 0,
     "&:not(:last-child)": {
-      borderBottom: `1px dashed darkorchid`,
+      borderBottom: `1px dashed #21453c`,
     },
     "& li": {
       padding: "30px 50px",
@@ -110,7 +110,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     },
   },
   burgerWrapper: {
-    transform: "translateY(-100px)",
     zIndex: 100,
     display: "none",
     [theme.breakpoints.down("sm")]: {
@@ -151,11 +150,13 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     transform: "translateX(0)",
   },
   mask: {
-    height: "100vh",
     position: "absolute",
     top: 0,
     right: 0,
     left: 0,
+    bottom: 0,
+    height: "100vh",
+    backdropFilter: "blur(2px) brightness(0.7)",
   },
   langWrapper: {
     marginRight: 40,

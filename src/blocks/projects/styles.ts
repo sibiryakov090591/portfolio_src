@@ -18,12 +18,14 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   projectsWrapper: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     flexWrap: "wrap",
     width: "100%",
+    maxWidth: 800,
     "@media screen and (max-width: 1042px)": {
       justifyContent: "center",
       padding: "0 30px",
+      maxWidth: "none",
     },
   },
 }));

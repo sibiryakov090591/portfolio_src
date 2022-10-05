@@ -33,7 +33,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   textarea: {
     width: "100%",
     minHeight: 100,
-    resize: "vertical",
+    resize: "none",
     padding: 5,
     outline: "none",
   },

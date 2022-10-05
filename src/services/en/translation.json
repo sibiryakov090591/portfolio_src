@@ -32,6 +32,11 @@
       "title": "ChipAssist marketplace",
       "text_1": "What tools were used: React / Redux, React-router-dom, Material ui, Styled component, I18next, React Hook Form, Axios, Stripe",
       "text_2": "This is a marketplace - a commercial project of electronic components, team development."
+    },
+    "requests": {
+      "title": "Exchange for sellers",
+      "text_1": "What tools were used: React / Redux, React-router-dom, Material ui, I18next, Axios",
+      "text_2": "This is an exchange for sellers where they respond with the best price to buyers' requests."
     }
   },
   "contacts": {

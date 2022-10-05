@@ -59,6 +59,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   resumeImgWrapper: {
+    display: "block",
     position: "relative",
     width: 200,
     height: 280,

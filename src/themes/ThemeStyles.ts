@@ -27,18 +27,18 @@ const themeStyles = makeStyles((theme: AppTheme & Theme) => ({
     color: theme.palette.select.text,
     transition: "all 0ms",
     "&:hover": {
-      backgroundColor: theme.palette.select.hover,
+      backgroundColor: `${theme.palette.select.hover} !important`,
     },
     "&.Mui-selected": {
-      backgroundColor: theme.palette.select.focus,
+      backgroundColor: `${theme.palette.select.focus} !important`,
       "&:hover": {
-        backgroundColor: theme.palette.select.hover,
+        backgroundColor: `${theme.palette.select.hover} !important`,
       },
     },
     "&:focus": {
-      backgroundColor: theme.palette.select.focus,
+      backgroundColor: `${theme.palette.select.focus} !important`,
       "&:hover": {
-        backgroundColor: theme.palette.select.hover,
+        backgroundColor: `${theme.palette.select.hover} !important`,
       },
     },
   },
