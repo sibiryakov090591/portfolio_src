@@ -21,7 +21,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     justifyContent: "space-between",
     flexWrap: "wrap",
     width: "100%",
-    maxWidth: 800,
+    maxWidth: 975,
     "@media screen and (max-width: 1042px)": {
       justifyContent: "center",
       padding: "0 30px",
