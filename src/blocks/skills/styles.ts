@@ -7,7 +7,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     backgroundColor: theme.palette.background.dark,
     backgroundImage: `url(${background})`,
     backgroundSize: "30%",
-    paddingBottom: 50,
   },
   skillsContainer: {
     display: "flex",
