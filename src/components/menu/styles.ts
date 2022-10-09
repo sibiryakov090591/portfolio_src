@@ -72,8 +72,9 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     fontSize: 22,
     marginRight: 0,
     padding: 0,
-    "&:not(:last-child)": {
-      borderBottom: `1px dashed #21453c`,
+    borderBottom: `1px dashed #21453c`,
+    "&:first-child": {
+      borderTop: `1px dashed #21453c`,
     },
     "& li": {
       padding: "30px 50px",

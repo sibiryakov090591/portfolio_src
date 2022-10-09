@@ -24,7 +24,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     maxWidth: 975,
     "@media screen and (max-width: 1042px)": {
       justifyContent: "center",
-      padding: "0 30px",
       maxWidth: "none",
     },
   },
