@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Create and set working directory
-WORKDIR /portfolio_fe
+WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the container
 COPY package*.json ./

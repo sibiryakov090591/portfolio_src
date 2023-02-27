@@ -3,9 +3,10 @@ import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { Box } from "@material-ui/core";
-// import FileSaver from "file-saver";
-import resumeEn from "../../resume/andrey-sibiriakov-resume-eng.pdf";
-import resumeRu from "../../resume/andrey-sibiriakov-resume-ru.pdf";
+// @ts-ignore
+import resumeEn from "./resume/andrey-sibiriakov-resume-eng.pdf";
+// @ts-ignore
+import resumeRu from "./resume/andrey-sibiriakov-resume-ru.pdf";
 import resumeImg_en from "../../images/resume.jpg";
 import resumeImg_ru from "../../images/resume_ru.jpg";
 import lang_en from "../../images/lang_en.svg";
@@ -20,22 +21,6 @@ const HireMe: React.FC = () => {
 
   const elem_1 = useRef<HTMLDivElement>(null);
   const elem_2 = useRef<HTMLDivElement>(null);
-
-  // const downloadHandler = (lang: string) => () => {
-  //   switch (lang) {
-  //     case "ru": {
-  //       FileSaver.saveAs(resumeRu, "resume_ru.pdf");
-  //       break;
-  //     }
-  //     case "en": {
-  //       FileSaver.saveAs(resumeEn, "resume_en.pdf");
-  //       break;
-  //     }
-  //     default: {
-  //       FileSaver.saveAs(resumeEn, "resume_en.pdf");
-  //     }
-  //   }
-  // };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -68,8 +53,8 @@ const HireMe: React.FC = () => {
             <a
               href={resumeEn}
               target="_blank"
+              rel="noopener noreferrer"
               className={classes.resumeImgWrapper}
-              // onClick={downloadHandler("en")}
             >
               <img
                 className={classes.resumeImg}
@@ -83,8 +68,8 @@ const HireMe: React.FC = () => {
             <a
               href={resumeRu}
               target="_blank"
+              rel="noopener noreferrer"
               className={classes.resumeImgWrapper}
-              // onClick={downloadHandler("ru")}
             >
               <img
                 className={classes.resumeImg}

@@ -90,7 +90,7 @@ const Menu: React.FC = () => {
       if (pageYOffset === 60) setPageYOffset(0);
     }
   };
-
+  
   return (
     <header
       className={`${classes.wrapper} ${
