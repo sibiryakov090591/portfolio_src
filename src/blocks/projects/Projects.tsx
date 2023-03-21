@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
           <Project
             images={[chip_1, chip_2, chip_3]}
             title={t("ca.title")}
-            link="https://prod.chipassist.com/"
+            link="https://chipassist.com/"
           >
             {t("ca.text_1")}
             <br />
