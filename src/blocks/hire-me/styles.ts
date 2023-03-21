@@ -66,9 +66,9 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     overflow: "hidden",
     cursor: "pointer",
     transition: "all 500ms ease-out",
-    boxShadow: "2px 0 10px rgb(0 0 0 / 40%)",
+    boxShadow: "0px 0px 3px 0px rgb(0 0 0 / 40%)",
     "&:hover": {
-      boxShadow: "0px 0px 5px 2px #3ba29c",
+      boxShadow: "0px 0px 5px 5px rgb(0 0 0 / 40%)",
       "& > img:first-child": {
         filter: "grayscale(0)",
         width: "145%",
@@ -93,10 +93,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     position: "absolute",
     bottom: 0,
     right: 5,
-    height: 75,
-    "@media screen and (max-width: 654px)": {
-      height: 60,
-    },
+    height: 55,
   },
 }));
 
