@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./src:/app/src
+      - ./build:/C:\INCUBATOR\portfolio\frontend\portfolio_src
     ports:
       - "3000:3000"
     environment:

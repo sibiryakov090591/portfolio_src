@@ -4,9 +4,9 @@ import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { Box } from "@material-ui/core";
 // @ts-ignore
-import resumeEn from "./resume/andrey-sibiriakov-resume-eng.pdf";
+import resumeEn from "./resume/andrew-sibiriakov-resume-eng.pdf";
 // @ts-ignore
-import resumeRu from "./resume/andrey-sibiriakov-resume-ru.pdf";
+import resumeRu from "./resume/andrew-sibiriakov-resume-ru.pdf";
 import resumeImg_en from "../../images/resume.jpg";
 import resumeImg_ru from "../../images/resume_ru.jpg";
 import lang_en from "../../images/lang_en.svg";
