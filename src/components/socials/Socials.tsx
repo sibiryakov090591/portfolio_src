@@ -34,7 +34,7 @@ const Socials: React.FC = () => {
         <div id="social_element" className={classes.imgWrapper}>
           <a
             className={appTheme.link}
-            href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
+            href="https://www.linkedin.com/in/andrew-sibiriakov-6a54941b2"
             target="_blank"
           >
             <img className={classes.img} src={in_icon} alt="linked in" />
@@ -70,7 +70,7 @@ const Socials: React.FC = () => {
         <div id="social_element" className={classes.imgWrapper}>
           <a
             className={appTheme.link}
-            href="mailto:sibiryakow91@gmail.com"
+            href="mailto:andrey.sibiriakov@gmail.com"
             target="_blank"
           >
             <img className={classes.img} src={email_icon} alt="send mail" />
