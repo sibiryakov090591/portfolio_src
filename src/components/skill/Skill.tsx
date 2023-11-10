@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import { useStyles } from "./styles";
 import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 type PropsType = {
   icon: string;
@@ -37,6 +38,7 @@ const Skill: React.FC<PropsType> = ({ icon, children }) => {
     const text = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
         iconAnimation(img);
         textAnimation(text);
     }, []);

@@ -4,8 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AspectRatioIcon from "@material-ui/icons/AspectRatio";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type PropsType = {
   images: any[];
@@ -18,15 +18,15 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
 
   const elem = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   gsap.from(elem.current, {
-  //     scrollTrigger: elem.current,
-  //     x: "40px",
-  //     opacity: 0,
-  //     duration: 1.2,
-  //   });
-  // }, []);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(elem.current, {
+      scrollTrigger: elem.current,
+      x: "40px",
+      opacity: 0,
+      duration: 1.2,
+    });
+  }, []);
 
   const settings = {
     fade: true,

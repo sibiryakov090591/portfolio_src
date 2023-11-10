@@ -7,18 +7,12 @@ import typescript_logo from "../../images/skills/typescript.png";
 import sass_logo from "../../images/skills/sass.png";
 import gsap_logo from "../../images/skills/gsap.png";
 import api_logo from "../../images/skills/api_rest.png";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../../services/I18next";
 import Skill from "../../components/skill/Skill";
 
 const Skills: React.FC = () => {
   const classes = useStyles();
   const { t } = useI18n("skills");
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-  }, []);
 
   return (
     <section id="skills" className={classes.skills}>

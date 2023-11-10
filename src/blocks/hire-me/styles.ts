@@ -41,8 +41,8 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     borderBottom: `2px solid ${theme.palette.background.green}`,
   },
   resumeItemWrapper: {
-    width: 200,
-    height: 280,
+    width: 300,
+    height: 265,
     margin: "0 20px",
     position: "relative",
     "&:before": {
@@ -61,30 +61,31 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   resumeImgWrapper: {
     display: "block",
     position: "relative",
-    width: 200,
-    height: 280,
+    width: 300,
+    height: 265,
     overflow: "hidden",
     cursor: "pointer",
     transition: "all 500ms ease-out",
     boxShadow: "0px 0px 3px 0px rgb(0 0 0 / 40%)",
     "&:hover": {
       boxShadow: "0px 0px 5px 5px rgb(0 0 0 / 40%)",
-      "& > img:first-child": {
-        filter: "grayscale(0)",
-        width: "145%",
-      },
-      "@media screen and (max-width: 654px)": {
-        "&:hover": {
-          "& > img:first-child": {
-            filter: "grayscale(0)",
-          },
-        },
-      },
+      transform: "scale(1.02) rotate(-1deg)",
+      // "& > img:first-child": {
+      //   filter: "grayscale(0)",
+      //   width: "120%",
+      // },
+      // "@media screen and (max-width: 654px)": {
+      //   "&:hover": {
+      //     "& > img:first-child": {
+      //       filter: "grayscale(0)",
+      //     },
+      //   },
+      // },
     },
   },
   resumeImg: {
-    width: "150%",
-    transform: "translateX(-2px)",
+    width: "113%",
+    transform: "translateX(-16px)",
     filter: "grayscale(1)",
     transition: "all 500ms ease-out",
     "@media screen and (max-width: 654px)": {},
