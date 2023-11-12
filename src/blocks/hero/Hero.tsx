@@ -11,13 +11,12 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     gsap.from(photo.current, {
-      delay: 0.3,
-      x: "-20px",
-      duration: 1.5,
+      delay: 0.5,
+      duration: 2,
       opacity: 0,
       ease: "circ.out",
     });
-  });
+  }, []);
 
   return (
     <section id="hero" className={classes.hero}>
