@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     left: 50,
   },
   imgWrapper: {
-    width: 25,
+    width: 30,
     marginTop: 20,
   },
   img: {

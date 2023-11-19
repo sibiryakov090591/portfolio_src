@@ -11,8 +11,9 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     gsap.from(photo.current, {
-      delay: 0.5,
-      duration: 2,
+      x: "-20px",
+      delay: 1,
+      duration: 3,
       opacity: 0,
       ease: "circ.out",
     });
