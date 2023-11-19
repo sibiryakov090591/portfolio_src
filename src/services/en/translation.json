@@ -20,11 +20,11 @@
     "text": "Frontend developer with extensive experience in building SPAs using React, Redux and TypeScript since 2019. Strong problem-solving abilities and keen attention to detail. Excellent teammate. Active Codewars participant, demonstrating a genuine passion for his work"
   },
   "skills": {
-    "react": "I often use next technologies: React-redux for state managing, React-router-dom for interaction with routs, Redux-thunk for side-effects.",
-    "ts": "I prefer statically typed languages because there is much more time for coding than for fixing bugs.",
-    "sass": "I use semantic HTML tags. I use normalize.css for cross-browser compatibility and I check the browser support for the tags used (Hello IE!...)",
-    "gsap": "I prefer greensock (GSAP) library for animation. Today I make easy animation, but I am improving my skill.",
-    "rest": "I use Axios library for client-server interaction and I am learning Socket.io for web-sockets."
+    "react": "Proficient in React.js, I specialize in creating dynamic and user-friendly web applications. My expertise lies in crafting responsive interfaces, leveraging React's component-based structure, state management, and integrating libraries to deliver seamless user experiences.",
+    "ts": "Leveraging TypeScript's strong typing system, I build scalable and maintainable React projects, ensuring code reliability and improved development workflows. My proficiency extends to creating dynamic interfaces, managing state efficiently, and implementing best practices for enhanced code quality and performance.",
+    "sass": "I specialize in crafting web applications that prioritize both accessibility and compatibility across various browsers and devices. I implement clean and meaningful HTML structures, ensuring semantic markup for enhanced SEO and usability.",
+    "gsap": "Skilled in utilizing the GSAP (GreenSock Animation Platform) library, I bring dynamic animations and interactive elements to React applications. With GSAP's powerful capabilities, I create fluid and engaging user experiences, seamlessly integrating animations that enhance visual appeal and user engagement.",
+    "rest": "I bring a robust approach to handling data communication between front-end and back-end systems. With Axios, I efficiently manage API requests and responses, handling asynchronous operations seamlessly. My expertise includes implementing error handling, interceptors, and configuring Axios instances to ensure secure, reliable and performant data retrieval."
   },
   "projects": {
     "mavik": {
