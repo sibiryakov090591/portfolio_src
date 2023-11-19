@@ -44,9 +44,9 @@
     }
   },
   "contacts": {
-    "button": "Send",
-    "name": "Name",
-    "email": "E-mail",
-    "textarea": "My apologize! Temporarily unavailable... Contact me by email app please!"
+    "button": "Send message",
+    "name": "Your full name",
+    "email": "Your email or phone number",
+    "textarea": "Message..."
   }
 }

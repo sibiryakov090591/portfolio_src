@@ -37,6 +37,10 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     padding: 5,
     outline: "none",
   },
+  button: {
+    margin: "35px auto 0",
+    width: 235,
+  },
 }));
 
 export default "styles";

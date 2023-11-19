@@ -15,6 +15,15 @@ const themeStyles = makeStyles((theme: AppTheme & Theme) => ({
     "&:focus": {
       backgroundColor: "rgba(59, 162, 156, 0.5)", // palette.background.green
     },
+    "&.Mui-disabled": {
+      color: "#a9acb5",
+    },
+    "& .MuiCircularProgress-root": {
+      color: theme.palette.text.green,
+      marginRight: 12,
+      width: "21px !important",
+      height: "21px !important",
+    },
   },
   selectMenu: {
     border: "1px solid",
