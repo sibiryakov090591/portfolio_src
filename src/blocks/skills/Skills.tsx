@@ -17,7 +17,7 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className={classes.skills}>
       <Container className={classes.skillsContainer}>
-        <Title title={t("menu.skills")} index="01" />
+        <Title title={t("menu.skills")} index="02" />
         <div>
           <Skill icon={react_logo}>{t("react")}</Skill>
           <Skill icon={typescript_logo}>{t("ts")}</Skill>

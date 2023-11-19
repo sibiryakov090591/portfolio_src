@@ -4,19 +4,21 @@ import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useI18n } from "../../services/I18next";
 
 const About: React.FC = () => {
   const classes = useStyles();
+  const { t } = useI18n("about");
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
   });
 
   return (
-    <section className={classes.skills}>
-      <Container className={classes.skillsContainer}>
-        <Title title="About Me" index="01" />
-        <div className={classes.skillsWrapper}>wreqwr</div>
+    <section id="about" className={classes.root}>
+      <Container className={classes.container}>
+        <Title title={t("menu.about")} index="01" />
+        <div className={classes.content}>Lorem</div>
       </Container>
     </section>
   );

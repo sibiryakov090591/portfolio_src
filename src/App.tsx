@@ -7,6 +7,7 @@ import Contacts from "./blocks/contacts/Contacts";
 import Footer from "./blocks/footer/Footer";
 import Skills from "./blocks/skills/Skills";
 import Menu from "./components/menu/Menu";
+import About from "./blocks/about-me/About";
 
 function App() {
   const [loaded, setLoaded] = React.useState(false);
@@ -22,6 +23,7 @@ function App() {
         <Hero />
         {loaded && (
           <>
+            <About />
             <Skills />
             <Projects />
             <HireMe />

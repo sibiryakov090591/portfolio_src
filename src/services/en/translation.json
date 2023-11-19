@@ -1,9 +1,10 @@
 {
   "menu": {
+    "about": "About",
     "skills": "Skills",
     "projects": "Projects",
     "resume": "Resume",
-    "text_me": "Text me"
+    "text_me": "Message"
   },
   "lang": {
     "title": "Choose language:",
@@ -14,6 +15,9 @@
     "line_1": "Hi",
     "line_2": "I`m Andrew",
     "line_3": "and I create UI/UX."
+  },
+  "about": {
+    "text": "Frontend developer with extensive experience in building SPAs using React, Redux and TypeScript since 2019. Strong problem-solving abilities and keen attention to detail. Excellent teammate. Active Codewars participant, demonstrating a genuine passion for his work"
   },
   "skills": {
     "react": "I often use next technologies: React-redux for state managing, React-router-dom for interaction with routs, Redux-thunk for side-effects.",

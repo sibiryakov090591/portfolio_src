@@ -13,7 +13,7 @@ const Contacts: React.FC = () => {
   return (
     <section id="contact" className={classes.contacts}>
       <Container className={classes.contactsContainer}>
-        <Title title={t("menu.text_me")} index="04" />
+        <Title title={t("menu.text_me")} index="05" />
         <form className={classes.form}>
           <input
             disabled

@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className={classes.projects}>
       <Container className={classes.projectsContainer}>
-        <Title title={t("menu.projects")} index="02" />
+        <Title title={t("menu.projects")} index="03" />
         <div className={classes.projectsWrapper}>
           <Project
             images={[mavik_1, mavik_2, , mavik_3]}

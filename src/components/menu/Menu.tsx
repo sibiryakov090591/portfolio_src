@@ -140,7 +140,7 @@ const Menu: React.FC = () => {
           <ul style={{ padding: 0 }}>
             <Link
               onClick={toggleMobileMenuHandler}
-              to="skills"
+              to="about"
               offset={-60}
               smooth={true}
               spy={true}
@@ -149,6 +149,20 @@ const Menu: React.FC = () => {
             >
               <li>
                 <span className={classes.topItemIndexMobile}>01.</span>
+                {t("about")}
+              </li>
+            </Link>
+            <Link
+              onClick={toggleMobileMenuHandler}
+              to="skills"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={`${classes.topItem} ${classes.topItemMobile}`}
+            >
+              <li>
+                <span className={classes.topItemIndexMobile}>02.</span>
                 {t("skills")}
               </li>
             </Link>
@@ -162,7 +176,7 @@ const Menu: React.FC = () => {
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li>
-                <span className={classes.topItemIndexMobile}>02.</span>
+                <span className={classes.topItemIndexMobile}>03.</span>
                 {t("projects")}
               </li>
             </Link>
@@ -176,7 +190,7 @@ const Menu: React.FC = () => {
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li>
-                <span className={classes.topItemIndexMobile}>03.</span>
+                <span className={classes.topItemIndexMobile}>04.</span>
                 {t("resume")}
               </li>
             </Link>
@@ -190,7 +204,7 @@ const Menu: React.FC = () => {
               className={`${classes.topItem} ${classes.topItemMobile}`}
             >
               <li>
-                <span className={classes.topItemIndexMobile}>04.</span>
+                <span className={classes.topItemIndexMobile}>05.</span>
                 {t("text_me")}
               </li>
             </Link>
@@ -202,7 +216,7 @@ const Menu: React.FC = () => {
       <nav className={classes.desktopMenu}>
         <ul className={classes.topList}>
           <Link
-            to="skills"
+            to="about"
             offset={-60}
             smooth={true}
             spy={true}
@@ -211,6 +225,19 @@ const Menu: React.FC = () => {
           >
             <li id="menu_item">
               <span className={classes.topItemIndex}>01.</span>
+              {t("about")}
+            </li>
+          </Link>
+          <Link
+            to="skills"
+            offset={-60}
+            smooth={true}
+            spy={true}
+            duration={600}
+            className={classes.topItem}
+          >
+            <li id="menu_item">
+              <span className={classes.topItemIndex}>02.</span>
               {t("skills")}
             </li>
           </Link>
@@ -223,7 +250,7 @@ const Menu: React.FC = () => {
             className={classes.topItem}
           >
             <li id="menu_item">
-              <span className={classes.topItemIndex}>02.</span>
+              <span className={classes.topItemIndex}>03.</span>
               {t("projects")}
             </li>
           </Link>
@@ -236,7 +263,7 @@ const Menu: React.FC = () => {
             className={classes.topItem}
           >
             <li id="menu_item">
-              <span className={classes.topItemIndex}>03.</span>
+              <span className={classes.topItemIndex}>04.</span>
               {t("resume")}
             </li>
           </Link>
@@ -249,7 +276,7 @@ const Menu: React.FC = () => {
             className={classes.topItem}
           >
             <li id="menu_item">
-              <span className={classes.topItemIndex}>04.</span>
+              <span className={classes.topItemIndex}>05.</span>
               {t("text_me")}
             </li>
           </Link>

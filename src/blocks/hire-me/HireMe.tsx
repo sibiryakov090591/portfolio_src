@@ -33,7 +33,7 @@ const HireMe: React.FC = () => {
   return (
     <section id="resume" className={classes.hire}>
       <Container className={classes.hireContainer}>
-        <Title title={t("resume")} index="03" />
+        <Title title={t("resume")} index="04" />
 
         <Box className={classes.wrapper}>
           <div ref={elem_1} className={classes.resumeItemWrapper}>
