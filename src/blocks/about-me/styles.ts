@@ -28,8 +28,10 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
       flexDirection: "column-reverse",
     },
     "& img": {
-      filter: "drop-shadow(0px 0px 25px #64ffda)",
+      filter: "drop-shadow(0px 0px 5px #64ffda)",
       marginLeft: 50,
+      width: 150,
+      borderRadius: "17%",
       [theme.breakpoints.down("sm")]: {
         display: "none",
       },

@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useStyles } from "./styles";
 import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../../services/I18next";
-import about from "../../images/about.png";
+import about from "../../images/about.jpg";
 
 const About: React.FC = () => {
   const classes = useStyles();
