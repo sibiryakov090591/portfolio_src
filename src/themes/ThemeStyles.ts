@@ -6,7 +6,7 @@ const themeStyles = makeStyles((theme: AppTheme & Theme) => ({
   button: {
     paddingLeft: 20,
     paddingRight: 20,
-    border: `1px solid ${theme.palette.button.green}`,
+    border: `2px dashed ${theme.palette.button.green}`,
     color: theme.palette.text.secondary,
     backgroundColor: "rgba(59, 162, 156, 0.3)", // palette.background.green
     "&:hover": {

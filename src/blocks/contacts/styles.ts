@@ -15,6 +15,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "center",
   },
   form: {
+    filter: "drop-shadow(0px 0px 360px #21d2c3)",
     display: "flex",
     flexDirection: "column",
     marginBottom: 50,

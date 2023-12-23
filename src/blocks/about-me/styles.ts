@@ -15,27 +15,52 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     alignItems: "center",
     paddingBottom: 50,
   },
-  content: {
-    color: theme.palette.text.secondary,
-    fontWeight: "bold",
-    fontSize: "1.2rem",
-    lineHeight: 1.6,
-    maxWidth: 800,
+  wrapper: {
+    // maxWidth: 800,
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
     alignItems: "center",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column-reverse",
     },
-    "& img": {
-      filter: "drop-shadow(0px 0px 5px #64ffda)",
-      marginLeft: 50,
-      width: 150,
-      borderRadius: "17%",
-      [theme.breakpoints.down("sm")]: {
-        display: "none",
-      },
+  },
+  content: {
+    color: theme.palette.text.secondary,
+    fontWeight: "bold",
+    fontSize: "1.2rem",
+    lineHeight: 1.5,
+    maxWidth: 800,
+  },
+  image: {
+    // transform: "rotate(-90deg)",
+    position: "relative",
+    marginLeft: 16,
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
+    "&:before": {
+      content: "''",
+      display: "block",
+      top: 0,
+      bottom: 4,
+      left: 0,
+      right: 0,
+      position: "absolute",
+      background: "rgba(5,118,91,0.3)",
+      borderRadius: "50ch",
+      zIndex: 2,
+    },
+    "& img": {
+      animation: `$light 1.6s`,
+      animationFillMode: "forwards",
+      width: 180,
+      borderRadius: "50ch",
+      border: "3px solid #3aa49d",
+    },
+  },
+  "@keyframes light": {
+    "0%": { filter: "drop-shadow(0px 0px 0px #21d2c3)" },
+    "100%": { filter: "drop-shadow(0px 0px 360px #21d2c3)" },
   },
 }));
 
