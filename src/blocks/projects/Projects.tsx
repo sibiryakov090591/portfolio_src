@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
   const { t } = useI18n("projects");
 
   return (
-    <section id="projects" className={classes.projects}>
+    <section id="projects">
       <Container className={classes.projectsContainer}>
         <Title title={t("menu.projects")} index="03" />
         <div className={classes.projectsWrapper}>

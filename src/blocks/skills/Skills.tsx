@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
   const { t } = useI18n("skills");
 
   return (
-    <section id="skills" className={classes.skills}>
+    <section id="skills">
       <Container className={classes.skillsContainer}>
         <Title title={t("menu.skills")} index="02" />
         <div>

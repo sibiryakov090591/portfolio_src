@@ -1,12 +1,8 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "../../themes/paletteTypes";
-import background from "../../images/background/blackgrit-6a2d636a530802d3ce97afb7af53a84b.png";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   contacts: {
-    backgroundColor: theme.palette.background.dark,
-    backgroundImage: `url(${background})`,
-    backgroundSize: "30%",
     paddingBottom: 50,
   },
   contactsContainer: {
@@ -15,7 +11,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "center",
   },
   form: {
-    filter: "drop-shadow(0px 0px 360px #21d2c3)",
     display: "flex",
     flexDirection: "column",
     marginBottom: 50,
@@ -25,6 +20,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   input: {
+    zIndex: 1,
     padding: "0 5px",
     width: "100%",
     height: 25,
@@ -32,6 +28,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     outline: "none",
   },
   textarea: {
+    animation: `$bright 10s forwards infinite`,
     width: "100%",
     minHeight: 100,
     resize: "none",
@@ -41,6 +38,11 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   button: {
     margin: "35px auto 0",
     width: 235,
+  },
+  "@keyframes bright": {
+    "0%": { boxShadow: "0px 0px 250px -20px #a6e3d6a8" },
+    "50%": { boxShadow: "0px 0px 500px -18px #0ad4abc2" },
+    "100%": { boxShadow: "0px 0px 250px -20px #a6e3d6a8" },
   },
 }));
 

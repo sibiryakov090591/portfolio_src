@@ -1,13 +1,7 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "../../themes/paletteTypes";
-import background from "../../images/background/blackgrit-6a2d636a530802d3ce97afb7af53a84b.png";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
-  hire: {
-    backgroundColor: theme.palette.background.dark,
-    backgroundImage: `url(${background})`,
-    backgroundSize: "30%",
-  },
   hireContainer: {
     display: "flex",
     flexDirection: "column",
@@ -41,60 +35,41 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     borderBottom: `2px solid ${theme.palette.background.green}`,
   },
   resumeItemWrapper: {
-    width: 300,
-    height: 265,
-    margin: "0 20px",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    alignItems: "stretch",
+    width: 600,
+    height: 238,
     position: "relative",
-    "&:before": {
-      content: "''",
-      display: "block",
-      position: "absolute",
-      transform: "rotate(4deg)",
-      width: "100%",
-      height: "100%",
-      backgroundColor: "#ffffff",
-    },
-    "@media screen and (max-width: 654px)": {
-      margin: "20px 0",
-    },
+    overflow: "hidden",
+    borderRadius: "30px",
+    backgroundColor: theme.palette.background.dark,
+    border: `6px dashed ${theme.palette.button.green}`,
   },
-  resumeImgWrapper: {
+  resumeLink: {
     display: "block",
     position: "relative",
-    width: 300,
-    height: 265,
-    overflow: "hidden",
     cursor: "pointer",
     transition: "all 500ms ease-out",
-    boxShadow: "0px 0px 3px 0px rgb(0 0 0 / 40%)",
+    overflow: "hidden",
     "&:hover": {
-      boxShadow: "0px 0px 5px 5px rgb(0 0 0 / 40%)",
-      transform: "scale(1.02) rotate(-1deg)",
-      // "& > img:first-child": {
-      //   filter: "grayscale(0)",
-      //   width: "120%",
-      // },
-      // "@media screen and (max-width: 654px)": {
-      //   "&:hover": {
-      //     "& > img:first-child": {
-      //       filter: "grayscale(0)",
-      //     },
-      //   },
-      // },
+      "& img": {
+        filter: "grayscale(0)",
+      },
     },
   },
   resumeImg: {
-    width: "113%",
-    transform: "translateX(-16px)",
+    width: "100%",
     filter: "grayscale(1)",
     transition: "all 500ms ease-out",
-    "@media screen and (max-width: 654px)": {},
   },
-  langIcon: {
-    position: "absolute",
-    bottom: 0,
-    right: 5,
-    height: 55,
+  content: {
+    color: theme.palette.text.green,
+    padding: 16,
+    display: "flex",
+    alignItems: "flex-end",
+    fontWeight: "bold",
+    lineHeight: "1.4",
   },
 }));
 

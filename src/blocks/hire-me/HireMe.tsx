@@ -3,10 +3,7 @@ import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { Box } from "@material-ui/core";
-// @ts-ignore
 import resumeEn from "./resume/andrew-sibiriakov-resume.pdf";
-// @ts-ignore
-import resumeRu from "./resume/andrew-sibiriakov-resume-ru.pdf";
 import resumeImg_en from "../../images/resume.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -31,24 +28,29 @@ const HireMe: React.FC = () => {
   }, []);
 
   return (
-    <section id="resume" className={classes.hire}>
+    <section id="resume">
       <Container className={classes.hireContainer}>
         <Title title={t("resume")} index="04" />
 
         <Box className={classes.wrapper}>
           <div ref={elem_1} className={classes.resumeItemWrapper}>
-            <a
-              href={resumeEn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classes.resumeImgWrapper}
-            >
-              <img
-                className={classes.resumeImg}
-                src={resumeImg_en}
-                alt="resume_en"
-              />
-            </a>
+            <div>
+              <a
+                href={resumeEn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.resumeLink}
+              >
+                <img
+                  className={classes.resumeImg}
+                  src={resumeImg_en}
+                  alt="resume_en"
+                />
+              </a>
+            </div>
+            <div className={classes.content}>
+              View or download the resume in PDF format. (CV)
+            </div>
           </div>
         </Box>
       </Container>

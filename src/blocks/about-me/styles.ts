@@ -1,14 +1,8 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "../../themes/paletteTypes";
-import background from "../../images/background/blackgrit-6a2d636a530802d3ce97afb7af53a84b.png";
 import { Theme } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
-  root: {
-    backgroundColor: theme.palette.background.dark,
-    backgroundImage: `url(${background})`,
-    backgroundSize: "30%",
-  },
   container: {
     display: "flex",
     flexDirection: "column",
@@ -16,28 +10,23 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     paddingBottom: 50,
   },
   wrapper: {
-    // maxWidth: 800,
+    position: "relative",
     display: "flex",
-    justifyContent: "flex-end",
+    justifyContent: "center",
     alignItems: "center",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column-reverse",
-    },
   },
   content: {
     color: theme.palette.text.secondary,
     fontWeight: "bold",
     fontSize: "1.2rem",
     lineHeight: 1.5,
-    maxWidth: 800,
+    maxWidth: "60vw",
+    zIndex: 3,
   },
   image: {
-    // transform: "rotate(-90deg)",
-    position: "relative",
-    marginLeft: 16,
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
+    position: "absolute",
+    right: "-13%",
+    bottom: "-50%",
     "&:before": {
       content: "''",
       display: "block",
@@ -46,21 +35,21 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
       left: 0,
       right: 0,
       position: "absolute",
-      background: "rgba(5,118,91,0.3)",
+      background: "rgba(23,116,151,0.3)",
       borderRadius: "50ch",
       zIndex: 2,
+      animation: `$bright 10s forwards infinite`,
     },
-    "& img": {
-      animation: `$light 1.6s`,
-      animationFillMode: "forwards",
-      width: 180,
+    "& video, img": {
+      width: 230,
+      border: `3px dashed ${theme.palette.border.green}`,
       borderRadius: "50ch",
-      border: "3px solid #3aa49d",
     },
   },
-  "@keyframes light": {
-    "0%": { filter: "drop-shadow(0px 0px 0px #21d2c3)" },
-    "100%": { filter: "drop-shadow(0px 0px 360px #21d2c3)" },
+  "@keyframes bright": {
+    "0%": { boxShadow: "0px 0px 220px -32px #a6e3d6a8" },
+    "50%": { boxShadow: "0px 0px 500px -24px #0ad4abc2" },
+    "100%": { boxShadow: "0px 0px 220px -32px #a6e3d6a8" },
   },
 }));
 

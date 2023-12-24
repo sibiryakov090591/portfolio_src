@@ -19,6 +19,9 @@ export default {
   button: {
     green: "#3ba29c",
   },
+  border: {
+    green: "#328988",
+  },
   skill: {
     background: "#232f41",
     border: "#2d3c50",

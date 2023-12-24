@@ -13,6 +13,9 @@ export interface AppTheme {
     button: {
       green: string;
     };
+    border: {
+      green: string;
+    };
     skill: {
       background: string;
       border: string;
