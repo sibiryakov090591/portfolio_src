@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     alignItems: "center",
     justifyContent: "end",
     padding: "0 20px",
-    zIndex: 2,
+    zIndex: 100,
     position: "fixed",
     top: 0,
     right: 0,
