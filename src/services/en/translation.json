@@ -17,7 +17,9 @@
     "line_3": "and I create UI/UX."
   },
   "about": {
-    "text": "Frontend developer with extensive experience in building SPAs using React, Redux and TypeScript since 2019. Strong problem-solving abilities and keen attention to detail. Excellent teammate. Active Codewars participant, demonstrating a genuine passion for his work."
+    "text_1": "With a passion for crafting digital experiences, I've immersed myself in the realm of front-end development in 2019. Specializing in React.js, I am turning designs into dynamic, user-friendly interfaces.",
+    "text_2": "As a team player, I thrive in dynamic environments where collective ideas transform into remarkable products. My journey as a front-end developer has fortified my problem-solving skills, allowing me to navigate complex challenges and deliver elegant solutions.",
+    "text_3": "Join me on this coding adventure as I continue to evolve, innovate, and contribute to the ever-changing world of front-end development!"
   },
   "skills": {
     "react": "Proficient in React.js, I specialize in creating dynamic and user-friendly web applications. My expertise lies in crafting responsive interfaces, leveraging React's component-based structure, state management, and integrating libraries to deliver seamless user experiences.",

@@ -21,7 +21,11 @@ const About: React.FC = () => {
       <Container className={classes.container}>
         <Title title={t("menu.about")} index="01" />
         <div className={classes.wrapper}>
-          <div className={classes.content}>{t("text")}</div>
+          <div className={classes.content}>
+            <p>{t("text_1")}</p>
+            <p>{t("text_2")}</p>
+            <p>{t("text_3")}</p>
+          </div>
           <div className={classes.image}>
             <video autoPlay loop muted>
               <source src={video} type="video/mp4" />
