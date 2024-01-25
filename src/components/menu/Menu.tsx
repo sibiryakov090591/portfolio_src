@@ -30,11 +30,11 @@ const Menu: React.FC = () => {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.from("#menu_item", {
-      delay: 4.5,
+      delay: 4,
       stagger: 0.1,
       ease: "circ.out",
       opacity: 0,
-      y: "-40px",
+      x: "-22px",
       duration: 0.6,
     });
   }, []);

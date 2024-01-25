@@ -3,6 +3,7 @@ import { AppTheme } from "../../themes/paletteTypes";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   wrapper: {
+    zIndex: 1,
     position: "fixed",
     bottom: 0,
     left: 50,

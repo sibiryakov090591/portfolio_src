@@ -12,8 +12,8 @@ export default {
     green: "#64ffda",
   },
   background: {
-    dark: "#0a192f",
-    green: "#3ba29c",
+    dark: "#030303",
+    green: "#23ac7e",
     white: "#ededed",
   },
   button: {
@@ -52,6 +52,7 @@ export default {
     red200: "#FFC4C9",
     red100: "#FAEEEF",
 
+    grey700: "#212121",
     grey600: "#333333",
     grey500: "#474747",
     grey400: "#A6A6A6",

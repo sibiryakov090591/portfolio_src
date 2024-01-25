@@ -1,7 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "../../themes/paletteTypes";
 import { Theme } from "@material-ui/core/styles/createTheme";
-import background from "../../images/background/blackgrit-6a2d636a530802d3ce97afb7af53a84b.png";
 
 export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   wrapper: {
@@ -15,9 +14,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     right: 0,
     left: 0,
     height: 60,
-    backgroundColor: "rgba(10, 25, 47, 0.65)",
-    backgroundImage: `url(${background})`,
-    backgroundSize: "30%",
     backdropFilter: "blur(10px)",
     transition: "all 300ms ease",
     [theme.breakpoints.down("sm")]: {

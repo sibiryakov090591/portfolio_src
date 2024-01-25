@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../../services/I18next";
 import about from "../../images/about.jpg";
-import video from "../../images/video.mp4";
 
 const About: React.FC = () => {
   const classes = useStyles();
@@ -27,10 +26,7 @@ const About: React.FC = () => {
             <p>{t("text_3")}</p>
           </div>
           <div className={classes.image}>
-            <video autoPlay loop muted>
-              <source src={video} type="video/mp4" />
-            </video>
-            {/*<img src={about} alt="about" />*/}
+            <img src={about} alt="about" />
           </div>
         </div>
       </Container>

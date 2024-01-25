@@ -14,13 +14,14 @@ const Socials: React.FC = () => {
 
   useEffect(() => {
     gsap.from("#social_element", {
+      delay: 4,
       stagger: 0.15,
       ease: "elastic.out(1, 0.3)",
       x: "-80px",
       duration: 2,
     });
     gsap.from("#social_line", {
-      delay: 1.6,
+      delay: 5,
       ease: "circ.out",
       y: "100px",
       duration: 0.6,

@@ -6,7 +6,6 @@ import github_icon from "../../images/footer/github_hover.svg";
 import inst_icon from "../../images/footer/instagram.svg";
 import email_icon from "../../images/footer/email.svg";
 import wars_icon from "../../images/footer/wars.svg";
-import Socials from "../../components/socials/Socials";
 import { Hidden } from "@material-ui/core";
 
 const Footer: React.FC = () => {
@@ -15,9 +14,6 @@ const Footer: React.FC = () => {
   return (
     <footer className={classes.footer}>
       <Container className={classes.footerContainer}>
-        <Hidden smDown>
-          <Socials />
-        </Hidden>
         <Hidden mdUp>
           <div className={classes.socialsWrapper}>
             <div className={classes.imgWrapper}>

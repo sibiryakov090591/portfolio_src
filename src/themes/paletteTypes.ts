@@ -39,6 +39,7 @@ export interface AppTheme {
       red200: string;
       red100: string;
 
+      grey700: string;
       grey600: string;
       grey500: string;
       grey400: string;

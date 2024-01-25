@@ -25,8 +25,7 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
   },
   image: {
     position: "absolute",
-    transform: "rotate(90deg)",
-    right: "-13%",
+    right: "-10%",
     "&:before": {
       content: "''",
       display: "block",
@@ -35,21 +34,15 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
       left: 0,
       right: 0,
       position: "absolute",
-      background: "rgba(23,151,149,0.26)",
+      background: "rgba(2,21,21,0.64)",
       borderRadius: "50ch",
       zIndex: 2,
-      animation: `$bright 10s forwards infinite`,
     },
     "& video, img": {
       width: 230,
-      border: `4px dashed ${theme.palette.border.green}`,
+      border: `7px dashed ${theme.palette.border.green}`,
       borderRadius: "50ch",
     },
-  },
-  "@keyframes bright": {
-    "0%": { boxShadow: "0px 0px 220px -32px #a6e3d6a8" },
-    "50%": { boxShadow: "0px 0px 500px -24px #0ad4abc2" },
-    "100%": { boxShadow: "0px 0px 220px -32px #a6e3d6a8" },
   },
 }));
 

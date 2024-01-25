@@ -5,6 +5,18 @@ import my_photo from "../../images/my_photo2.jpg";
 export const useStyles = makeStyles((theme: AppTheme) => ({
   hero: {
     height: "100vh",
+    backgroundImage:
+      "linear-gradient(180deg,rgba(38,98,71,.62) 0%,rgba(38,98,71,0) 100%)",
+    position: "relative",
+    "&:after": {
+      content: "''",
+      position: "absolute",
+      zIndex: 0,
+      inset: 0,
+      background:
+        "radial-gradient(ellipse at center top,rgba(12,12,12,0) 40%,rgba(3,3,3,1) 100%)",
+      pointerEvents: "none",
+    },
   },
   heroContainer: {
     minHeight: "100vh",
@@ -22,6 +34,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   presentation: {
+    zIndex: 1,
     position: "absolute",
     bottom: "-55px",
     right: "-85%",
@@ -48,6 +61,16 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     overflow: "hidden",
     width: 300,
     height: 300,
+    position: "relative",
+    "&:after": {
+      content: "''",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: "rgba(77,142,114, 0.21)",
+    },
     "@media screen and (max-width: 900px)": {
       marginBottom: 40,
     },

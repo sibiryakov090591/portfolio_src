@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     },
   },
   index: {
-    color: theme.palette.background.green,
+    color: theme.palette.text.green,
     fontFamily: "Orbitron",
     fontWeight: 400,
   },
