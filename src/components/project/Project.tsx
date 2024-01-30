@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import AspectRatioIcon from "@material-ui/icons/AspectRatio";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BlankLink from "../menu/BlankLink/BlankLink";
 
 type PropsType = {
   images: any[];
@@ -43,14 +44,14 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
   return (
     <div ref={elem} className={classes.wrapper}>
       <div className={classes.sliderWrapper}>
-        <a className={classes.sliderLink} href={link} target="_blank">
+        <BlankLink className={classes.sliderLink} href={link}>
           <AspectRatioIcon className={classes.sliderIcon} />
           <Slider {...settings} className={classes.slider}>
             {images.map((img, i) => (
               <img key={i} src={img} alt="work image" />
             ))}
           </Slider>
-        </a>
+        </BlankLink>
       </div>
       <div className={classes.description}>
         <h3 className={classes.title}>{title}</h3>

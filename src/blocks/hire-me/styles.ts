@@ -10,6 +10,14 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   wrapper: {
     display: "flex",
+    cursor: "pointer",
+    transition: "all 500ms ease-out",
+    overflow: "hidden",
+    "&:hover": {
+      "& img": {
+        filter: "grayscale(0)",
+      },
+    },
     "@media screen and (max-width: 654px)": {
       flexDirection: "column",
     },
@@ -38,25 +46,12 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     alignItems: "stretch",
-    width: 600,
-    height: 238,
+    maxWidth: 630,
     position: "relative",
     overflow: "hidden",
     borderRadius: "30px",
     backgroundColor: theme.palette.background.dark,
-    border: `6px dashed ${theme.palette.button.green}`,
-  },
-  resumeLink: {
-    display: "block",
-    position: "relative",
-    cursor: "pointer",
-    transition: "all 500ms ease-out",
-    overflow: "hidden",
-    "&:hover": {
-      "& img": {
-        filter: "grayscale(0)",
-      },
-    },
+    border: `5px dashed ${theme.palette.app.grey700}`,
   },
   resumeImg: {
     width: "100%",
@@ -67,7 +62,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.text.green,
     padding: 16,
     display: "flex",
-    alignItems: "flex-end",
+    alignItems: "center",
     fontWeight: "bold",
     lineHeight: "1.4",
   },

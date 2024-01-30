@@ -5,7 +5,8 @@ import { Container } from "@material-ui/core";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../../services/I18next";
-import about from "../../images/about.jpg";
+import icon from "../../assets/images/icons/SettingsIcon/settings-svgrepo-com.svg";
+import SettingsIcon from "../../assets/images/icons/SettingsIcon/SettingsIcon";
 
 const About: React.FC = () => {
   const classes = useStyles();
@@ -19,15 +20,11 @@ const About: React.FC = () => {
     <section id="about">
       <Container className={classes.container}>
         <Title title={t("menu.about")} index="01" />
-        <div className={classes.wrapper}>
-          <div className={classes.content}>
-            <p>{t("text_1")}</p>
-            <p>{t("text_2")}</p>
-            <p>{t("text_3")}</p>
-          </div>
-          <div className={classes.image}>
-            <img src={about} alt="about" />
-          </div>
+        <div className={classes.content}>
+          <SettingsIcon className={classes.settingsIcon} />
+          <p>{t("text_1")}</p>
+          <p>{t("text_2")}</p>
+          <p>{t("text_3")}</p>
         </div>
       </Container>
     </section>

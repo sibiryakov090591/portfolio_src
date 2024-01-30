@@ -8,6 +8,8 @@ export interface AppTheme {
     background: {
       dark: string;
       green: string;
+      yellow: string;
+      darkYellow: string;
       white: string;
     };
     button: {

@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useStyles } from "./styles";
 import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
-import react_logo from "../../images/skills/react.png";
-import typescript_logo from "../../images/skills/typescript.png";
-import sass_logo from "../../images/skills/sass.png";
-import gsap_logo from "../../images/skills/gsap.png";
-import api_logo from "../../images/skills/api_rest.png";
+import react_logo from "../../assets/images/skills/react.png";
+import typescript_logo from "../../assets/images/skills/typescript.png";
+import sass_logo from "../../assets/images/skills/sass.png";
+import gsap_logo from "../../assets/images/skills/gsap.png";
+import api_logo from "../../assets/images/skills/api_rest.png";
 import { useI18n } from "../../services/I18next";
 import Skill from "../../components/skill/Skill";
 

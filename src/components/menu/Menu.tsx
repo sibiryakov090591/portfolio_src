@@ -5,10 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
-import logo from "../../images/logo.svg";
+import logo from "../../assets/images/logo.svg";
 import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
 import useAppTheme from "../../themes/ThemeStyles";
+import NavLink from "./NavLink/NavLink";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -30,8 +31,7 @@ const Menu: React.FC = () => {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.from("#menu_item", {
-      delay: 4,
-      stagger: 0.1,
+      stagger: 0.12,
       ease: "circ.out",
       opacity: 0,
       x: "-22px",
@@ -102,7 +102,7 @@ const Menu: React.FC = () => {
           ref={logoRef}
           className={`${classes.logoWrapper} ${classes.mobileContainer}`}
         >
-          <Link
+          <NavLink
             className={`${classes.logoLink} ${appTheme.link}`}
             to="hero"
             smooth={true}
@@ -110,7 +110,7 @@ const Menu: React.FC = () => {
             duration={600}
           >
             <img className={classes.img} src={logo} alt="logo" />
-          </Link>
+          </NavLink>
         </div>
       </div>
 
@@ -138,7 +138,7 @@ const Menu: React.FC = () => {
       >
         <nav className={classes.mobileList}>
           <ul style={{ padding: 0 }}>
-            <Link
+            <NavLink
               onClick={toggleMobileMenuHandler}
               to="about"
               offset={-60}
@@ -151,8 +151,8 @@ const Menu: React.FC = () => {
                 <span className={classes.topItemIndexMobile}>01.</span>
                 {t("about")}
               </li>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               onClick={toggleMobileMenuHandler}
               to="skills"
               offset={-60}
@@ -165,8 +165,8 @@ const Menu: React.FC = () => {
                 <span className={classes.topItemIndexMobile}>02.</span>
                 {t("skills")}
               </li>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               onClick={toggleMobileMenuHandler}
               to="projects"
               offset={-60}
@@ -179,8 +179,8 @@ const Menu: React.FC = () => {
                 <span className={classes.topItemIndexMobile}>03.</span>
                 {t("projects")}
               </li>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               onClick={toggleMobileMenuHandler}
               to="resume"
               offset={-60}
@@ -193,8 +193,8 @@ const Menu: React.FC = () => {
                 <span className={classes.topItemIndexMobile}>04.</span>
                 {t("resume")}
               </li>
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               onClick={toggleMobileMenuHandler}
               to="contact"
               offset={-60}
@@ -207,7 +207,7 @@ const Menu: React.FC = () => {
                 <span className={classes.topItemIndexMobile}>05.</span>
                 {t("text_me")}
               </li>
-            </Link>
+            </NavLink>
           </ul>
         </nav>
       </div>
@@ -215,7 +215,7 @@ const Menu: React.FC = () => {
       {/*Desktop*/}
       <nav className={classes.desktopMenu}>
         <ul className={classes.topList}>
-          <Link
+          <NavLink
             to="about"
             offset={-60}
             smooth={true}
@@ -227,8 +227,8 @@ const Menu: React.FC = () => {
               <span className={classes.topItemIndex}>01.</span>
               {t("about")}
             </li>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="skills"
             offset={-60}
             smooth={true}
@@ -240,8 +240,8 @@ const Menu: React.FC = () => {
               <span className={classes.topItemIndex}>02.</span>
               {t("skills")}
             </li>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="projects"
             offset={-60}
             smooth={true}
@@ -253,8 +253,8 @@ const Menu: React.FC = () => {
               <span className={classes.topItemIndex}>03.</span>
               {t("projects")}
             </li>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="resume"
             offset={-60}
             smooth={true}
@@ -266,8 +266,8 @@ const Menu: React.FC = () => {
               <span className={classes.topItemIndex}>04.</span>
               {t("resume")}
             </li>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="contact"
             offset={-60}
             smooth={true}
@@ -279,7 +279,7 @@ const Menu: React.FC = () => {
               <span className={classes.topItemIndex}>05.</span>
               {t("text_me")}
             </li>
-          </Link>
+          </NavLink>
         </ul>
 
         <div className={classes.langWrapper} id="menu_item">
@@ -287,9 +287,9 @@ const Menu: React.FC = () => {
         </div>
 
         <div id="menu_item" className={classes.logoWrapper}>
-          <Link to="hero" smooth={true} spy={true} duration={600}>
+          <NavLink to="hero" smooth={true} spy={true} duration={600}>
             <img className={classes.img} src={logo} alt="logo" />
-          </Link>
+          </NavLink>
         </div>
       </nav>
     </header>

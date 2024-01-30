@@ -1,20 +1,26 @@
 @import-normalize;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Orbitron:wght@500;700&family=Racing+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,900&family=Orbitron:wght@500;700&family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Titillium+Web:wght@400;700;900&family=Orbitron:wght@500;700&family=Racing+Sans+One&display=swap');
 
 /* scroll */
 *::-webkit-scrollbar {
   background-color: #212121;
-  width: 7px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #3ba29c;
-  border-radius: 10px;
+  background-color: #7e7e09;
+  border: 4px solid #212121;
+  transition: 100ms;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  transition: 100ms;
+  background-color: #96960a;
+  border: 3px solid #212121;
 }
 
 *::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #212121;
 }
 
 body {
@@ -23,7 +29,7 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Nunito Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+  font-family: 'Titillium Web', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

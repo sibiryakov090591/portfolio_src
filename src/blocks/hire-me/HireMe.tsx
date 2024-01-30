@@ -4,10 +4,11 @@ import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { Box } from "@material-ui/core";
 import resumeEn from "./resume/andrew-sibiriakov-resume.pdf";
-import resumeImg_en from "../../images/resume.jpg";
+import resumeImg_en from "../../assets/images/resume.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../../services/I18next";
+import BlankLink from "../../components/menu/BlankLink/BlankLink";
 
 const HireMe: React.FC = () => {
   const classes = useStyles();
@@ -32,27 +33,24 @@ const HireMe: React.FC = () => {
       <Container className={classes.hireContainer}>
         <Title title={t("resume")} index="04" />
 
-        <Box className={classes.wrapper}>
+        <BlankLink
+          rel="noopener noreferrer"
+          href={resumeEn}
+          className={classes.wrapper}
+        >
           <div ref={elem_1} className={classes.resumeItemWrapper}>
             <div>
-              <a
-                href={resumeEn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.resumeLink}
-              >
-                <img
-                  className={classes.resumeImg}
-                  src={resumeImg_en}
-                  alt="resume_en"
-                />
-              </a>
+              <img
+                className={classes.resumeImg}
+                src={resumeImg_en}
+                alt="resume_en"
+              />
             </div>
             <div className={classes.content}>
               View or download the resume in PDF format. (CV)
             </div>
           </div>
-        </Box>
+        </BlankLink>
       </Container>
     </section>
   );

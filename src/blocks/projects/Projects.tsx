@@ -3,15 +3,15 @@ import { useStyles } from "./styles";
 import Title from "../../components/title/Title";
 import Project from "../../components/project/Project";
 import { Container } from "@material-ui/core";
-import mavik_1 from "../../images/projects/MavikPro/Mavik_1.webp";
-import mavik_2 from "../../images/projects/MavikPro/Mavik_2.webp";
-import mavik_3 from "../../images/projects/MavikPro/Mavik_3.webp";
-import chip_1 from "../../images/projects/Chipassist/chipassist_1.webp";
-import chip_2 from "../../images/projects/Chipassist/chipassist_2.webp";
-import chip_3 from "../../images/projects/Chipassist/chipassist_3.webp";
-import requests_1 from "../../images/projects/Requests/requests_1.jpg";
-import requests_2 from "../../images/projects/Requests/requests_2.jpg";
-import requests_3 from "../../images/projects/Requests/requests_3.jpg";
+import mavik_1 from "../../assets/images/projects/MavikPro/Mavik_1.webp";
+import mavik_2 from "../../assets/images/projects/MavikPro/Mavik_2.webp";
+import mavik_3 from "../../assets/images/projects/MavikPro/Mavik_3.webp";
+import chip_1 from "../../assets/images/projects/Chipassist/chipassist_1.webp";
+import chip_2 from "../../assets/images/projects/Chipassist/chipassist_2.webp";
+import chip_3 from "../../assets/images/projects/Chipassist/chipassist_3.webp";
+import requests_1 from "../../assets/images/projects/Requests/requests_1.jpg";
+import requests_2 from "../../assets/images/projects/Requests/requests_2.jpg";
+import requests_3 from "../../assets/images/projects/Requests/requests_3.jpg";
 import { useI18n } from "../../services/I18next";
 
 const Projects: React.FC = () => {

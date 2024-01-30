@@ -1,6 +1,6 @@
 import React from "react";
-import flag_ru from "../../images/lang_ru.svg";
-import flag_en from "../../images/lang_en.svg";
+import flag_ru from "../../assets/images/lang_ru.svg";
+import flag_en from "../../assets/images/lang_en.svg";
 import { useI18n } from "../../services/I18next";
 import { useStyles } from "./styles";
 import useAppTheme from "../../themes/ThemeStyles";

@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import Title from "../../components/title/Title";
-import { Container, Button } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
+import Button from "../../components/menu/Button/Button";
 import emailjs from "@emailjs/browser";
 import useAppTheme from "../../themes/ThemeStyles";
 import { useI18n } from "../../services/I18next";

@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "../../themes/paletteTypes";
-import my_photo from "../../images/my_photo2.jpg";
+import my_photo from "../../assets/images/my_photo2.jpg";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   hero: {

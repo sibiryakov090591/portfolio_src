@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
-import in_icon from "../../images/footer/linkedin.svg";
-import github_icon from "../../images/footer/github_hover.svg";
-import inst_icon from "../../images/footer/instagram.svg";
-import email_icon from "../../images/footer/email.svg";
-import wars_icon from "../../images/footer/wars.svg";
+import in_icon from "../../assets/images/footer/linkedin.svg";
+import github_icon from "../../assets/images/footer/github_hover.svg";
+import inst_icon from "../../assets/images/footer/instagram.svg";
+import email_icon from "../../assets/images/footer/email.svg";
+import wars_icon from "../../assets/images/footer/wars.svg";
 import { Hidden } from "@material-ui/core";
 
 const Footer: React.FC = () => {

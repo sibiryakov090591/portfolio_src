@@ -13,7 +13,9 @@ export default {
   },
   background: {
     dark: "#030303",
-    green: "#23ac7e",
+    green: "#085450",
+    yellow: "#7e7e09",
+    darkYellow: "#766717",
     white: "#ededed",
   },
   button: {
@@ -23,8 +25,8 @@ export default {
     green: "#328988",
   },
   skill: {
-    background: "#232f41",
-    border: "#2d3c50",
+    background: "#212121",
+    border: "#333333",
   },
   select: {
     background: "rgba(0,0,0,0.4)",
@@ -52,6 +54,7 @@ export default {
     red200: "#FFC4C9",
     red100: "#FAEEEF",
 
+    grey800: "#222222",
     grey700: "#212121",
     grey600: "#333333",
     grey500: "#474747",

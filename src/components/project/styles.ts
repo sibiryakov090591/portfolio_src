@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     margin: 20,
     maxWidth: 400,
     borderRadius: 10,
-    boxShadow: "5px 5px 20px #000000",
+    boxShadow: "3px 3px 0px #2c2c2c",
     overflow: "hidden",
     "@media screen and (max-width: 615px)": {
       width: "100%",
@@ -22,7 +22,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     position: "relative",
     "&:hover": {
       "& svg": {
-        color: theme.palette.background.green,
+        color: theme.palette.background.yellow,
       },
     },
   },
@@ -30,7 +30,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     position: "absolute",
     bottom: 7,
     right: 7,
-    color: "#5c5c5c",
+    color: theme.palette.background.darkYellow,
     transition: "all 200ms ease",
     pointerEvents: "none",
     zIndex: 10,

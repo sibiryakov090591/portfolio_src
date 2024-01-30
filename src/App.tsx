@@ -12,12 +12,6 @@ import Socials from "./components/socials/Socials";
 import { Hidden } from "@material-ui/core";
 
 function App() {
-  const [loaded, setLoaded] = React.useState(false);
-
-  React.useEffect(() => {
-    setTimeout(() => setLoaded(true), 5500);
-  }, []);
-
   return (
     <React.Fragment>
       <Menu />
@@ -26,14 +20,12 @@ function App() {
       </Hidden>
       <main id="main">
         <Hero />
-        <div style={{ display: loaded ? "block" : "none" }}>
-          <About />
-          <Skills />
-          <Projects />
-          <HireMe />
-          <Contacts />
-          <Footer />
-        </div>
+        <About />
+        <Skills />
+        <Projects />
+        <HireMe />
+        <Contacts />
+        <Footer />
       </main>
     </React.Fragment>
   );

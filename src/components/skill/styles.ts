@@ -20,7 +20,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     wordBreak: "break-word",
     color: theme.palette.text.primary,
     width: 600,
-    fontWeight: "bold",
     "@media screen and (max-width: 900px)": {
       width: "auto",
     },
