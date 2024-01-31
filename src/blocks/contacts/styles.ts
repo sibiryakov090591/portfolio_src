@@ -36,13 +36,14 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     outline: "none",
   },
   button: {
-    margin: "35px auto 0",
+    margin: "35px auto 0 !important",
     width: 235,
   },
   "@keyframes bright": {
-    "0%": { boxShadow: "0px 0px 250px -20px #a6e3d6a8" },
-    "50%": { boxShadow: "0px 0px 500px -18px #0ad4abc2" },
-    "100%": { boxShadow: "0px 0px 250px -20px #a6e3d6a8" },
+    "0%": { boxShadow: "0px 80px 250px 5px #0F4F33" },
+    "33%": { boxShadow: "0px 80px 650px 18px #024830" },
+    "66%": { boxShadow: "0px 80px 650px 18px #0e474f" },
+    "100%": { boxShadow: "0px 80px 250px 5px #0F4F33" },
   },
 }));
 
