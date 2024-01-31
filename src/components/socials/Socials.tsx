@@ -18,7 +18,7 @@ const Socials: React.FC = () => {
       delay: 1,
       stagger: 0.15,
       ease: "elastic.out(0.6, 0.2)",
-      x: "-80px",
+      x: "-90px",
       duration: 2,
     });
     gsap.from("#social_line", {

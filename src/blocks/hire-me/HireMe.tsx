@@ -9,6 +9,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../../services/I18next";
 import BlankLink from "../../components/menu/BlankLink/BlankLink";
+import AspectRatioIcon from "@material-ui/icons/AspectRatio";
 
 const HireMe: React.FC = () => {
   const classes = useStyles();
@@ -39,7 +40,7 @@ const HireMe: React.FC = () => {
           className={classes.wrapper}
         >
           <div ref={elem_1} className={classes.resumeItemWrapper}>
-            <div>
+            <div className={`${classes.resumeImgWrapper} img_wrapper`}>
               <img
                 className={classes.resumeImg}
                 src={resumeImg_en}
@@ -47,7 +48,8 @@ const HireMe: React.FC = () => {
               />
             </div>
             <div className={classes.content}>
-              View or download the resume in PDF format. (CV)
+              View and download the resume (CV) in PDF format.
+              <AspectRatioIcon className={classes.icon} />
             </div>
           </div>
         </BlankLink>

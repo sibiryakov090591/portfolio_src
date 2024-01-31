@@ -1,7 +1,8 @@
 import { makeStyles } from "@material-ui/styles";
 import { AppTheme } from "../../themes/paletteTypes";
+import { Theme } from "@material-ui/core/styles/createTheme";
 
-export const useStyles = makeStyles((theme: AppTheme) => ({
+export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   projectsContainer: {
     display: "flex !important",
     flexDirection: "column",
@@ -10,14 +11,13 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     paddingBottom: 50,
   },
   projectsWrapper: {
-    display: "flex",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
+    display: "grid",
+    gap: "24px",
+    gridTemplateColumns: "1fr 1fr",
     width: "100%",
     maxWidth: 975,
-    "@media screen and (max-width: 1042px)": {
-      justifyContent: "center",
-      maxWidth: "none",
+    [theme.breakpoints.down(1135)]: {
+      gridTemplateColumns: "1fr",
     },
   },
 }));

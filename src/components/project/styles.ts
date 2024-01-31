@@ -4,10 +4,9 @@ import { AppTheme } from "../../themes/paletteTypes";
 export const useStyles = makeStyles((theme: AppTheme) => ({
   wrapper: {
     backgroundColor: theme.palette.app.grey700,
-    margin: 20,
+    margin: "20px auto",
     maxWidth: 400,
     borderRadius: 10,
-    boxShadow: "3px 3px 0px #2c2c2c",
     overflow: "hidden",
     "@media screen and (max-width: 615px)": {
       width: "100%",
@@ -16,19 +15,19 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   sliderWrapper: {
     overflow: "hidden",
     height: 188,
-  },
-  sliderLink: {
-    display: "block",
-    position: "relative",
     "&:hover": {
-      "& svg": {
+      "& + div > svg": {
         color: theme.palette.background.yellow,
       },
     },
   },
+  sliderLink: {
+    display: "block",
+    position: "relative",
+  },
   sliderIcon: {
     position: "absolute",
-    bottom: 7,
+    top: 7,
     right: 7,
     color: theme.palette.background.darkYellow,
     transition: "all 200ms ease",
@@ -43,6 +42,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     lineHeight: 1.4,
     padding: "10px 35px 35px",
     color: theme.palette.text.primary,
+    position: "relative",
   },
   slider: {
     transition: "all 800ms ease",

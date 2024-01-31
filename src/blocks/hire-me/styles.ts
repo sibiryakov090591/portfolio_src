@@ -11,11 +11,13 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   wrapper: {
     display: "flex",
     cursor: "pointer",
-    transition: "all 500ms ease-out",
     overflow: "hidden",
     "&:hover": {
-      "& img": {
-        filter: "grayscale(0)",
+      "& .img_wrapper:after": {
+        background: "rgb(80 124 136 / 25%)",
+      },
+      "& svg": {
+        color: theme.palette.background.yellow,
       },
     },
     "@media screen and (max-width: 654px)": {
@@ -43,28 +45,48 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     borderBottom: `2px solid ${theme.palette.background.green}`,
   },
   resumeItemWrapper: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    alignItems: "stretch",
     maxWidth: 630,
     position: "relative",
     overflow: "hidden",
-    borderRadius: "30px",
-    backgroundColor: theme.palette.background.dark,
-    border: `5px dashed ${theme.palette.app.grey700}`,
+    borderRadius: 12,
+    backgroundColor: theme.palette.app.grey700,
+    border: `5px solid ${theme.palette.app.grey700}`,
+  },
+  resumeImgWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+    borderRadius: 10,
+    position: "relative",
+    "&:after": {
+      content: "''",
+      transition: "all 500ms ease-out",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: "rgb(64 158 118 / 21%)",
+    },
   },
   resumeImg: {
     width: "100%",
-    filter: "grayscale(1)",
-    transition: "all 500ms ease-out",
   },
   content: {
-    color: theme.palette.text.green,
-    padding: 16,
+    color: theme.palette.text.primary,
+    padding: "12px 12px 8px",
     display: "flex",
     alignItems: "center",
     fontWeight: "bold",
     lineHeight: "1.4",
+  },
+  icon: {
+    transition: "all 200ms ease-out",
+    color: theme.palette.background.darkYellow,
+    position: "absolute",
+    bottom: 4,
+    right: 6,
   },
 }));
 

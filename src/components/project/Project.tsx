@@ -23,7 +23,7 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(elem.current, {
       scrollTrigger: elem.current,
-      x: "40px",
+      y: "40px",
       opacity: 0,
       duration: 1.2,
     });
@@ -45,7 +45,6 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
     <div ref={elem} className={classes.wrapper}>
       <div className={classes.sliderWrapper}>
         <BlankLink className={classes.sliderLink} href={link}>
-          <AspectRatioIcon className={classes.sliderIcon} />
           <Slider {...settings} className={classes.slider}>
             {images.map((img, i) => (
               <img key={i} src={img} alt="work image" />
@@ -54,6 +53,7 @@ const Project: React.FC<PropsType> = ({ title, images, link, children }) => {
         </BlankLink>
       </div>
       <div className={classes.description}>
+        <AspectRatioIcon className={classes.sliderIcon} />
         <h3 className={classes.title}>{title}</h3>
         <p className={classes.text}>{children}</p>
       </div>
