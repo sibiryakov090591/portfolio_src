@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   wrapper: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "end",
+    justifyContent: "space-between",
     padding: "0 20px",
     zIndex: 100,
     position: "fixed",
@@ -23,11 +23,11 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   logoWrapper: {
     cursor: "pointer",
-    width: 45,
-    height: 45,
+    height: 50,
+    margin: "10px 8px 0 40px",
   },
   logoLink: {
-    height: 45,
+    height: 50,
   },
   mobileContainer: {
     width: 60,
@@ -36,7 +36,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     justifyContent: "center",
   },
   img: {
-    width: 45,
+    height: "100%",
   },
   desktopMenu: {
     display: "flex",
@@ -49,11 +49,12 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     display: "flex",
     color: theme.palette.text.secondary,
     transition: "all 300ms ease",
+    margin: 0,
   },
   topItem: {
     color: theme.palette.text.secondary,
     cursor: "pointer",
-    padding: "30px 0",
+    padding: "25px 0",
     transition: "all 300ms ease",
     marginRight: 40,
     [theme.breakpoints.down("sm")]: {

@@ -10,6 +10,7 @@ import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
 import useAppTheme from "../../themes/ThemeStyles";
 import NavLink from "./NavLink/NavLink";
+import { Box } from "@material-ui/core";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -39,33 +40,6 @@ const Menu: React.FC = () => {
       duration: 0.6,
     });
   }, []);
-
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-  //   tl.to(burgerRef.current, {
-  //     // delay: 4.6,
-  //     ease: "circ.out",
-  //     y: 0,
-  //     duration: 0.6,
-  //   });
-  //   tl.from(
-  //     logoRef.current,
-  //     {
-  //       y: -100,
-  //       ease: "circ.out",
-  //       duration: 0.6,
-  //     },
-  //     "<0.2"
-  //   );
-  //   tl.from(
-  //     langRef.current,
-  //     {
-  //       opacity: 0,
-  //       duration: 0.6,
-  //     },
-  //     "<0.4"
-  //   );
-  // }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -214,85 +188,86 @@ const Menu: React.FC = () => {
       </div>
 
       {/*Desktop*/}
-      <nav className={classes.desktopMenu}>
-        <ul className={classes.topList}>
-          <NavLink
-            to="about"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>01.</span>
-              {t("about")}
-            </li>
-          </NavLink>
-          <NavLink
-            to="skills"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>02.</span>
-              {t("skills")}
-            </li>
-          </NavLink>
-          <NavLink
-            to="projects"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>03.</span>
-              {t("projects")}
-            </li>
-          </NavLink>
-          <NavLink
-            to="resume"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>04.</span>
-              {t("resume")}
-            </li>
-          </NavLink>
-          <NavLink
-            to="contact"
-            offset={-60}
-            smooth={true}
-            spy={true}
-            duration={600}
-            className={classes.topItem}
-          >
-            <li id="menu_item">
-              <span className={classes.topItemIndex}>05.</span>
-              {t("text_me")}
-            </li>
-          </NavLink>
-        </ul>
+      <div id="menu_item" className={classes.logoWrapper}>
+        <NavLink to="hero" smooth={true} spy={true} duration={600}>
+          <img className={classes.img} src={logo} alt="logo" />
+        </NavLink>
+      </div>
 
+      <Box display="flex" alignItems="center">
+        <nav className={classes.desktopMenu}>
+          <ul className={classes.topList}>
+            <NavLink
+              to="about"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>01.</span>
+                {t("about")}
+              </li>
+            </NavLink>
+            <NavLink
+              to="skills"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>02.</span>
+                {t("skills")}
+              </li>
+            </NavLink>
+            <NavLink
+              to="projects"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>03.</span>
+                {t("projects")}
+              </li>
+            </NavLink>
+            <NavLink
+              to="resume"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>04.</span>
+                {t("resume")}
+              </li>
+            </NavLink>
+            <NavLink
+              to="contact"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.topItem}
+            >
+              <li id="menu_item">
+                <span className={classes.topItemIndex}>05.</span>
+                {t("text_me")}
+              </li>
+            </NavLink>
+          </ul>
+        </nav>
         <div className={classes.langWrapper} id="menu_item">
           <LangMenu />
         </div>
-
-        <div id="menu_item" className={classes.logoWrapper}>
-          <NavLink to="hero" smooth={true} spy={true} duration={600}>
-            <img className={classes.img} src={logo} alt="logo" />
-          </NavLink>
-        </div>
-      </nav>
+      </Box>
     </header>
   );
 };
