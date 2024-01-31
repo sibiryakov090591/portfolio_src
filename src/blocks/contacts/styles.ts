@@ -40,10 +40,10 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     width: 235,
   },
   "@keyframes bright": {
-    "0%": { boxShadow: "0px 80px 250px 5px #0F4F33" },
-    "33%": { boxShadow: "0px 80px 650px 18px #024830" },
-    "66%": { boxShadow: "0px 80px 650px 18px #0e474f" },
-    "100%": { boxShadow: "0px 80px 250px 5px #0F4F33" },
+    "0%": { boxShadow: "0px 80px 450px 5px #0F4F33" },
+    "33%": { boxShadow: "0px 80px 1250px 18px #024830" },
+    "66%": { boxShadow: "0px 80px 1250px 18px #0e474f" },
+    "100%": { boxShadow: "0px 80px 450px 5px #0F4F33" },
   },
 }));
 
