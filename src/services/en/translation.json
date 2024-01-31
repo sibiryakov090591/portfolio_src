@@ -47,8 +47,8 @@
   },
   "contacts": {
     "button": "Send message",
-    "name": "Your full name",
-    "email": "Your email or phone number",
+    "name": "Full name",
+    "email": "Email or phone number",
     "textarea": "Message..."
   }
 }
