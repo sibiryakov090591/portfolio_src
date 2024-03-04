@@ -23,11 +23,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   logoWrapper: {
     cursor: "pointer",
-    height: 50,
-    margin: "10px 8px 0 40px",
-  },
-  logoLink: {
-    height: 50,
+    height: 35,
+    marginLeft: "40px",
   },
   mobileContainer: {
     width: 60,
@@ -159,11 +156,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   langWrapper: {
     marginRight: 40,
     [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-  mobileLangAndLogo: {
-    [theme.breakpoints.up("md")]: {
       display: "none",
     },
   },

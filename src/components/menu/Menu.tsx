@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useStyles } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import BlurOnIcon from "@material-ui/icons/BlurOn";
 import logo from "../../assets/images/logo.svg";
@@ -10,7 +9,7 @@ import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
 import useAppTheme from "../../themes/ThemeStyles";
 import NavLink from "./NavLink/NavLink";
-import { Box } from "@material-ui/core";
+import { Box, Hidden } from "@material-ui/core";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -72,34 +71,27 @@ const Menu: React.FC = () => {
         pageYOffset === 60 ? classes.fixedList : ""
       }`}
     >
-      <div className={classes.mobileLangAndLogo}>
-        <div
-          ref={logoRef}
-          className={`${classes.logoWrapper} ${classes.mobileContainer}`}
+      <div ref={logoRef} className={classes.logoWrapper}>
+        <NavLink
+          className={appTheme.link}
+          to="hero"
+          smooth={true}
+          spy={true}
+          duration={600}
         >
-          <NavLink
-            className={`${classes.logoLink} ${appTheme.link}`}
-            to="hero"
-            smooth={true}
-            spy={true}
-            duration={600}
-          >
-            <img className={classes.img} src={logo} alt="logo" />
-          </NavLink>
-        </div>
+          <img className={classes.img} src={logo} alt="logo" />
+        </NavLink>
       </div>
 
-      <div className={classes.mobileLangAndLogo}>
-        <div ref={langRef} className={classes.mobileContainer}>
-          <LangMenu />
-        </div>
+      <div ref={langRef} className={classes.mobileContainer}>
+        <LangMenu />
       </div>
 
       {/*Mobile*/}
       <div
         ref={burgerRef}
         onClick={toggleMobileMenuHandler}
-        className={`${classes.burgerWrapper} ${classes.mobileContainer}`}
+        className={classes.burgerWrapper}
       >
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
@@ -188,11 +180,13 @@ const Menu: React.FC = () => {
       </div>
 
       {/*Desktop*/}
-      <div id="menu_item" className={classes.logoWrapper}>
-        <NavLink to="hero" smooth={true} spy={true} duration={600}>
-          <img className={classes.img} src={logo} alt="logo" />
-        </NavLink>
-      </div>
+      <Hidden smDown>
+        <div id="menu_item" className={classes.logoWrapper}>
+          <NavLink to="hero" smooth={true} spy={true} duration={600}>
+            <img className={classes.img} src={logo} alt="logo" />
+          </NavLink>
+        </div>
+      </Hidden>
 
       <Box display="flex" alignItems="center">
         <nav className={classes.desktopMenu}>
