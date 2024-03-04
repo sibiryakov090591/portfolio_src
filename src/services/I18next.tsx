@@ -2,6 +2,7 @@ import i18n, { TFunction, i18n as Ii18n } from "i18next";
 import React, { PropsWithChildren } from "react";
 import { initReactI18next, useTranslation } from "react-i18next";
 import enTranslate from "./en/translation.json";
+import esTranslate from "./es/translation.json";
 import ruTranslate from "./ru/translation.json";
 
 i18n.use(initReactI18next).init({
@@ -9,6 +10,7 @@ i18n.use(initReactI18next).init({
   lng: localStorage.getItem("locale") || "en",
   resources: {
     en: { translation: enTranslate },
+    es: { translation: esTranslate },
     ru: { translation: ruTranslate },
   },
 });

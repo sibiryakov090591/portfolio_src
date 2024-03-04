@@ -1,6 +1,7 @@
 import React from "react";
-import flag_ru from "../../assets/images/lang_ru.svg";
-import flag_en from "../../assets/images/lang_en.svg";
+import flag_ru from "../../assets/images/flags/lang_ru.svg";
+import flag_en from "../../assets/images/flags/lang_en.png";
+import flag_es from "../../assets/images/flags/lang_es.png";
 import { useI18n } from "../../services/I18next";
 import { useStyles } from "./styles";
 import useAppTheme from "../../themes/ThemeStyles";
@@ -16,7 +17,20 @@ const LangMenu = () => {
   const [open, setOpen] = React.useState(false);
   const id = open ? "simple-popper" : undefined;
 
-  const handleChangeLocale = (locale: "en" | "ru") => {
+  const getIcon = () => {
+    switch (i18n.language) {
+      case "en":
+        return flag_en;
+      case "es":
+        return flag_es;
+      case "ru":
+        return flag_ru;
+      default:
+        return flag_en;
+    }
+  };
+
+  const handleChangeLocale = (locale: "en" | "ru" | "es") => {
     i18n.changeLanguage(locale);
     localStorage.setItem("locale", locale);
   };
@@ -36,11 +50,7 @@ const LangMenu = () => {
         onClick={handleClick}
         ref={anchorEl}
       >
-        <img
-          className={classes.langFlag}
-          src={i18n.language === "en" ? flag_en : flag_ru}
-          alt="flag icon"
-        />
+        <img className={classes.langFlag} src={getIcon()} alt="flag icon" />
       </div>
       <Popper
         placement={"bottom"}
@@ -69,6 +79,18 @@ const LangMenu = () => {
                 alt="flag_en"
               />
               <span className={classes.text}>{t("en")}</span>
+            </MenuItem>
+            <MenuItem
+              className={appTheme.selectMenuItem}
+              onClick={() => handleChangeLocale("es")}
+              selected={i18n.language === "es"}
+            >
+              <img
+                className={classes.langFlagItem}
+                src={flag_es}
+                alt="flag_es"
+              />
+              <span className={classes.text}>{t("es")}</span>
             </MenuItem>
             <MenuItem
               className={appTheme.selectMenuItem}

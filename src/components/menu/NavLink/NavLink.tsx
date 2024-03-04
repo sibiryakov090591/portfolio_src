@@ -1,35 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-scroll";
-import sound from "../../../assets/audio/mixkit-game-user-interface-tone-2570_Gy5p0NA0.wav";
+import sound from "../../../assets/audio/navigation.wav";
+import useSound from "use-sound";
 
 const NavLink: React.FC<any> = ({ children, onClick, ...rest }) => {
-  const audioRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.1;
-      audioRef.current.load();
-    }
-  }, [audioRef.current]);
+  const [play] = useSound(sound, { volume: 0.1 });
 
   const playAudio = () => {
-    const audio: any = audioRef.current;
-
-    // If audio is playing, pause and reset to the beginning
-    if (!audio.paused) {
-      audio.pause();
-      audio.currentTime = 0;
-    }
-
     // Play the audio
-    audio.play();
+    play();
+
+    // Action
     if (onClick) onClick();
   };
 
   return (
     <Link {...rest} onClick={playAudio}>
       {children}
-      <audio ref={audioRef} src={sound}></audio>
     </Link>
   );
 };

@@ -1,0 +1,55 @@
+{
+  "menu": {
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "resume": "Currículum",
+    "text_me": "Mensaje"
+  },
+  "lang": {
+    "title": "Elige idioma:",
+    "ru": "Ruso",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "hero": {
+    "line_1": "Hola",
+    "line_2": "Soy Andrés",
+    "line_3": "y creo experiencias de interfaz de usuario (UI/UX)."
+  },
+  "about": {
+    "text_1": "Con pasión por crear experiencias digitales, me sumergí en el mundo del desarrollo front-end en 2019. Especializado en React.js, convierto diseños en interfaces dinámicas y fáciles de usar.",
+    "text_2": "Como jugador de equipo, prospero en entornos dinámicos donde las ideas colectivas se transforman en productos notables. Mi trayectoria como desarrollador front-end ha fortalecido mis habilidades para resolver problemas, permitiéndome enfrentar desafíos complejos y ofrecer soluciones elegantes.",
+    "text_3": "Acompáñame en esta aventura de codificación mientras sigo evolucionando, innovando y contribuyendo al cambiante mundo del desarrollo front-end."
+  },
+  "skills": {
+    "react": "Competente en React.js, me especializo en crear aplicaciones web dinámicas y fáciles de usar. Mi experiencia se centra en la creación de interfaces receptivas, aprovechando la estructura basada en componentes de React, la gestión de estado e integrando bibliotecas para ofrecer experiencias de usuario perfectas.",
+    "ts": "Aprovechando el sólido sistema de tipificación de TypeScript, construyo proyectos React escalables y mantenibles, asegurando la confiabilidad del código y flujos de trabajo de desarrollo mejorados. Mi competencia se extiende a la creación de interfaces dinámicas, la gestión eficiente del estado e implementar las mejores prácticas para mejorar la calidad y el rendimiento del código.",
+    "sass": "Me especializo en la creación de aplicaciones web que priorizan la accesibilidad y la compatibilidad con diversos navegadores y dispositivos. Implemento estructuras HTML limpias y significativas, asegurando un marcado semántico para mejorar el SEO y la usabilidad.",
+    "gsap": "Experto en utilizar la biblioteca GSAP (GreenSock Animation Platform), agrego animaciones dinámicas y elementos interactivos a las aplicaciones React. Con las potentes capacidades de GSAP, creo experiencias de usuario fluidas y atractivas, integrando sin problemas animaciones que mejoran el atractivo visual y la participación del usuario.",
+    "rest": "Aporto un enfoque sólido para manejar la comunicación de datos entre sistemas front-end y back-end. Con Axios, gestiono eficientemente las solicitudes y respuestas de la API, manejando operaciones asíncronas sin problemas. Mi experiencia incluye la implementación de manejo de errores, interceptores y configuración de instancias de Axios para garantizar la obtención de datos segura, confiable y eficiente."
+  },
+  "projects": {
+    "mavik": {
+      "title": "Mavik Pro Landing",
+      "text_1": "Herramientas utilizadas: HTML / SASS, JavaScript, Slick-slider, GSAP para animación, PHPMailer.",
+      "text_2": "Esta es una página de aterrizaje con una ligera animación en la biblioteca GreenSock (GSAP)."
+    },
+    "ca": {
+      "title": "ChipAssist marketplace",
+      "text_1": "Herramientas utilizadas: React / Redux, React-router-dom, Material ui, Styled component, I18next, React Hook Form, Axios, Stripe",
+      "text_2": "Mercado de componentes electrónicos. Aquí los usuarios buscan productos en una línea de búsqueda o en un catálogo y realizan un pedido, también pueden solicitar componentes faltantes."
+    },
+    "requests": {
+      "title": "Intercambio para vendedores",
+      "text_1": "Herramientas utilizadas: React / Redux, React-router-dom, Material ui, I18next, Axios",
+      "text_2": "Este es un intercambio para vendedores, aquí los vendedores ven solicitudes y responden a ellas con el mejor precio."
+    }
+  },
+  "contacts": {
+    "button": "Enviar mensaje",
+    "name": "Nombre completo",
+    "email": "Correo electrónico o número de teléfono",
+    "textarea": "Mensaje..."
+  }
+}
