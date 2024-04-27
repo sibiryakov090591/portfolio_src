@@ -83,9 +83,9 @@ const Menu: React.FC = () => {
         </NavLink>
       </div>
 
-      <div ref={langRef} className={classes.mobileContainer}>
-        <LangMenu />
-      </div>
+      {/*<div ref={langRef} className={classes.mobileContainer}>*/}
+      {/*  <LangMenu />*/}
+      {/*</div>*/}
 
       {/*Mobile*/}
       <div
@@ -180,14 +180,6 @@ const Menu: React.FC = () => {
       </div>
 
       {/*Desktop*/}
-      <Hidden smDown>
-        <div id="menu_item" className={classes.logoWrapper}>
-          <NavLink to="hero" smooth={true} spy={true} duration={600}>
-            <img className={classes.img} src={logo} alt="logo" />
-          </NavLink>
-        </div>
-      </Hidden>
-
       <Box display="flex" alignItems="center">
         <nav className={classes.desktopMenu}>
           <ul className={classes.topList}>
