@@ -1,7 +1,8 @@
 import { makeStyles } from "@material-ui/styles";
+import { Theme } from "@material-ui/core/styles/createTheme";
 import { AppTheme } from "../../themes/paletteTypes";
 
-export const useStyles = makeStyles((theme: AppTheme) => ({
+export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
   footer: {
     paddingTop: 50,
     paddingBottom: 50,
@@ -34,6 +35,10 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     display: "flex",
     gap: "24px",
     padding: 0,
+    [theme.breakpoints.down(400)]: {
+      flexDirection: "column",
+      gap: "0px",
+    },
   },
   item: {
     color: theme.palette.text.secondary,

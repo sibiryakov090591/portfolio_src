@@ -16,44 +16,6 @@ const Footer: React.FC = () => {
   return (
     <footer className={classes.footer}>
       <Container className={classes.footerContainer}>
-        <Hidden mdUp>
-          <div className={classes.socialsWrapper}>
-            <div className={classes.imgWrapper}>
-              <a
-                href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
-                target="_blank"
-              >
-                <img className={classes.img} src={in_icon} alt="linked in" />
-              </a>
-            </div>
-            <div className={classes.imgWrapper}>
-              <a href="https://github.com/sibiryakov090591" target="_blank">
-                <img className={classes.img} src={github_icon} alt="github" />
-              </a>
-            </div>
-            <div className={classes.imgWrapper}>
-              <a
-                href="https://www.codewars.com/users/AndreySibiryakov"
-                target="_blank"
-              >
-                <img className={classes.img} src={wars_icon} alt="code wars" />
-              </a>
-            </div>
-            <div className={classes.imgWrapper}>
-              <a
-                href="https://www.instagram.com/sibiryakov_bro/"
-                target="_blank"
-              >
-                <img className={classes.img} src={inst_icon} alt="instagram" />
-              </a>
-            </div>
-            <div className={classes.imgWrapper}>
-              <a href="mailto:sibiryakow91@gmail.com" target="_blank">
-                <img className={classes.img} src={email_icon} alt="send mail" />
-              </a>
-            </div>
-          </div>
-        </Hidden>
         <nav>
           <ul className={classes.list}>
             <NavLink
@@ -108,9 +70,50 @@ const Footer: React.FC = () => {
             </NavLink>
           </ul>
         </nav>
-        <div>
-          © {new Date().getFullYear()} Andrew Sibiriakov - Progressive Front End
-          engineering.
+        <Hidden mdUp>
+          <div className={classes.socialsWrapper}>
+            <div className={classes.imgWrapper}>
+              <a
+                href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
+                target="_blank"
+              >
+                <img className={classes.img} src={in_icon} alt="linked in" />
+              </a>
+            </div>
+            <div className={classes.imgWrapper}>
+              <a href="https://github.com/sibiryakov090591" target="_blank">
+                <img className={classes.img} src={github_icon} alt="github" />
+              </a>
+            </div>
+            <div className={classes.imgWrapper}>
+              <a
+                href="https://www.codewars.com/users/AndreySibiryakov"
+                target="_blank"
+              >
+                <img className={classes.img} src={wars_icon} alt="code wars" />
+              </a>
+            </div>
+            <div className={classes.imgWrapper}>
+              <a
+                href="https://www.instagram.com/sibiryakov_bro/"
+                target="_blank"
+              >
+                <img className={classes.img} src={inst_icon} alt="instagram" />
+              </a>
+            </div>
+            <div className={classes.imgWrapper}>
+              <a href="mailto:sibiryakow91@gmail.com" target="_blank">
+                <img className={classes.img} src={email_icon} alt="send mail" />
+              </a>
+            </div>
+          </div>
+        </Hidden>
+        <div style={{ textAlign: "center" }}>
+          © {new Date().getFullYear()} Andrew Sibiriakov -{" "}
+          <Hidden smUp>
+            <br />
+          </Hidden>{" "}
+          Progressive Front End engineering.
         </div>
       </Container>
     </footer>
