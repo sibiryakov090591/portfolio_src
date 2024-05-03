@@ -4,6 +4,18 @@ import { AppTheme } from "../../themes/paletteTypes";
 export const useStyles = makeStyles((theme: AppTheme) => ({
   contacts: {
     paddingBottom: 50,
+    backgroundImage:
+      "linear-gradient(0deg,rgba(38,98,71,.62) 0%,rgba(38,98,71,0) 100%)",
+    position: "relative",
+    "&:after": {
+      content: "''",
+      position: "absolute",
+      zIndex: 0,
+      inset: 0,
+      background:
+        "radial-gradient(ellipse at center bottom,rgba(12,12,12,0) 40%,rgba(3,3,3,1) 100%)",
+      pointerEvents: "none",
+    },
   },
   contactsContainer: {
     display: "flex",
@@ -28,7 +40,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     outline: "none",
   },
   textarea: {
-    animation: `$bright 10s forwards infinite`,
     width: "100%",
     minHeight: 100,
     resize: "none",
@@ -38,12 +49,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   button: {
     margin: "35px auto 0 !important",
     width: 235,
-  },
-  "@keyframes bright": {
-    "0%": { boxShadow: "0px 80px 450px 5px #0F4F33" },
-    "33%": { boxShadow: "0px 80px 1250px 18px #024830" },
-    "66%": { boxShadow: "0px 80px 1250px 18px #0e474f" },
-    "100%": { boxShadow: "0px 80px 450px 5px #0F4F33" },
   },
 }));
 

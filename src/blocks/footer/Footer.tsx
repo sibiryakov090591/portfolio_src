@@ -1,15 +1,17 @@
 import React from "react";
-import { Container } from "@material-ui/core";
+import { Container, Hidden } from "@material-ui/core";
 import { useStyles } from "./styles";
 import in_icon from "../../assets/images/footer/linkedin.svg";
 import github_icon from "../../assets/images/footer/github_hover.svg";
 import inst_icon from "../../assets/images/footer/instagram.svg";
 import email_icon from "../../assets/images/footer/email.svg";
 import wars_icon from "../../assets/images/footer/wars.svg";
-import { Hidden } from "@material-ui/core";
+import NavLink from "../../components/menu/NavLink/NavLink";
+import { useI18n } from "../../services/I18next";
 
 const Footer: React.FC = () => {
   const classes = useStyles();
+  const { t } = useI18n("menu");
 
   return (
     <footer className={classes.footer}>
@@ -52,7 +54,64 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </Hidden>
-        <div>© {new Date().getFullYear()} Andrew Sibiriakov.</div>
+        <nav>
+          <ul className={classes.list}>
+            <NavLink
+              to="about"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.item}
+            >
+              <li>{t("about")}</li>
+            </NavLink>
+            <NavLink
+              to="skills"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.item}
+            >
+              <li>{t("skills")}</li>
+            </NavLink>
+            <NavLink
+              to="projects"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.item}
+            >
+              <li>{t("projects")}</li>
+            </NavLink>
+            <NavLink
+              to="resume"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.item}
+            >
+              <li>{t("resume")}</li>
+            </NavLink>
+            <NavLink
+              to="contact"
+              offset={-60}
+              smooth={true}
+              spy={true}
+              duration={600}
+              className={classes.item}
+            >
+              <li>{t("text_me")}</li>
+            </NavLink>
+          </ul>
+        </nav>
+        <div>
+          © {new Date().getFullYear()} Andrew Sibiriakov - Progressive Front End
+          engineering.
+        </div>
       </Container>
     </footer>
   );

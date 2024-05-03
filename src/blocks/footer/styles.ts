@@ -3,7 +3,9 @@ import { AppTheme } from "../../themes/paletteTypes";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   footer: {
+    paddingTop: 50,
     paddingBottom: 50,
+    borderTop: "2px solid #234133",
   },
   footerContainer: {
     display: "flex",
@@ -26,6 +28,20 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     transition: "all 250ms ease",
     "&:hover": {
       filter: "grayscale(0)",
+    },
+  },
+  list: {
+    display: "flex",
+    gap: "24px",
+    padding: 0,
+  },
+  item: {
+    color: theme.palette.text.secondary,
+    cursor: "pointer",
+    padding: "12px 0",
+    transition: "all 300ms ease",
+    "&:hover": {
+      color: theme.palette.text.green,
     },
   },
 }));
