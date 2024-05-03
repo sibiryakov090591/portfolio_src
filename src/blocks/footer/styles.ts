@@ -16,7 +16,8 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
   },
   socialsWrapper: {
     display: "flex",
-    marginBottom: 20,
+    marginTop: 20,
+    marginBottom: 32,
   },
   imgWrapper: {
     width: 25,

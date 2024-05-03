@@ -66,9 +66,9 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     fontSize: 22,
     marginRight: 0,
     padding: 0,
-    borderBottom: `1px dashed #21453c`,
+    borderBottom: `4px solid #061813`,
     "&:first-child": {
-      borderTop: `1px dashed #21453c`,
+      borderTop: `4px solid #061813`,
     },
     "& li": {
       padding: "30px 50px",
@@ -87,9 +87,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     fontWeight: 600,
   },
   topItemIndexMobile: {
-    display: "block",
     fontSize: 20,
-    marginBottom: 5,
+    marginRight: 12,
     color: theme.palette.text.green,
     fontFamily: "Orbitron",
     fontWeight: 600,
@@ -107,6 +106,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   burgerWrapper: {
     zIndex: 100,
     display: "none",
+    position: "absolute",
+    right: 20,
     [theme.breakpoints.down("sm")]: {
       display: "flex",
     },
