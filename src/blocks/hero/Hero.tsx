@@ -1,22 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Typewriter from "typewriter-effect";
 import { useStyles } from "./styles";
 import { Box } from "@material-ui/core";
-import { gsap } from "gsap";
 
 const Hero: React.FC = () => {
   const classes = useStyles();
-
-  // const photo = useRef<HTMLDivElement>(null);
-  //
-  // useEffect(() => {
-  //   gsap.from(photo.current, {
-  //     y: "-20px",
-  //     duration: 3,
-  //     opacity: 0,
-  //     ease: "circ.out",
-  //   });
-  // }, []);
 
   return (
     <section id="hero" className={classes.hero}>

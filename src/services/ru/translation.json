@@ -31,19 +31,29 @@
   },
   "projects": {
     "mavik": {
-      "title": "Mavik Pro Лендинг",
-      "text_1": "Какие технологии здесь использовались: HTML / SASS, JavaScript, Slick-slider, GSAP для анимации, PHPMailer.",
-      "text_2": "Это лендинговая страница с несложной анимацией на Greensock (GSAP)."
+      "title": "Mavik-Pro лендинг",
+      "text_1": "Какие технологии здесь использовались: HTML, CSS/SASS, JavaScript, Slick-slider, GreenSock (GSAP) для анимации, PHPMailer.",
+      "text_2": "Это лендинговая страница разработанная по собственному дизайну с несложной анимацией на GSAP (GreenSock)."
     },
     "ca": {
       "title": "ChipAssist маркетплейс",
-      "text_1": "Какие технологии здесь использовались: React / Redux, React-router-dom, Material ui, Styled component, I18next, React Hook Form, Axios, Stripe",
-      "text_2": "Маркетплейс электронных комплектующих. Здесь пользователи ищут товары по поиску и в каталоге и оформить заказ, а также могут запросить отсутствующие компоненты."
+      "text_1": "Какие технологии здесь использовались: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, React Hook Form, Axios, Stripe",
+      "text_2": "Торговая площадка электронных компонентов, включающая каталог и корзину. Наши пользователи могут запросить существующие продукты или загрузить файл CVS/XML (BOM), и мы постараемся найти лучшие предложения."
     },
     "requests": {
-      "title": "Биржа для продавцов электорнных компонентов",
-      "text_1": "Какие технологии здесь использовались: React / Redux, React-router-dom, Material ui, Axios",
-      "text_2": "Это биржа для продавцов, здесь продавцы видят запросы покупателей и отвечают на них лучшей ценой."
+      "title": "ChipAssist биржа для продавцов",
+      "text_1": "Какие технологии здесь использовались: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components Axios",
+      "text_2": "Это биржа для наших продавцов, где они могут предоставить лучшие цены по запросам пользователей."
+    },
+    "dashboard": {
+      "title": "Панель управления",
+      "text_1": "Использованные инструменты: TypeScript, React.js, React-router-dom, Material ui, DevExtreme, Vite, AWS",
+      "text_2": "Это фронтенд часть панели управления любыми данными."
+    },
+    "pcb_calc": {
+      "title": "Калькулятор PCB",
+      "text_1": "Использованные инструменты: TypeScript, React.js, Material ui, I18n",
+      "text_2": "Это калькулятор для печатных плат (PCB), где пользователь может выбирать разные типы, размеры, материалы и т.д."
     }
   },
   "contacts": {

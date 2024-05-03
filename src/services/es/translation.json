@@ -32,18 +32,28 @@
   "projects": {
     "mavik": {
       "title": "Mavik Pro Landing",
-      "text_1": "Herramientas utilizadas: HTML / SASS, JavaScript, Slick-slider, GSAP para animación, PHPMailer.",
+      "text_1": "Herramientas utilizadas: HTML, CSS/SASS, JavaScript, Slick-slider, GreenSock (GSAP) para animación, PHPMailer.",
       "text_2": "Esta es una página de aterrizaje con una ligera animación en la biblioteca GreenSock (GSAP)."
     },
     "ca": {
       "title": "ChipAssist marketplace",
-      "text_1": "Herramientas utilizadas: React / Redux, React-router-dom, Material ui, Styled component, I18next, React Hook Form, Axios, Stripe",
-      "text_2": "Mercado de componentes electrónicos. Aquí los usuarios buscan productos en una línea de búsqueda o en un catálogo y realizan un pedido, también pueden solicitar componentes faltantes."
+      "text_1": "Herramientas utilizadas: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, React Hook Form, Axios, Stripe",
+      "text_2": "Marketplace de componentes electrónicos que incluye catálogo y carrito. Nuestros usuarios pueden solicitar productos existentes o descargar un archivo CVS/XML (BOM) e intentaremos encontrar las mejores propuestas."
     },
     "requests": {
       "title": "Intercambio para vendedores",
-      "text_1": "Herramientas utilizadas: React / Redux, React-router-dom, Material ui, I18next, Axios",
-      "text_2": "Este es un intercambio para vendedores, aquí los vendedores ven solicitudes y responden a ellas con el mejor precio."
+      "text_1": "Herramientas utilizadas: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, Axios",
+      "text_2": "Esta es una bolsa de valores para nuestros vendedores donde pueden ofrecer los mejores precios para las solicitudes de los usuarios."
+    },
+    "dashboard": {
+      "title": "Tablero de gestión",
+      "text_1": "Herramientas utilizadas: TypeScript, React.js, React-router-dom, Material ui, DevExtreme, Vite, AWS",
+      "text_2": "Esta es la parte frontend del tablero para gestionar cualquier dato."
+    },
+    "pcb_calc": {
+      "title": "Calculadora de PCB",
+      "text_1": "Herramientas utilizadas: TypeScript, React.js, Material ui, I18n",
+      "text_2": "Esta es una calculadora para paneles PCB (placas electrónicas) donde el usuario puede seleccionar diferentes tipos, tamaños, materiales, etc."
     }
   },
   "contacts": {

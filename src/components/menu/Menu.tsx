@@ -9,7 +9,7 @@ import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
 import useAppTheme from "../../themes/ThemeStyles";
 import NavLink from "./NavLink/NavLink";
-import { Box, Hidden } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const Menu: React.FC = () => {
   const classes = useStyles();
@@ -17,7 +17,6 @@ const Menu: React.FC = () => {
   const { t } = useI18n("menu");
 
   const burgerRef = useRef(null);
-  const langRef = useRef(null);
   const logoRef = useRef(null);
 
   const [pageYOffset, setPageYOffset] = useState(0);
@@ -82,10 +81,6 @@ const Menu: React.FC = () => {
           <img className={classes.img} src={logo} alt="logo" />
         </NavLink>
       </div>
-
-      {/*<div ref={langRef} className={classes.mobileContainer}>*/}
-      {/*  <LangMenu />*/}
-      {/*</div>*/}
 
       {/*Mobile*/}
       <div

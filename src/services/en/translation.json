@@ -31,19 +31,29 @@
   },
   "projects": {
     "mavik": {
-      "title": "Mavik Pro Landing",
-      "text_1": "What tools were used: HTML / SASS, JavaScript, Slick-slider, GSAP for animation, PHPMailer.",
-      "text_2": "This is a landing page with a light animation on the greensock (GSAP) library."
+      "title": "Mavik-Pro landing page",
+      "text_1": "What tools were used: HTML, CSS/SASS, JavaScript, Slick-slider, GreenSock (GSAP) for animation, PHPMailer.",
+      "text_2": "This is a landing page which were designed myself with a light animation utilized the GSAP (GreenSock) library."
     },
     "ca": {
       "title": "ChipAssist marketplace",
-      "text_1": "What tools were used: React / Redux, React-router-dom, Material ui, Styled component, I18next, React Hook Form, Axios, Stripe",
-      "text_2": "Marketplace for electronic components. Here users search products in a search line or in a catalog and make an order, also they can request missing components."
+      "text_1": "What tools were used: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, React hook form, Axios, Stripe",
+      "text_2": "Marketplace of electronic components that includes catalog and cart. Our users may request existing products or download a CVS/XML file (BOM) and we'll try to find the best proposals."
     },
     "requests": {
-      "title": "Exchange for sellers",
-      "text_1": "What tools were used: React / Redux, React-router-dom, Material ui, I18next, Axios",
-      "text_2": "This is an exchange for sellers, here sellers see requests and respond to them with the best price."
+      "title": "ChipAssist stock exchange",
+      "text_1": "What tools were used: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, Axios",
+      "text_2": "This is a stock exchange for our sellers where they may provide the best prices for user's requests."
+    },
+    "dashboard": {
+      "title": "Management dashboard",
+      "text_1": "What tools were used: TypeScript, React.js, React-router-dom, Material ui, DevExtreme, Vite, AWS",
+      "text_2": "This is frontend part of dashboard to manage any data."
+    },
+    "pcb_calc": {
+      "title": "PCB calculator",
+      "text_1": "What tools were used: TypeScript, React.js, Material ui, I18n",
+      "text_2": "This is a calculator for PCB panels (electronic boards) where user may select different type, size, materials and etc."
     }
   },
   "contacts": {

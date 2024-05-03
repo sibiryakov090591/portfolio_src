@@ -34,6 +34,21 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     pointerEvents: "none",
     zIndex: 10,
   },
+  githubWrapper: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    fontSize: 13,
+    fontStyle: "italic",
+    color: theme.palette.background.yellow,
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
+  githubIcon: {
+    width: 20,
+    marginLeft: 12,
+  },
   title: {
     fontSize: 18,
     color: theme.palette.text.green,
