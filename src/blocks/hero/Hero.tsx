@@ -7,22 +7,22 @@ import { gsap } from "gsap";
 const Hero: React.FC = () => {
   const classes = useStyles();
 
-  const photo = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.from(photo.current, {
-      y: "-20px",
-      duration: 3,
-      opacity: 0,
-      ease: "circ.out",
-    });
-  }, []);
+  // const photo = useRef<HTMLDivElement>(null);
+  //
+  // useEffect(() => {
+  //   gsap.from(photo.current, {
+  //     y: "-20px",
+  //     duration: 3,
+  //     opacity: 0,
+  //     ease: "circ.out",
+  //   });
+  // }, []);
 
   return (
     <section id="hero" className={classes.hero}>
       <Box className={classes.heroContainer}>
         <Box className={classes.heroInner}>
-          <div className={classes.photo} ref={photo} />
+          <div className={classes.photo} />
 
           <h1 className={classes.presentation}>
             <Typewriter

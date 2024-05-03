@@ -62,6 +62,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     width: 300,
     height: 300,
     position: "relative",
+    animation: `$flash 3s forwards`,
     "&:after": {
       content: "''",
       position: "absolute",
@@ -69,7 +70,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
       left: 0,
       right: 0,
       bottom: 0,
-      background: "rgba(77,142,114, 0.21)",
+      background: "rgba(26,209,130, 0.21)",
     },
     "@media screen and (max-width: 900px)": {
       marginBottom: 40,
@@ -78,6 +79,18 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
       width: 250,
       height: 250,
       marginBottom: 0,
+    },
+  },
+  "@keyframes flash": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(-15px) scale(0.96)",
+      filter: "grayscale(0.8) blur(2px)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0px) scale(1)",
+      filter: "grayscale(0) blur(0)",
     },
   },
 }));
