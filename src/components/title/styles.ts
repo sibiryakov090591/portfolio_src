@@ -4,6 +4,7 @@ import { Theme } from "@material-ui/core/styles/createTheme";
 
 export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
   title: {
+    zIndex: 2,
     margin: "0 auto",
     padding: "50px 0 65px",
     color: theme.palette.text.secondary,

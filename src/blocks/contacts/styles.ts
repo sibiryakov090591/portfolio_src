@@ -45,6 +45,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     resize: "none",
     padding: 5,
     outline: "none",
+    zIndex: 1,
   },
   button: {
     margin: "35px auto 0 !important",
