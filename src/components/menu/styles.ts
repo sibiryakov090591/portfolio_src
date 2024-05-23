@@ -25,6 +25,9 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     cursor: "pointer",
     height: 35,
     marginLeft: "40px",
+    [theme.breakpoints.down(980)]: {
+        marginLeft: "0px",
+    },
   },
   mobileContainer: {
     width: 60,
@@ -65,7 +68,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   topItemMobile: {
     display: "block",
-    fontSize: 22,
+    fontSize: 20,
     marginRight: 0,
     padding: 0,
     borderBottom: `4px solid #061813`,
@@ -78,27 +81,21 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
         padding: "25px 45px",
       },
     },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 18,
-    },
   },
   topItemIndex: {
     color: theme.palette.text.green,
-    marginRight: 2,
+    marginRight: 4,
     fontFamily: "Orbitron",
     fontWeight: 400,
     fontSize: 16,
     transition: "all 300ms ease",
   },
   topItemIndexMobile: {
-    fontSize: 20,
+    fontWeight: 400,
+    fontSize: 16,
     marginRight: 12,
     color: theme.palette.text.green,
     fontFamily: "Orbitron",
-    fontWeight: 600,
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 16,
-    },
   },
   fixedList: {
     boxShadow: "0 10px 20px -10px #000",

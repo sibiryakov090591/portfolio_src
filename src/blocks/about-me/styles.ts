@@ -16,6 +16,13 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     lineHeight: 1.4,
     maxWidth: "60vw",
     zIndex: 3,
+    [theme.breakpoints.down("sm")]: {
+        maxWidth: "none",
+        padding: "0 30px",
+    },
+    [theme.breakpoints.down("xs")]: {
+        padding: "0px",
+    },
     "&:before": {
       content: "''",
       display: "block",
@@ -26,6 +33,9 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
       bottom: 0,
       left: "-30px",
       backgroundColor: theme.palette.app.grey700,
+      [theme.breakpoints.down("sm")]: {
+        display: "none",
+    },
     },
   },
   settingsIcon: {
@@ -34,6 +44,9 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     top: "-52px",
     width: 55,
     fill: theme.palette.background.darkYellow,
+    [theme.breakpoints.down("sm")]: {
+        display: "none",
+    },
   },
 }));
 
