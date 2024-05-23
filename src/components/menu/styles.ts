@@ -54,6 +54,8 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     padding: "25px 0",
     transition: "all 300ms ease",
     marginRight: 40,
+    fontWeight: 600,
+    fontSize: 20,
     [theme.breakpoints.down("sm")]: {
       marginRight: 0,
     },
@@ -82,9 +84,11 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
   },
   topItemIndex: {
     color: theme.palette.text.green,
-    marginRight: 6,
+    marginRight: 2,
     fontFamily: "Orbitron",
-    fontWeight: 600,
+    fontWeight: 400,
+    fontSize: 16,
+    transition: "all 300ms ease",
   },
   topItemIndexMobile: {
     fontSize: 20,

@@ -10,7 +10,8 @@ const Title: React.FC<PropsType> = ({ title, index }) => {
   const classes = useStyles();
   return (
     <h2 className={classes.title}>
-      <span className={classes.index}>{`${index}. `}</span>
+      {/* <span className={classes.index}>{`${index}. `}</span> */}
+      <span className={classes.index}></span>
       {title}
     </h2>
   );

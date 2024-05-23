@@ -11,6 +11,14 @@ import useAppTheme from "../../themes/ThemeStyles";
 import NavLink from "./NavLink/NavLink";
 import { Box } from "@material-ui/core";
 
+const menuItems = [
+  { name: "about", to: "about", index: "01" },
+  { name: "skills", to: "skills", index: "02" },
+  { name: "projects", to: "projects", index: "03" },
+  { name: "resume", to: "resume", index: "04" },
+  { name: "text_me", to: "contact", index: "05" },
+];
+
 const Menu: React.FC = () => {
   const classes = useStyles();
   const appTheme = useAppTheme();
@@ -100,76 +108,27 @@ const Menu: React.FC = () => {
       >
         <nav className={classes.mobileList}>
           <ul style={{ padding: 0 }}>
-            <NavLink
-              onClick={toggleMobileMenuHandler}
-              to="about"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li>
-                <span className={classes.topItemIndexMobile}>01.</span>
-                {t("about")}
-              </li>
-            </NavLink>
-            <NavLink
-              onClick={toggleMobileMenuHandler}
-              to="skills"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li>
-                <span className={classes.topItemIndexMobile}>02.</span>
-                {t("skills")}
-              </li>
-            </NavLink>
-            <NavLink
-              onClick={toggleMobileMenuHandler}
-              to="projects"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li>
-                <span className={classes.topItemIndexMobile}>03.</span>
-                {t("projects")}
-              </li>
-            </NavLink>
-            <NavLink
-              onClick={toggleMobileMenuHandler}
-              to="resume"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li>
-                <span className={classes.topItemIndexMobile}>04.</span>
-                {t("resume")}
-              </li>
-            </NavLink>
-            <NavLink
-              onClick={toggleMobileMenuHandler}
-              to="contact"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={`${classes.topItem} ${classes.topItemMobile}`}
-            >
-              <li>
-                <span className={classes.topItemIndexMobile}>05.</span>
-                {t("text_me")}
-              </li>
-            </NavLink>
+            {menuItems.map((item) => {
+              return (
+                <NavLink
+                  key={item.to}
+                  onClick={toggleMobileMenuHandler}
+                  to={item.to}
+                  offset={-60}
+                  smooth={true}
+                  spy={true}
+                  duration={600}
+                  className={`${classes.topItem} ${classes.topItemMobile}`}
+                >
+                  <li>
+                    <span className={classes.topItemIndexMobile}>
+                      {item.index}.
+                    </span>
+                    {t(item.name)}
+                  </li>
+                </NavLink>
+              );
+            })}
           </ul>
         </nav>
       </div>
@@ -178,71 +137,24 @@ const Menu: React.FC = () => {
       <Box display="flex" alignItems="center">
         <nav className={classes.desktopMenu}>
           <ul className={classes.topList}>
-            <NavLink
-              to="about"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>01.</span>
-                {t("about")}
-              </li>
-            </NavLink>
-            <NavLink
-              to="skills"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>02.</span>
-                {t("skills")}
-              </li>
-            </NavLink>
-            <NavLink
-              to="projects"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>03.</span>
-                {t("projects")}
-              </li>
-            </NavLink>
-            <NavLink
-              to="resume"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>04.</span>
-                {t("resume")}
-              </li>
-            </NavLink>
-            <NavLink
-              to="contact"
-              offset={-60}
-              smooth={true}
-              spy={true}
-              duration={600}
-              className={classes.topItem}
-            >
-              <li id="menu_item">
-                <span className={classes.topItemIndex}>05.</span>
-                {t("text_me")}
-              </li>
-            </NavLink>
+            {menuItems.map((item) => {
+              return (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  offset={-60}
+                  smooth={true}
+                  spy={true}
+                  duration={600}
+                  className={classes.topItem}
+                >
+                  <li id="menu_item">
+                    <span className={classes.topItemIndex}>{item.index}.</span>
+                    {t(item.name)}
+                  </li>
+                </NavLink>
+              );
+            })}
           </ul>
         </nav>
         <div className={classes.langWrapper} id="menu_item">
