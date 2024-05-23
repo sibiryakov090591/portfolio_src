@@ -8,6 +8,8 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     margin: "0 auto",
     padding: "50px 0 65px",
     color: theme.palette.text.secondary,
+    fontSize: 32,
+    fontFamily: "Orbitron",
     [theme.breakpoints.down("sm")]: {
       padding: "50px 0 50px",
     },
@@ -16,6 +18,7 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     color: theme.palette.text.green,
     fontFamily: "Orbitron",
     fontWeight: 400,
+    fontSize: 22,
   },
 }));
 
