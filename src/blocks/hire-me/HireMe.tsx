@@ -3,7 +3,7 @@ import Title from "../../components/title/Title";
 import { Container } from "@material-ui/core";
 import { useStyles } from "./styles";
 import { Box } from "@material-ui/core";
-import resumeEn from "./resume/andrew-sibiriakov-resume.pdf";
+import resumeEn from "./resume/Andrew_Sibiriakov_resume.pdf";
 import resumeImg_en from "../../assets/images/resume.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
