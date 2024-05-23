@@ -14,7 +14,7 @@ const BlankLink: React.FC<any> = ({ children, onClick, ...rest }) => {
   };
 
   return (
-    <a target="_blank" onClick={playAudio} {...rest}>
+    <a target="_blank" rel="noopener noreferrer" onClick={playAudio} {...rest}>
       {children}
     </a>
   );

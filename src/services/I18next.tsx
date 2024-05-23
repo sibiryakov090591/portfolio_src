@@ -15,9 +15,11 @@ i18n.use(initReactI18next).init({
   },
 });
 
-export const I18nContext = React.createContext<{}>({});
+export const I18nContext = React.createContext<Record<string, unknown>>({});
 
-export const I18nProvider: React.FC = (props: PropsWithChildren<{}>) => {
+export const I18nProvider: React.FC = (
+  props: PropsWithChildren<Record<string, unknown>>
+) => {
   return (
     <I18nContext.Provider value={{}}>{props.children}</I18nContext.Provider>
   );

@@ -76,12 +76,17 @@ const Footer: React.FC = () => {
               <a
                 href="https://www.linkedin.com/in/andrey-sibiriakov-6a54941b2"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img className={classes.img} src={in_icon} alt="linked in" />
               </a>
             </div>
             <div className={classes.imgWrapper}>
-              <a href="https://github.com/sibiryakov090591" target="_blank">
+              <a
+                href="https://github.com/sibiryakov090591"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img className={classes.img} src={github_icon} alt="github" />
               </a>
             </div>
@@ -89,6 +94,7 @@ const Footer: React.FC = () => {
               <a
                 href="https://www.codewars.com/users/AndreySibiryakov"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img className={classes.img} src={wars_icon} alt="code wars" />
               </a>
@@ -97,12 +103,17 @@ const Footer: React.FC = () => {
               <a
                 href="https://www.instagram.com/sibiryakov_bro/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img className={classes.img} src={inst_icon} alt="instagram" />
               </a>
             </div>
             <div className={classes.imgWrapper}>
-              <a href="mailto:sibiryakow91@gmail.com" target="_blank">
+              <a
+                href="mailto:sibiryakow91@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img className={classes.img} src={email_icon} alt="send mail" />
               </a>
             </div>

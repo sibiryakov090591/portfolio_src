@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
             {t("ca.text_2")}
           </Project>
           <Project
-            images={[requests_1, requests_2, , requests_3]}
+            images={[requests_1, requests_2, requests_3]}
             title={t("requests.title")}
             link="https://requests.chipassist.com/"
           >
@@ -61,7 +61,7 @@ const Projects: React.FC = () => {
             {t("requests.text_2")}
           </Project>
           <Project
-            images={[dashboard_1, dashboard_2, , dashboard_3]}
+            images={[dashboard_1, dashboard_2, dashboard_3]}
             title={t("dashboard.title")}
             link="https://main.d38hoihxf751c8.amplifyapp.com/"
             github="https://github.com/sibiryakov090591/management_dashboard"

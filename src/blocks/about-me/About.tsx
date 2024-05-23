@@ -5,7 +5,6 @@ import { Container } from "@material-ui/core";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "../../services/I18next";
-import icon from "../../assets/images/icons/SettingsIcon/settings-svgrepo-com.svg";
 import SettingsIcon from "../../assets/images/icons/SettingsIcon/SettingsIcon";
 
 const About: React.FC = () => {

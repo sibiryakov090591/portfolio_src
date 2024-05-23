@@ -12,7 +12,7 @@ li {
 }
 
 body {
-    overflowX: hidden;
+    overflow-x: hidden;
     background-color: #030303;
 }
 
