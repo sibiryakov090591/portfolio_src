@@ -22,13 +22,6 @@
     "text_2": "As a team player, I thrive in dynamic environments where collective ideas transform into remarkable products. My journey as a front-end developer has fortified my problem-solving skills, allowing me to navigate complex challenges and deliver elegant solutions.",
     "text_3": "Join me on this coding adventure as I continue to evolve, innovate, and contribute to the ever-changing world of front-end development!"
   },
-  "skills": {
-    "react": "Proficient in React.js, I specialize in creating dynamic and user-friendly web applications. My expertise lies in crafting responsive interfaces, leveraging React's component-based structure, state management, and integrating libraries to deliver seamless user experiences.",
-    "ts": "Leveraging TypeScript's strong typing system, I build scalable and maintainable React projects, ensuring code reliability and improved development workflows. My proficiency extends to creating dynamic interfaces, managing state efficiently, and implementing best practices for enhanced code quality and performance.",
-    "sass": "I specialize in crafting web applications that prioritize both accessibility and compatibility across various browsers and devices. I implement clean and meaningful HTML structures, ensuring semantic markup for enhanced SEO and usability.",
-    "gsap": "Skilled in utilizing the GSAP (GreenSock Animation Platform) library, I bring dynamic animations and interactive elements to React applications. With GSAP's powerful capabilities, I create fluid and engaging user experiences, seamlessly integrating animations that enhance visual appeal and user engagement.",
-    "rest": "I bring a robust approach to handling data communication between front-end and back-end systems. With Axios, I efficiently manage API requests and responses, handling asynchronous operations seamlessly. My expertise includes implementing error handling, interceptors, and configuring Axios instances to ensure secure, reliable and performant data retrieval."
-  },
   "projects": {
     "mavik": {
       "title": "Mavik-Pro landing page",

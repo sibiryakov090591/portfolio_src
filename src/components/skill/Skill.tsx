@@ -1,57 +1,18 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import { useStyles } from "./styles";
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 type PropsType = {
   icon: string;
 };
 
-const iconAnimation = (ref: any) => {
-    gsap.from(ref.current, {
-        scrollTrigger: {
-            trigger: ref.current,
-            start: "top 80%",
-        },
-        x: "-25px",
-        opacity: 0,
-        duration: 1.3,
-    });
-};
-
-const textAnimation = (ref: any) => {
-    gsap.from(ref.current, {
-        scrollTrigger: {
-            trigger: ref.current,
-            start: "top 80%",
-        },
-        y: "25px",
-        opacity: 0,
-        duration: 1.3,
-    });
-};
-
 const Skill: React.FC<PropsType> = ({ icon, children }) => {
   const classes = useStyles();
 
-    const img = useRef<HTMLDivElement>(null);
-    const text = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        iconAnimation(img);
-        textAnimation(text);
-    }, []);
-
   return (
-      <div className={classes.wrapper}>
-          <div ref={img} className={classes.iconWrapper}>
-              <img className={classes.icon} src={icon} alt="Skill icon" />
-          </div>
-          <p ref={text} className={classes.description}>
-              {children}
-          </p>
-      </div>
+    <div className={classes.wrapper}>
+      <img className={classes.icon} src={icon} alt="Skill icon" />
+      <span className={classes.description}>{children}</span>
+    </div>
   );
 };
 

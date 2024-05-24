@@ -22,13 +22,6 @@
     "text_2": "Como jugador de equipo, prospero en entornos dinámicos donde las ideas colectivas se transforman en productos notables. Mi trayectoria como desarrollador front-end ha fortalecido mis habilidades para resolver problemas, permitiéndome enfrentar desafíos complejos y ofrecer soluciones elegantes.",
     "text_3": "Acompáñame en esta aventura de codificación mientras sigo evolucionando, innovando y contribuyendo al cambiante mundo del desarrollo front-end."
   },
-  "skills": {
-    "react": "Competente en React.js, me especializo en crear aplicaciones web dinámicas y fáciles de usar. Mi experiencia se centra en la creación de interfaces receptivas, aprovechando la estructura basada en componentes de React, la gestión de estado e integrando bibliotecas para ofrecer experiencias de usuario perfectas.",
-    "ts": "Aprovechando el sólido sistema de tipificación de TypeScript, construyo proyectos React escalables y mantenibles, asegurando la confiabilidad del código y flujos de trabajo de desarrollo mejorados. Mi competencia se extiende a la creación de interfaces dinámicas, la gestión eficiente del estado e implementar las mejores prácticas para mejorar la calidad y el rendimiento del código.",
-    "sass": "Me especializo en la creación de aplicaciones web que priorizan la accesibilidad y la compatibilidad con diversos navegadores y dispositivos. Implemento estructuras HTML limpias y significativas, asegurando un marcado semántico para mejorar el SEO y la usabilidad.",
-    "gsap": "Experto en utilizar la biblioteca GSAP (GreenSock Animation Platform), agrego animaciones dinámicas y elementos interactivos a las aplicaciones React. Con las potentes capacidades de GSAP, creo experiencias de usuario fluidas y atractivas, integrando sin problemas animaciones que mejoran el atractivo visual y la participación del usuario.",
-    "rest": "Aporto un enfoque sólido para manejar la comunicación de datos entre sistemas front-end y back-end. Con Axios, gestiono eficientemente las solicitudes y respuestas de la API, manejando operaciones asíncronas sin problemas. Mi experiencia incluye la implementación de manejo de errores, interceptores y configuración de instancias de Axios para garantizar la obtención de datos segura, confiable y eficiente."
-  },
   "projects": {
     "mavik": {
       "title": "Mavik Pro Landing",
