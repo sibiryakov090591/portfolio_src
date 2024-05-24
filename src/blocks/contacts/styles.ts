@@ -3,7 +3,7 @@ import { AppTheme } from "../../themes/paletteTypes";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   contacts: {
-    paddingBottom: 50,
+    paddingBottom: 90,
     backgroundImage:
       "linear-gradient(0deg,rgba(38,98,71,.62) 0%,rgba(38,98,71,0) 100%)",
     position: "relative",

@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingBottom: 50,
+    paddingBottom: 90,
   },
   wrapper: {
     display: "flex",

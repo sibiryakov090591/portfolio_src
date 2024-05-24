@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-around",
-    paddingBottom: 50,
+    paddingBottom: 90,
   },
   projectsWrapper: {
     display: "grid",

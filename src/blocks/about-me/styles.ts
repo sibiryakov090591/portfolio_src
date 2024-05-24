@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingBottom: 50,
+    paddingBottom: 90,
   },
   content: {
     position: "relative",
