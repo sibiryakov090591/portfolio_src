@@ -19,12 +19,14 @@ const HireMe: React.FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(elem_1.current, {
+      y: 20,
+      opacity: 0,
+      duration: 1,
+      ease: "circ.out",
       scrollTrigger: {
         trigger: elem_1.current,
-        start: "top 70%",
+        start: "top 60%",
       },
-      opacity: 0,
-      duration: 0.6,
     });
   }, []);
 

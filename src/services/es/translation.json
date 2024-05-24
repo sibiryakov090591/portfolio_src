@@ -51,8 +51,10 @@
   },
   "contacts": {
     "button": "Enviar mensaje",
+    "sending": "Enviando",
     "name": "Nombre completo",
     "email": "Correo electrónico o número de teléfono",
-    "textarea": "Mensaje..."
+    "textarea": "Mensaje...",
+    "alert": "Gracias, te responderé lo antes posible!"
   }
 }

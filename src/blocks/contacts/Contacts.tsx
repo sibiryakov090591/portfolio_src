@@ -7,6 +7,11 @@ import emailjs from "@emailjs/browser";
 import useAppTheme from "../../themes/ThemeStyles";
 import { useI18n } from "../../services/I18next";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
+import Slide from "@material-ui/core/Slide";
+
+const transition = (props: any) => <Slide {...props} direction="up" />;
 
 const Contacts: React.FC = () => {
   const classes = useStyles();
@@ -15,6 +20,11 @@ const Contacts: React.FC = () => {
   const formRef = useRef(null);
 
   const [sending, setSending] = useState(false);
+  const [open, setOpen] = React.useState(true);
+
+  const onCloseAlert = (e: any, reason: string) => {
+    if (reason !== "clickaway") setOpen(false);
+  };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -71,9 +81,21 @@ const Contacts: React.FC = () => {
             className={`${appTheme.button} ${classes.button}`}
           >
             {sending && <CircularProgress disableShrink />}
-            {t("button")}
+            {sending ? t("sending") : t("button")}
           </Button>
         </form>
+        <Snackbar
+          open={open}
+          onClose={onCloseAlert}
+          autoHideDuration={5000}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          TransitionComponent={transition}
+          key={transition ? transition.name : ""}
+        >
+          <Alert elevation={6} variant="filled" severity="success">
+            {t("alert")}
+          </Alert>
+        </Snackbar>
       </Container>
     </section>
   );

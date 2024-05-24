@@ -51,8 +51,10 @@
   },
   "contacts": {
     "button": "Send message",
+    "sending": "Sending",
     "name": "Full name",
     "email": "Email or phone number",
-    "textarea": "Message..."
+    "textarea": "Message...",
+    "alert": "Thank you, I will answer you as soon as possible!"
   }
 }
