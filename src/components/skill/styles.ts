@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   description: {
     marginLeft: 16,
-    fontSize: 22,
+    fontSize: 20,
     whiteSpace: "nowrap",
     color: theme.palette.text.primary,
   },
