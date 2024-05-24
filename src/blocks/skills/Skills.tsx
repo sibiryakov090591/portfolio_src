@@ -45,7 +45,7 @@ const Skills: React.FC = () => {
         <div className={classes.marqueeWrapper}>
           <div className={classes.border} style={{ right: "100%" }} />
           <div style={{ width: "100%" }}>
-            <Marquee direction="left">
+            <Marquee direction="left" speed={40}>
               <Skill icon={javascript}>JavaScript</Skill>
               <Skill icon={typescript_logo}>TypeScript</Skill>
               <Skill icon={react_logo}>React</Skill>
@@ -63,7 +63,7 @@ const Skills: React.FC = () => {
             </Marquee>
           </div>
           <div style={{ width: "100%", marginTop: 24 }}>
-            <Marquee direction="left" speed={60}>
+            <Marquee direction="left" speed={50}>
               <Skill icon={atlassian}>Atlassian</Skill>
               <Skill icon={github}>GitHub</Skill>
               <Skill icon={api_logo}>RESTful APIs</Skill>
