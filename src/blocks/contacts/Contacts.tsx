@@ -20,7 +20,7 @@ const Contacts: React.FC = () => {
   const formRef = useRef(null);
 
   const [sending, setSending] = useState(false);
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const onCloseAlert = (e: any, reason: string) => {
     if (reason !== "clickaway") setOpen(false);

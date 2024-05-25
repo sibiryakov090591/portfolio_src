@@ -55,7 +55,7 @@ const Project: React.FC<PropsType> = ({
       x: "-80px",
       opacity: 0,
       transform: "matrix(1, 0, -0.4, 1, 1, 0",
-      duration: 0.7,
+      duration: 1,
       ease: "circ.out",
       scrollTrigger: childrenRef.current,
     });
@@ -93,24 +93,26 @@ const Project: React.FC<PropsType> = ({
         </BlankLink>
       </div>
       <div className={classes.description}>
-        <AspectRatioIcon className={classes.sliderIcon} />
-        <h3 ref={titleRef} className={classes.title}>
-          {title}
-        </h3>
-        <p ref={childrenRef} className={classes.text}>
-          {children}
-        </p>
+        <div>
+          <AspectRatioIcon className={classes.sliderIcon} />
+          <h3 ref={titleRef} className={classes.title}>
+            {title}
+          </h3>
+          <p ref={childrenRef} className={classes.text}>
+            {children}
+          </p>
+        </div>
         {!!github && (
-          <BlankLink href={github}>
-            <div ref={githubRef} className={classes.githubWrapper}>
+          <div ref={githubRef} className={classes.githubWrapper}>
+            <BlankLink href={github}>
               Github link
               <img
                 className={classes.githubIcon}
                 src={github_icon}
                 alt="github"
               />
-            </div>
-          </BlankLink>
+            </BlankLink>
+          </div>
         )}
       </div>
     </div>

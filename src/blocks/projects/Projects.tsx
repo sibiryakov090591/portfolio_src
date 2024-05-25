@@ -35,30 +35,30 @@ const Projects: React.FC = () => {
             link="https://sibiryakov090591.github.io/Project-Mavik/src/"
             github="https://github.com/sibiryakov090591/Project-Mavik"
           >
-            {t("mavik.text_1")}
-            <br />
-            <br />
             {t("mavik.text_2")}
+            <br />
+            <br />
+            {t("mavik.text_1")}
           </Project>
           <Project
             images={[chip_1, chip_2, chip_3]}
             title={t("ca.title")}
-            link="https://chipassist.com/"
+            link="https://chipassist.andrew-sib.com/"
           >
-            {t("ca.text_1")}
-            <br />
-            <br />
             {t("ca.text_2")}
+            <br />
+            <br />
+            {t("ca.text_1")}
           </Project>
           <Project
             images={[requests_1, requests_2, requests_3]}
             title={t("requests.title")}
             link="https://requests.chipassist.com/"
           >
-            {t("requests.text_1")}
-            <br />
-            <br />
             {t("requests.text_2")}
+            <br />
+            <br />
+            {t("requests.text_1")}
           </Project>
           <Project
             images={[dashboard_1, dashboard_2, dashboard_3]}
@@ -66,20 +66,20 @@ const Projects: React.FC = () => {
             link="https://main.d38hoihxf751c8.amplifyapp.com/"
             github="https://github.com/sibiryakov090591/management_dashboard"
           >
-            {t("dashboard.text_1")}
-            <br />
-            <br />
             {t("dashboard.text_2")}
+            <br />
+            <br />
+            {t("dashboard.text_1")}
           </Project>
           <Project
             images={[pcb_1, pcb_2, pcb_3]}
             title={t("pcb_calc.title")}
-            link="https://icsearch.ru/pcb"
+            link="https://chipassist.andrew-sib.com/pcb"
           >
-            {t("pcb_calc.text_1")}
-            <br />
-            <br />
             {t("pcb_calc.text_2")}
+            <br />
+            <br />
+            {t("pcb_calc.text_1")}
           </Project>
         </div>
       </Container>

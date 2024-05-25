@@ -24,7 +24,7 @@
   },
   "projects": {
     "mavik": {
-      "title": "Mavik-Pro landing page",
+      "title": "Mavik-Pro landing",
       "text_1": "What tools were used: HTML, CSS/SASS, JavaScript, Slick-slider, GreenSock (GSAP) for animation, PHPMailer.",
       "text_2": "This is a landing page which were designed myself with a light animation utilized the GSAP (GreenSock) library."
     },

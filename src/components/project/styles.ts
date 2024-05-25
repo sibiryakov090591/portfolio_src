@@ -8,6 +8,8 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     maxWidth: 400,
     borderRadius: 10,
     overflow: "hidden",
+    display: "flex",
+    flexDirection: "column",
     "@media screen and (max-width: 615px)": {
       width: "100%",
     },
@@ -50,6 +52,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     marginLeft: 12,
   },
   title: {
+    fontFamily: "Orbitron",
     fontSize: 18,
     color: theme.palette.text.green,
   },
@@ -58,6 +61,10 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     padding: "10px 35px 35px",
     color: theme.palette.text.primary,
     position: "relative",
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
   slider: {
     transition: "all 800ms ease",
@@ -70,6 +77,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
   },
   text: {
     margin: 0,
+    fontSize: 18,
     wordBreak: "break-word",
   },
 }));
