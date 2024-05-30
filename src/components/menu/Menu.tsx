@@ -57,6 +57,7 @@ const Menu: React.FC = () => {
 
   const toggleDrawer = (open: boolean) => (event: any) => {
     if (
+      event &&
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
     ) {
