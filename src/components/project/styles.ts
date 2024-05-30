@@ -52,7 +52,6 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     marginLeft: 12,
   },
   title: {
-    fontFamily: "Orbitron",
     fontSize: 18,
     color: theme.palette.text.green,
   },
