@@ -9,7 +9,7 @@ import { useI18n } from "../../services/I18next";
 import LangMenu from "../langMenu/LangMenu";
 import useAppTheme from "../../themes/ThemeStyles";
 import NavLink from "./NavLink/NavLink";
-import { Box } from "@material-ui/core";
+import { Box, Drawer } from "@material-ui/core";
 
 const menuItems = [
   { name: "about", to: "about", index: "01" },
@@ -31,6 +31,14 @@ const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    const listener = () => {
+      if (window.pageYOffset >= 60) {
+        if (pageYOffset !== 60) setPageYOffset(60);
+      } else {
+        if (pageYOffset === 60) setPageYOffset(0);
+      }
+    };
+    window.removeEventListener("scroll", listener);
     window.addEventListener("scroll", listener);
     return () => window.removeEventListener("scroll", listener);
   }, [pageYOffset]);
@@ -47,29 +55,14 @@ const Menu: React.FC = () => {
     });
   }, []);
 
-  useEffect(() => {
-    if (isOpen) {
-      window.document.body.classList.add("stopScroll");
-      const mask = document.createElement("div");
-      mask.classList.add("mask");
-      mask.addEventListener("click", () => setIsOpen(false));
-      window.document.querySelector("#main")?.append(mask);
-    } else {
-      window.document.body.classList.remove("stopScroll");
-      window.document.querySelector(".mask")?.remove();
+  const toggleDrawer = (open: boolean) => (event: any) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
     }
-  }, [isOpen]);
-
-  const toggleMobileMenuHandler = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const listener = () => {
-    if (window.pageYOffset >= 60) {
-      if (pageYOffset !== 60) setPageYOffset(60);
-    } else {
-      if (pageYOffset === 60) setPageYOffset(0);
-    }
+    setIsOpen(open);
   };
 
   return (
@@ -93,45 +86,53 @@ const Menu: React.FC = () => {
       {/*Mobile*/}
       <div
         ref={burgerRef}
-        onClick={toggleMobileMenuHandler}
+        onClick={toggleDrawer(!isOpen)}
         className={classes.burgerWrapper}
       >
         <BlurOnIcon className={classes.burgerIcon} />
       </div>
-      {isOpen && (
-        <div onClick={toggleMobileMenuHandler} className={classes.mask}></div>
-      )}
-      <div
-        className={`${classes.mobileMenuWrapper} ${
-          isOpen ? classes.active : ""
-        }`}
+
+      <Drawer
+        anchor={"right"}
+        open={isOpen}
+        onClose={toggleDrawer(false)}
+        transitionDuration={500}
+        ModalProps={{
+          BackdropProps: {
+            classes: {
+              root: classes.backdrop,
+            },
+          },
+        }}
       >
-        <nav className={classes.mobileList}>
-          <ul style={{ padding: 0 }}>
-            {menuItems.map((item) => {
-              return (
-                <NavLink
-                  key={item.to}
-                  onClick={toggleMobileMenuHandler}
-                  to={item.to}
-                  offset={-60}
-                  smooth={true}
-                  spy={true}
-                  duration={600}
-                  className={`${classes.topItem} ${classes.topItemMobile}`}
-                >
-                  <li>
-                    <span className={classes.topItemIndexMobile}>
-                      {item.index}.
-                    </span>
-                    {t(item.name)}
-                  </li>
-                </NavLink>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
+        <div className={classes.mobileMenuWrapper}>
+          <nav className={classes.mobileList}>
+            <ul style={{ padding: 0 }}>
+              {menuItems.map((item) => {
+                return (
+                  <NavLink
+                    key={item.to}
+                    onClick={toggleDrawer(false)}
+                    to={item.to}
+                    offset={-60}
+                    smooth={true}
+                    spy={true}
+                    duration={600}
+                    className={`${classes.topItem} ${classes.topItemMobile}`}
+                  >
+                    <li>
+                      <span className={classes.topItemIndexMobile}>
+                        {item.index}.
+                      </span>
+                      {t(item.name)}
+                    </li>
+                  </NavLink>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      </Drawer>
 
       {/*Desktop*/}
       <Box display="flex" alignItems="center">

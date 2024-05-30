@@ -119,25 +119,13 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     cursor: "pointer",
   },
   mobileMenuWrapper: {
-    zIndex: 10,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     background: theme.palette.background.dark,
-    height: "100vh",
-    position: "absolute",
-    top: 0,
-    right: 0,
-    width: "40%",
-    transition: "all 400ms ease",
-    transform: "translateX(100%)",
-    [theme.breakpoints.down("sm")]: {
-      width: "50%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "65%",
-    },
+    height: "100%",
+    borderLeft: "4px solid #061813",
   },
   mobileList: {
     textAlign: "start",
@@ -161,6 +149,10 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
       display: "none",
     },
   },
+  backdrop: {
+    backgroundColor: "rgba(0,0,0,0.4)",
+    backdropFilter: "blur(5px)",    
+}
 }));
 
 export default "styles";
