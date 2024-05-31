@@ -131,18 +131,6 @@ export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
     textAlign: "start",
     width: "100%",
   },
-  active: {
-    transform: "translateX(0)",
-  },
-  mask: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    height: "100vh",
-    backdropFilter: "blur(2px) brightness(0.7)",
-  },
   langWrapper: {
     marginRight: 40,
     [theme.breakpoints.down("sm")]: {
