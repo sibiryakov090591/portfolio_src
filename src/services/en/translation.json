@@ -24,14 +24,14 @@
   },
   "projects": {
     "mavik": {
-      "title": "Mavik-Pro landing",
+      "title": "Mavik-Pro",
       "text_1": "What tools were used: HTML, CSS/SASS, JavaScript, Slick-slider, GreenSock (GSAP) for animation, PHPMailer.",
-      "text_2": "This is a landing page which were designed myself with a light animation utilized the GSAP (GreenSock) library."
+      "text_2": "Static landing page which I designed on my own with a light animation utilized the GSAP (GreenSock) library."
     },
     "ca": {
       "title": "ChipAssist marketplace",
       "text_1": "What tools were used: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, React hook form, Axios, Stripe",
-      "text_2": "Marketplace of electronic components that includes catalog and cart. Our users may request existing products or download a CVS/XML file (BOM) and we'll try to find the best proposals."
+      "text_2": "E-commerce B2C project. Marketplace of electronic components that includes catalog and cart. Our users may request existing products or download a CVS/XML file (BOM) and we'll try to find the best proposals."
     },
     "requests": {
       "title": "ChipAssist stock exchange",
