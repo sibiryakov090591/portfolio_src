@@ -10,18 +10,17 @@ import Skills from "./blocks/skills/Skills";
 import Menu from "./components/menu/Menu";
 import About from "./blocks/about-me/About";
 import Socials from "./components/socials/Socials";
-import { Hidden, useMediaQuery, useTheme } from "@material-ui/core";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
 function App() {
   const theme = useTheme();
   const isMdDown = useMediaQuery(theme.breakpoints.down("md"));
+  const hideSocials = useMediaQuery(theme.breakpoints.down(1400));
 
   return (
     <React.Fragment>
       <Menu />
-      <Hidden smDown>
-        <Socials />
-      </Hidden>
+      {!hideSocials && <Socials />}
       <main id="main">
         <Hero />
         <About />

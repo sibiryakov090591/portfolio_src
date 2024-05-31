@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     zIndex: 1,
     position: "fixed",
     bottom: 0,
-    left: 15,
+    left: 25,
   },
   imgWrapper: {
     width: 30,
