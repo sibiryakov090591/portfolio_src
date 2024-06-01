@@ -3,21 +3,19 @@ import { AppTheme } from "../../themes/paletteTypes";
 import { Theme } from "@material-ui/core/styles/createTheme";
 
 export const useStyles = makeStyles((theme: AppTheme & Theme) => ({
-  projectsContainer: {
-    display: "flex !important",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-around",
+  projects: {
     paddingBottom: 90,
   },
   projectsWrapper: {
-    display: "grid",
-    gap: "24px",
-    gridTemplateColumns: "1fr 1fr",
-    width: "100%",
-    maxWidth: 975,
-    [theme.breakpoints.down(1135)]: {
-      gridTemplateColumns: "1fr",
+    [theme.breakpoints.down(1100)]: {
+        display: "grid",
+        gap: "24px",
+        gridTemplateColumns: "1fr 1fr",
+        width: "100%",
+        padding: "0 24px",
+        [theme.breakpoints.down(800)]: {
+            gridTemplateColumns: "1fr",
+        },
     },
   },
 }));

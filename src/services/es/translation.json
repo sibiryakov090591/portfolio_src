@@ -18,35 +18,30 @@
     "line_3": "y creo experiencias de interfaz de usuario (UI/UX)."
   },
   "about": {
-    "text_1": "Con pasión por crear experiencias digitales, me sumergí en el mundo del desarrollo front-end en 2019. Especializado en React.js, convierto diseños en interfaces dinámicas y fáciles de usar.",
-    "text_2": "Como jugador de equipo, prospero en entornos dinámicos donde las ideas colectivas se transforman en productos notables. Mi trayectoria como desarrollador front-end ha fortalecido mis habilidades para resolver problemas, permitiéndome enfrentar desafíos complejos y ofrecer soluciones elegantes.",
-    "text_3": "Acompáñame en esta aventura de codificación mientras sigo evolucionando, innovando y contribuyendo al cambiante mundo del desarrollo front-end."
+    "text_1": "¡Hola, soy Andrew Sibiriakov, un desarrollador de front-end que crea aplicaciones web eficientes y convincentes. Mi viaje en el desarrollo comenzó en 2019 con mi primer \"¡Hola Mundo!\" no a través de un IDE, sino en un archivo .txt que abrí usando Chrome :)",
+    "text_2": "Hoy estoy muy emocionado de ver cómo nuestro mundo cambia rápidamente con el crecimiento de las tecnologías. Estoy feliz de identificarme como parte de este increíble campo. Además de ser apasionado por la tecnología, también me he enamorado de la naturaleza para siempre, y exhorto a todos a ayudar a salvar nuestro planeta manteniendo un ambiente limpio. Me alegra ver cómo las tecnologías modernas apoyan nuestro ecosistema, haciendo nuestras vidas más seguras y felices.",
+    "text_3": "¡Únete a mí en esta aventura de programación! ¡Desarrollemos no solo aplicaciones, sino también el futuro!"
   },
   "projects": {
     "mavik": {
       "title": "Mavik-Pro",
-      "text_1": "Herramientas utilizadas: HTML, CSS/SASS, JavaScript, Slick-slider, GreenSock (GSAP) para animación, PHPMailer.",
-      "text_2": "Esta es una página de aterrizaje con una ligera animación en la biblioteca GreenSock (GSAP)."
+      "text_2": "Una página de inicio estática diseñada por mí, que presenta una animación ligera que utiliza la biblioteca GSAP (GreenSock). Tiene un diseño totalmente adaptable y responsivo, adecuado tanto para dispositivos móviles como de escritorio."
     },
     "ca": {
       "title": "ChipAssist marketplace",
-      "text_1": "Herramientas utilizadas: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, React Hook Form, Axios, Stripe",
-      "text_2": "Marketplace de componentes electrónicos que incluye catálogo y carrito. Nuestros usuarios pueden solicitar productos existentes o descargar un archivo CVS/XML (BOM) e intentaremos encontrar las mejores propuestas."
+      "text_2": "Proyecto de comercio electrónico B2C. Un mercado de componentes electrónicos que incluye chat, catálogo, carrito, perfil y otras características específicas. Los clientes pueden comprar productos existentes y también pueden cargar un archivo CSV/XML con números de pieza (lista de BOM) para que el sistema encuentre las mejores ofertas."
     },
     "requests": {
       "title": "Intercambio para vendedores",
-      "text_1": "Herramientas utilizadas: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, Axios",
-      "text_2": "Esta es una bolsa de valores para nuestros vendedores donde pueden ofrecer los mejores precios para las solicitudes de los usuarios."
+      "text_2": "Proyecto B2B de comercio electrónico. Una bolsa de valores para vendedores donde pueden ofrecer los mejores precios para las solicitudes de los clientes (RFQ), lo que resulta en expectativas satisfechas de los clientes y los anima a regresar al mercado para pedir más productos."
     },
     "dashboard": {
       "title": "Tablero de gestión",
-      "text_1": "Herramientas utilizadas: TypeScript, React.js, React-router-dom, Material ui, DevExtreme, Vite, AWS",
-      "text_2": "Esta es la parte frontend del tablero para gestionar cualquier dato."
+      "text_2": "Un panel frontal para análisis de datos que incluye varios gráficos completos. Se implementa mediante Vite y se aloja en el servicio en la nube AWS Amplify. El diseño es adaptable y responsivo tanto para dispositivos móviles como de escritorio."
     },
     "pcb_calc": {
       "title": "Calculadora de PCB",
-      "text_1": "Herramientas utilizadas: TypeScript, React.js, Material ui, I18n",
-      "text_2": "Esta es una calculadora para paneles PCB (placas electrónicas) donde el usuario puede seleccionar diferentes tipos, tamaños, materiales, etc."
+      "text_2": "Esta es una calculadora versátil y completa para construir placas electrónicas personalizadas (paneles PCB) donde los usuarios pueden seleccionar diferentes tipos, tamaños, materiales y más. Además, tiene un diseño moderno que brinda una mejor UX."
     }
   },
   "contacts": {

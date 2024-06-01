@@ -18,35 +18,30 @@
     "line_3": "and I create UI/UX."
   },
   "about": {
-    "text_1": "With a passion for crafting digital experiences, I've immersed myself in the realm of front-end development in 2019. Specializing in React.js, I am turning designs into dynamic, user-friendly interfaces.",
-    "text_2": "As a team player, I thrive in dynamic environments where collective ideas transform into remarkable products. My journey as a front-end developer has fortified my problem-solving skills, allowing me to navigate complex challenges and deliver elegant solutions.",
-    "text_3": "Join me on this coding adventure as I continue to evolve, innovate, and contribute to the ever-changing world of front-end development!"
+    "text_1": "Hi, I'm Andrew Sibiriakov, a front-end developer creating efficient and compelling web applications. My journey in development started in 2019 with my first \"Hello World!\" not through an IDE, but in a .txt file which I opened using Chrome :)",
+    "text_2": "Today, I am so excited to see how fast our world changes with the growing advancements in technology. I am thrilled to identify myself as a part of this incredible field. Besides being passionate about technology, I have also fallen in love with nature forever, and I urge everyone to help save our planet by maintaining a clean environment. I am happy to see how modern technologies support our ecosystem, making our lives safer and happier.",
+    "text_3": "Join me on this coding adventure! Let's develop not just applications, but the future!"
   },
   "projects": {
     "mavik": {
       "title": "Mavik-Pro",
-      "text_1": "What tools were used: HTML, CSS/SASS, JavaScript, Slick-slider, GreenSock (GSAP) for animation, PHPMailer.",
-      "text_2": "Static landing page which I designed on my own with a light animation utilized the GSAP (GreenSock) library."
+      "text_2": "A static landing page designed by myself, featuring a light animation utilizing the GSAP (GreenSock) library. It has a fully adaptive and responsive design, suitable for both desktop and mobile devices."
     },
     "ca": {
       "title": "ChipAssist marketplace",
-      "text_1": "What tools were used: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, React hook form, Axios, Stripe",
-      "text_2": "E-commerce B2C project. Marketplace of electronic components that includes catalog and cart. Our users may request existing products or download a CVS/XML file (BOM) and we'll try to find the best proposals."
+      "text_2": "E-commerce B2C project. A marketplace for electronic components that includes chat, catalog, cart, profile, and other specific features. Customers can buy existing products, and they can also upload a CSV/XML file with part numbers (BOM List) for the system to find the best offers."
     },
     "requests": {
       "title": "ChipAssist stock exchange",
-      "text_1": "What tools were used: TypeScript, React.js, Redux, React-router-dom, Material ui, Styled-components, I18n, Axios",
-      "text_2": "This is a stock exchange for our sellers where they may provide the best prices for user's requests."
+      "text_2": "E-commerce B2B project. A stock exchange for sellers where they can offer the best prices for customer requests (RFQs), resulting in satisfied customer expectations and encouraging them to return to the marketplace to order more products."
     },
     "dashboard": {
       "title": "Management dashboard",
-      "text_1": "What tools were used: TypeScript, React.js, React-router-dom, Material ui, DevExtreme, Vite, AWS",
-      "text_2": "This is frontend part of dashboard to manage any data."
+      "text_2": "A frontend dashboard for data analysis that includes various comprehensive charts. It is deployed using Vite and hosted on AWS Amplify cloud service. The design is adaptive and responsive for both desktop and mobile devices."
     },
     "pcb_calc": {
       "title": "PCB calculator",
-      "text_1": "What tools were used: TypeScript, React.js, Material ui, I18n",
-      "text_2": "This is a calculator for PCB panels (electronic boards) where user may select different type, size, materials and etc."
+      "text_2": "This is a versatile and comprehensive calculator for building custom electronic boards (PCB panels) where users can select different types, sizes, materials, and more. Additionally, it has a modern design that provides a better UX."
     }
   },
   "contacts": {

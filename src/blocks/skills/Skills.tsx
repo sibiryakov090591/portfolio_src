@@ -31,7 +31,7 @@ import vite from "../../assets/images/skills/vite.png";
 import webpack from "../../assets/images/skills/webpack.png";
 import express from "../../assets/images/skills/express.png";
 import { useI18n } from "../../services/I18next";
-import Skill from "../../components/skill/Skill";
+import Skill from "./skill/Skill";
 import Marquee from "react-fast-marquee";
 
 const Skills: React.FC = () => {

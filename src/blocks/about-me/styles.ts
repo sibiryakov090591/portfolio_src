@@ -13,8 +13,8 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     position: "relative",
     color: theme.palette.text.secondary,
     fontSize: "1.2rem",
-    lineHeight: 1.4,
-    maxWidth: "60vw",
+    lineHeight: 1.5,
+    maxWidth: "70vw",
     zIndex: 3,
     [theme.breakpoints.down("sm")]: {
         maxWidth: "none",

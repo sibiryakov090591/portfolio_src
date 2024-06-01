@@ -17,8 +17,8 @@ import pcb_1 from "../../assets/images/projects/PCB/pcb_1.jpg";
 import pcb_2 from "../../assets/images/projects/PCB/pcb_2.jpg";
 import pcb_3 from "../../assets/images/projects/PCB/pcb_3.jpg";
 import { useI18n } from "../../services/I18next";
-import Project from "./project/Project";
-import ProjectCard from "./project/ProjectCard/ProjectCard";
+import Project from "./projectDesktop/Project";
+import ProjectCard from "./projectCard/ProjectCard";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 
 const Projects: React.FC = () => {
