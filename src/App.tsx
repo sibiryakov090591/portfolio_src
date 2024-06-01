@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Hero from "./blocks/hero/Hero";
 import ProjectsV2 from "./blocks/projectsV2/Projects";
-import Projects from "./blocks/projects/Projects";
 import HireMe from "./blocks/hire-me/HireMe";
 import Contacts from "./blocks/contacts/Contacts";
 import Footer from "./blocks/footer/Footer";
@@ -16,7 +15,6 @@ import { useMediaQuery, useTheme } from "@material-ui/core";
 
 function App() {
   const theme = useTheme();
-  const isMdDown = useMediaQuery(theme.breakpoints.down("md"));
   const hideSocials = useMediaQuery(theme.breakpoints.down(1400));
 
   return (
@@ -27,7 +25,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
-        {isMdDown ? <Projects /> : <ProjectsV2 />}
+        <ProjectsV2 />
         <HireMe />
         <Contacts />
         <Footer />

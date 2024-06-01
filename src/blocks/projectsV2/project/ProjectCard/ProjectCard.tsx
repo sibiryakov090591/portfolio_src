@@ -3,27 +3,31 @@ import { useStyles } from "./styles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import AspectRatioIcon from "@material-ui/icons/AspectRatio";
-import github_icon from "../../assets/images/footer/github_hover.svg";
+import useAppTheme from "../../../../themes/ThemeStyles";
+import github_icon from "../../../../assets/images/footer/github_hover.svg";
+import out_icon from "../../../../assets/images/icons/Out.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import BlankLink from "../menu/BlankLink/BlankLink";
+import BlankLink from "../../../../components/menu/BlankLink/BlankLink";
+import Button from "../../../../components/menu/Button/Button";
 
 type PropsType = {
   images: any[];
   title: string;
+  text: any;
   link: string;
   github?: string;
 };
 
-const Project: React.FC<PropsType> = ({
+const ProjectCard: React.FC<PropsType> = ({
   title,
+  text,
   images,
   link,
   github,
-  children,
 }) => {
   const classes = useStyles();
+  const appTheme = useAppTheme();
 
   const elemRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
@@ -84,39 +88,36 @@ const Project: React.FC<PropsType> = ({
   return (
     <div ref={elemRef} className={classes.wrapper}>
       <div className={classes.sliderWrapper}>
-        <BlankLink className={classes.sliderLink} href={link}>
-          <Slider {...settings} className={classes.slider}>
-            {images.map((img, i) => (
-              <img key={i} src={img} alt="work image" />
-            ))}
-          </Slider>
-        </BlankLink>
+        <Slider {...settings} className={classes.slider}>
+          {images.map((img, i) => (
+            <img key={i} src={img} alt="work image" />
+          ))}
+        </Slider>
       </div>
       <div className={classes.description}>
         <div>
-          <AspectRatioIcon className={classes.sliderIcon} />
           <h3 ref={titleRef} className={classes.title}>
             {title}
           </h3>
           <p ref={childrenRef} className={classes.text}>
-            {children}
+            {text}
           </p>
         </div>
-        {!!github && (
-          <div ref={githubRef} className={classes.githubWrapper}>
-            <BlankLink href={github}>
-              Github link
-              <img
-                className={classes.githubIcon}
-                src={github_icon}
-                alt="github"
-              />
-            </BlankLink>
-          </div>
-        )}
+        <div ref={githubRef} className={classes.actions}>
+          <BlankLink href={github}>
+            <Button className={`${appTheme.button} ${classes.button}`}>
+              Github <img src={github_icon} alt="github" />
+            </Button>
+          </BlankLink>
+          <BlankLink href={link}>
+            <Button className={`${appTheme.button} ${classes.button}`}>
+              Demo <img src={out_icon} alt="demo" />
+            </Button>
+          </BlankLink>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Project;
+export default ProjectCard;

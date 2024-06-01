@@ -1,55 +1,29 @@
 import { makeStyles } from "@material-ui/styles";
-import { AppTheme } from "../../themes/paletteTypes";
+import { AppTheme } from "../../../../themes/paletteTypes";
 
 export const useStyles = makeStyles((theme: AppTheme) => ({
   wrapper: {
     backgroundColor: theme.palette.app.grey700,
     margin: "20px auto",
     maxWidth: 400,
+    width: "100%",
     borderRadius: 10,
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
-    "@media screen and (max-width: 615px)": {
-      width: "100%",
-    },
   },
   sliderWrapper: {
     overflow: "hidden",
     height: 188,
-    "&:hover": {
-      "& + div > svg": {
-        color: theme.palette.background.yellow,
-      },
-    },
   },
-  sliderLink: {
-    display: "block",
-    position: "relative",
-  },
-  sliderIcon: {
-    position: "absolute",
-    top: 7,
-    right: 7,
-    color: theme.palette.background.darkYellow,
-    transition: "all 200ms ease",
-    pointerEvents: "none",
-    zIndex: 10,
-  },
-  githubWrapper: {
+  actions: {
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    fontSize: 13,
-    fontStyle: "italic",
+    gap: 22,
     color: theme.palette.background.yellow,
-    "&:hover": {
-      textDecoration: "underline",
-    },
-  },
-  githubIcon: {
-    width: 20,
-    marginLeft: 12,
+    marginTop: 36,
+    "& img": { height: 20, marginLeft: 12 },
   },
   title: {
     fontSize: 18,
@@ -79,6 +53,11 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     fontSize: 18,
     wordBreak: "break-word",
   },
+  button: {
+    border: "none !important",
+    fontSize: 13,
+    background: "#303636 !important",
+  }
 }));
 
 export default "styles";

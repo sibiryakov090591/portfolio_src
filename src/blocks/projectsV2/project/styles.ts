@@ -19,7 +19,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
             top: "-40px",
             bottom: "-40px",
             right: 0,
-            backgroundColor: "rgba(1,12,7,1)",
+            backgroundColor: "rgba(0,25,14,1)",
             backgroundImage: `url(${img})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center -50px",
@@ -33,7 +33,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
         }
       },
       projectTitle: {
-        fontSize: 20,
+        fontSize: 26,
         color: theme.palette.text.green,
       },
       projectText: {
@@ -45,13 +45,13 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
       actions: {
         marginTop: 22,
         display: "flex",
-        gap: 14,
+        gap: 18,
         alignItems: "center",
-        "& img": { height: 23 },
-        "& svg": { fontSize: 28 },
+        "& img": { height: 28 },
       },
       slider: {
         background: "rgba(2,19,11,1)",
+        borderRadius: "10px",
         maxHeight: "305px",
         maxWidth: "500px",
         margin: "0 auto 0 0",

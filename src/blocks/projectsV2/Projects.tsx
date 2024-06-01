@@ -18,10 +18,15 @@ import pcb_2 from "../../assets/images/projects/PCB/pcb_2.jpg";
 import pcb_3 from "../../assets/images/projects/PCB/pcb_3.jpg";
 import { useI18n } from "../../services/I18next";
 import Project from "./project/Project";
+import ProjectCard from "./project/ProjectCard/ProjectCard";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
 const Projects: React.FC = () => {
   const classes = useStyles();
   const { t } = useI18n("projects");
+
+  const theme = useTheme();
+  const isShowProductCards = useMediaQuery(theme.breakpoints.down(1100));
 
   const data = [
     {
@@ -64,19 +69,30 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className={classes.projects}>
       <Title title={t("menu.projects")} index="03" />
-      {data.map((item, index) => {
-        return (
-          <Project
-            key={index}
-            images={item.images}
-            title={item.title}
-            text={item.text}
-            link={item.link}
-            github={item.github}
-            isReverse={index % 2 === 0}
-          />
-        );
-      })}
+      <div className={classes.projectsWrapper}>
+        {data.map((item, index) => {
+          return isShowProductCards ? (
+            <ProjectCard
+              key={index}
+              images={item.images}
+              title={item.title}
+              text={item.text}
+              link={item.link}
+              github={item.github}
+            />
+          ) : (
+            <Project
+              key={index}
+              images={item.images}
+              title={item.title}
+              text={item.text}
+              link={item.link}
+              github={item.github}
+              isReverse={index % 2 === 0}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 };
