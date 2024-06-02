@@ -85,12 +85,12 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     "0%": {
       opacity: 0,
       transform: "translateY(-15px) scale(0.96)",
-      filter: "grayscale(0.8) blur(2px)",
+      filter: "grayscale(0.8)",
     },
     "100%": {
       opacity: 1,
       transform: "translateY(0px) scale(1)",
-      filter: "grayscale(0) blur(0)",
+      filter: "grayscale(0)",
     },
   },
 }));
