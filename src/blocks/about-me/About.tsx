@@ -22,20 +22,19 @@ const About: React.FC = () => {
     tl.to(elemRef_1.current, {
       scrollTrigger: {
         trigger: elemRef_1.current,
-        start: "top 70%",
-        end: "top 50%",
+        start: "top 80%",
         onEnter: () =>
           tl.to(elemRef_1.current, {
             text: `${t("text_1")}`,
             duration: 2,
-            delay: 2,
+            delay: 1,
           }),
       },
     });
     tl.to(elemRef_2.current, {
       scrollTrigger: {
         trigger: elemRef_2.current,
-        start: "top 70%",
+        start: "top 80%",
         onEnter: () =>
           tl.to(elemRef_2.current, {
             text: `${t("text_2")}`,
@@ -46,7 +45,7 @@ const About: React.FC = () => {
     tl.to(elemRef_3.current, {
       scrollTrigger: {
         trigger: elemRef_3.current,
-        start: "top 70%",
+        start: "top 80%",
         onEnter: () =>
           tl.to(elemRef_3.current, {
             text: `${t("text_3")}`,
