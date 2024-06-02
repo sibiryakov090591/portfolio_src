@@ -55,7 +55,7 @@ const About: React.FC = () => {
           }),
       },
     });
-  });
+  }, []);
 
   const scrambleTextToNumbers = (input: string) => {
     return (
@@ -80,4 +80,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default React.memo(About);
