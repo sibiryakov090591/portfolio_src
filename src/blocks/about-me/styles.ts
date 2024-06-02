@@ -14,10 +14,10 @@ export const useStyles = makeStyles((theme: Theme & AppTheme) => ({
     color: theme.palette.text.secondary,
     fontSize: "1.2rem",
     lineHeight: 1.5,
-    maxWidth: "70vw",
+    width: "70vw",
     zIndex: 3,
     [theme.breakpoints.down("sm")]: {
-        maxWidth: "none",
+        width: "100%",
         padding: "0 30px",
     },
     [theme.breakpoints.down("xs")]: {
