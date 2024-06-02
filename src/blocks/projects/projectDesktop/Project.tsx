@@ -5,8 +5,10 @@ import github_icon from "../../../assets/images/footer/github_hover.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import out_icon from "../../../assets/images/icons/Out.png";
-import { Container, Grid } from "@material-ui/core";
+import { Container, Fade, Grid, Theme, withStyles } from "@material-ui/core";
 import BlankLink from "../../../components/menu/BlankLink/BlankLink";
+import Tooltip from "@material-ui/core/Tooltip";
+import { AppTheme } from "../../../themes/paletteTypes";
 
 type PropsType = {
   images: any[];
@@ -83,6 +85,16 @@ const Project: React.FC<PropsType> = ({
     slidesToScroll: 1,
   };
 
+  const HtmlTooltip = withStyles((theme: any) => ({
+    tooltip: {
+      backgroundColor: theme.palette.app.grey700,
+      color: theme.palette.text.green,
+      fontWeight: "bold",
+      maxWidth: 220,
+      fontSize: "14px",
+    },
+  }))(Tooltip);
+
   return (
     <div className={`${classes.project} ${isReverse ? "reverse" : ""}`}>
       <Container maxWidth={"lg"}>
@@ -99,12 +111,28 @@ const Project: React.FC<PropsType> = ({
               <h3 className={classes.projectTitle}>{title}</h3>
               {text}
               <div className={classes.actions}>
-                <BlankLink href={link}>
-                  <img src={out_icon} alt="out to site" />
-                </BlankLink>
-                <BlankLink href={github}>
-                  <img src={github_icon} alt="github" />
-                </BlankLink>
+                <HtmlTooltip
+                  title="Visit demo"
+                  arrow
+                  TransitionComponent={Fade}
+                >
+                  <div>
+                    <BlankLink href={link}>
+                      <img src={out_icon} alt="out to site" />
+                    </BlankLink>
+                  </div>
+                </HtmlTooltip>
+                <HtmlTooltip
+                  title="Visit github"
+                  arrow
+                  TransitionComponent={Fade}
+                >
+                  <div>
+                    <BlankLink href={github}>
+                      <img src={github_icon} alt="github" />
+                    </BlankLink>
+                  </div>
+                </HtmlTooltip>
               </div>
             </div>
           </Grid>

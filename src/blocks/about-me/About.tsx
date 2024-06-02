@@ -23,6 +23,7 @@ const About: React.FC = () => {
       scrollTrigger: {
         trigger: elemRef_1.current,
         start: "top 70%",
+        end: "top 50%",
         onEnter: () =>
           tl.to(elemRef_1.current, {
             text: `${t("text_1")}`,
@@ -38,8 +39,7 @@ const About: React.FC = () => {
         onEnter: () =>
           tl.to(elemRef_2.current, {
             text: `${t("text_2")}`,
-            duration: 3,
-            delay: 1,
+            duration: 2,
           }),
       },
     });
@@ -50,8 +50,7 @@ const About: React.FC = () => {
         onEnter: () =>
           tl.to(elemRef_3.current, {
             text: `${t("text_3")}`,
-            duration: 2,
-            delay: 1,
+            duration: 1,
           }),
       },
     });
