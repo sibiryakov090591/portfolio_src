@@ -92,6 +92,7 @@ const Project: React.FC<PropsType> = ({
       fontWeight: "bold",
       maxWidth: 220,
       fontSize: "14px",
+      padding: "6px 10px",
     },
   }))(Tooltip);
 
@@ -111,22 +112,14 @@ const Project: React.FC<PropsType> = ({
               <h3 className={classes.projectTitle}>{title}</h3>
               {text}
               <div className={classes.actions}>
-                <HtmlTooltip
-                  title="Visit demo"
-                  arrow
-                  TransitionComponent={Fade}
-                >
+                <HtmlTooltip title="Demo" arrow TransitionComponent={Fade}>
                   <div>
                     <BlankLink href={link}>
                       <img src={out_icon} alt="out to site" />
                     </BlankLink>
                   </div>
                 </HtmlTooltip>
-                <HtmlTooltip
-                  title="Visit github"
-                  arrow
-                  TransitionComponent={Fade}
-                >
+                <HtmlTooltip title="Github" arrow TransitionComponent={Fade}>
                   <div>
                     <BlankLink href={github}>
                       <img src={github_icon} alt="github" />
