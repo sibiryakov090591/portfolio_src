@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import useAppTheme from "../../../themes/ThemeStyles";
 import github_icon from "../../../assets/images/footer/github_hover.svg";
-import out_icon from "../../../assets/images/icons/Out.png";
+import out_icon from "../../../assets/images/icons/Out.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BlankLink from "../../../components/menu/BlankLink/BlankLink";

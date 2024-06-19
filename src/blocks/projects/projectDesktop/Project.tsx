@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import github_icon from "../../../assets/images/footer/github_hover.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import out_icon from "../../../assets/images/icons/Out.png";
+import out_icon from "../../../assets/images/icons/Out.svg";
 import { Container, Fade, Grid, Theme, withStyles } from "@material-ui/core";
 import BlankLink from "../../../components/menu/BlankLink/BlankLink";
 import Tooltip from "@material-ui/core/Tooltip";
@@ -29,48 +29,57 @@ const Project: React.FC<PropsType> = ({
 }) => {
   const classes = useStyles();
 
-  const elemRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
-  const childrenRef = useRef<HTMLDivElement>(null);
-  const githubRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const actionsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(elemRef.current, {
-      y: "40px",
-      opacity: 0,
-      duration: 1.2,
-      ease: "circ.out",
+    const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: elemRef.current,
-        start: "top 70%",
+        trigger: sliderRef.current,
+        start: "top 50%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
     });
-    gsap.from(titleRef.current, {
-      delay: 0.3,
-      x: "-30px",
+    tl.from(sliderRef.current, {
+      x: isReverse ? "-40px" : "40px",
       opacity: 0,
       duration: 0.7,
       ease: "circ.out",
-      scrollTrigger: titleRef.current,
     });
-    gsap.from(childrenRef.current, {
-      delay: 0.5,
-      x: "-80px",
-      opacity: 0,
-      transform: "matrix(1, 0, -0.4, 1, 1, 0",
-      duration: 1,
-      ease: "circ.out",
-      scrollTrigger: childrenRef.current,
-    });
-    gsap.from(githubRef.current, {
-      delay: 0.7,
-      y: "20px",
-      opacity: 0,
-      duration: 0.4,
-      ease: "circ.out",
-      scrollTrigger: githubRef.current,
-    });
+    tl.from(
+      titleRef.current,
+      {
+        y: "-30px",
+        opacity: 0,
+        duration: 0.7,
+        ease: "circ.out",
+      },
+      "-=0.5"
+    );
+    tl.from(
+      textRef.current,
+      {
+        y: "30px",
+        opacity: 0,
+        duration: 0.7,
+        ease: "circ.out",
+      },
+      "-=0.5"
+    );
+    tl.from(
+      actionsRef.current,
+      {
+        y: "30px",
+        opacity: 0,
+        duration: 0.7,
+        ease: "circ.out",
+      },
+      "-=0.3"
+    );
   }, []);
 
   const settings = {
@@ -109,9 +118,11 @@ const Project: React.FC<PropsType> = ({
             <div
               className={`${classes.projectText} ${isReverse ? "reverse" : ""}`}
             >
-              <h3 className={classes.projectTitle}>{title}</h3>
-              {text}
-              <div className={classes.actions}>
+              <h3 ref={titleRef} className={classes.projectTitle}>
+                {title}
+              </h3>
+              <div ref={textRef}>{text}</div>
+              <div ref={actionsRef} className={classes.actions}>
                 <HtmlTooltip title="Demo" arrow TransitionComponent={Fade}>
                   <div>
                     <BlankLink href={link}>
@@ -129,7 +140,7 @@ const Project: React.FC<PropsType> = ({
               </div>
             </div>
           </Grid>
-          <Grid item sm={6}>
+          <Grid innerRef={sliderRef} item sm={6}>
             <Slider
               {...settings}
               className={`${classes.slider} ${isReverse ? "reverse" : ""}`}
