@@ -36,41 +36,55 @@ const ProjectCard: React.FC<PropsType> = ({
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(elemRef.current, {
-      y: "40px",
-      opacity: 0,
-      duration: 1.2,
-      ease: "circ.out",
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: elemRef.current,
-        start: "top 70%",
+        start: "top 10%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
     });
-    gsap.from(titleRef.current, {
-      delay: 0.3,
-      x: "-30px",
-      opacity: 0,
-      duration: 0.7,
-      ease: "circ.out",
-      scrollTrigger: titleRef.current,
-    });
-    gsap.from(childrenRef.current, {
-      delay: 0.5,
-      x: "-80px",
-      opacity: 0,
-      transform: "matrix(1, 0, -0.4, 1, 1, 0",
-      duration: 1,
-      ease: "circ.out",
-      scrollTrigger: childrenRef.current,
-    });
-    gsap.from(githubRef.current, {
-      delay: 0.7,
-      y: "20px",
-      opacity: 0,
-      duration: 0.4,
-      ease: "circ.out",
-      scrollTrigger: githubRef.current,
-    });
+    tl.from(
+      elemRef.current,
+      {
+        y: "40px",
+        opacity: 0,
+        duration: 1,
+        ease: "circ.out",
+      },
+      "-=0.8"
+    );
+    tl.from(
+      titleRef.current,
+      {
+        x: "-30px",
+        opacity: 0,
+        duration: 0.7,
+        ease: "circ.out",
+      },
+      "-=0.5"
+    );
+    tl.from(
+      childrenRef.current,
+      {
+        x: "-80px",
+        opacity: 0,
+        transform: "matrix(1, 0, -0.4, 1, 1, 0",
+        duration: 0.7,
+        ease: "circ.out",
+      },
+      "-=0.5"
+    );
+    tl.from(
+      githubRef.current,
+      {
+        y: "20px",
+        opacity: 0,
+        duration: 0.7,
+        ease: "circ.out",
+      },
+      "-=0.5"
+    );
   }, []);
 
   const settings = {
