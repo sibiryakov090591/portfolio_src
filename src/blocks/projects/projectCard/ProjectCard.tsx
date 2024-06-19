@@ -39,7 +39,7 @@ const ProjectCard: React.FC<PropsType> = ({
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: elemRef.current,
-        start: "top 10%",
+        start: "top 40%",
         end: "bottom 20%",
         toggleActions: "play none none none",
       },
@@ -49,10 +49,10 @@ const ProjectCard: React.FC<PropsType> = ({
       {
         y: "40px",
         opacity: 0,
-        duration: 1,
+        duration: 0.7,
         ease: "circ.out",
       },
-      "-=0.8"
+      "-=0.5"
     );
     tl.from(
       titleRef.current,

@@ -18,40 +18,28 @@ const About: React.FC = () => {
 
   useEffect(() => {
     gsap.registerPlugin(TextPlugin, ScrollTrigger);
-    const tl = gsap.timeline();
-    tl.to(elemRef_1.current, {
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: elemRef_1.current,
-        start: "top 100%",
-        onEnter: () =>
-          tl.to(elemRef_1.current, {
-            text: `${t("text_1")}`,
-            duration: 2,
-            delay: 1,
-          }),
+        start: "top 90%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
       },
+    });
+    tl.to(elemRef_1.current, {
+      text: `${t("text_1")}`,
+      duration: 1,
+      delay: 1,
     });
     tl.to(elemRef_2.current, {
-      scrollTrigger: {
-        trigger: elemRef_2.current,
-        start: "top 100%",
-        onEnter: () =>
-          tl.to(elemRef_2.current, {
-            text: `${t("text_2")}`,
-            duration: 2,
-          }),
-      },
+      text: `${t("text_2")}`,
+      duration: 1,
+      delay: 0.5,
     });
     tl.to(elemRef_3.current, {
-      scrollTrigger: {
-        trigger: elemRef_3.current,
-        start: "top 100%",
-        onEnter: () =>
-          tl.to(elemRef_3.current, {
-            text: `${t("text_3")}`,
-            duration: 1,
-          }),
-      },
+      text: `${t("text_3")}`,
+      duration: 1,
+      delay: 0.5,
     });
   }, []);
 

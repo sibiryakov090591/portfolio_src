@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     fontSize: 24,
     width: 255,
     height: 100,
-    lineHeight: 1.2,
+    lineHeight: 1.4,
     "@media screen and (max-width: 900px)": {
       bottom: "-105px",
       right: "-35px",
@@ -51,8 +51,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     "@media screen and (max-width: 450px)": {
       position: "initial",
       fontSize: 24,
-      width: 160,
-      alignSelf: "end",
+      width: 260,
     },
   },
   photo: {
@@ -62,7 +61,7 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
     width: 300,
     height: 300,
     position: "relative",
-    animation: `$flash 3s forwards`,
+    animation: `$flash 1.5s forwards`,
     "&:after": {
       content: "''",
       position: "absolute",
@@ -76,20 +75,18 @@ export const useStyles = makeStyles((theme: AppTheme) => ({
       marginBottom: 40,
     },
     "@media screen and (max-width: 450px)": {
-      width: 250,
-      height: 250,
+      width: 220,
+      height: 220,
       marginBottom: 0,
     },
   },
   "@keyframes flash": {
     "0%": {
       opacity: 0,
-      transform: "translateY(-15px) scale(0.96)",
       filter: "grayscale(0.8)",
     },
     "100%": {
       opacity: 1,
-      transform: "translateY(0px) scale(1)",
       filter: "grayscale(0)",
     },
   },
